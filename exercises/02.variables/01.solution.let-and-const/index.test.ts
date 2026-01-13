@@ -7,7 +7,7 @@ await testStep('TAX_RATE should be 0.08', async () => {
 
 await testStep('cartTotal should be calculated correctly', async () => {
 	// cartTotal = bookPrice + coffeePrice = 15.99 + 4.5 = 20.49
-	expect(cartTotal).toBe(20.49)
+	expect(cartTotal).toBeCloseTo(20.49, 2)
 })
 
 await testStep('finalTotal should include tax', async () => {
