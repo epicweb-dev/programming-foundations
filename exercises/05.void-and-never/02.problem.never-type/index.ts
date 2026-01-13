@@ -16,6 +16,7 @@ type Status = 'pending' | 'success' | 'error'
 
 // 🐨 Complete this function to handle all cases
 // The default case should use the never exhaustiveness pattern
+// @ts-expect-error - 💣 remove this comment
 function getStatusMessage(status: Status): string {
 	switch (status) {
 		case 'pending':

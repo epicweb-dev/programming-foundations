@@ -15,9 +15,13 @@ const stockCount: number = 100
 // 💰 Use the && operator
 
 // ✅ Verification
+// @ts-expect-error - 💣 remove this comment
 console.log('Is Available:', isAvailable)
+// @ts-expect-error - 💣 remove this comment
 console.log('Is On Sale:', isOnSale)
+// @ts-expect-error - 💣 remove this comment
 console.log('Has Discount:', hasDiscount)
+// @ts-expect-error - 💣 remove this comment
 console.log('Can Purchase:', canPurchase)
 
 export {}
