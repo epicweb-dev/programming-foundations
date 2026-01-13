@@ -9,6 +9,7 @@ const sum = largeNumber + anotherLarge
 // Symbols are unique (TypeScript infers symbol from Symbol())
 const userId = Symbol('user-id')
 const anotherId = Symbol('user-id')
+// @ts-expect-error TypeScript knows these unique symbols are never equal - that's the point!
 const areEqual = userId === anotherId // false!
 
 console.log('Large number:', largeNumber)
