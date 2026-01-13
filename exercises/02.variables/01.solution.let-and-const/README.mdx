@@ -1,0 +1,15 @@
+# Let and Const
+
+👨‍💼 Perfect! You've seen the difference between `let` and `const` in action.
+
+When you tried to reassign `TAX_RATE`, TypeScript caught it immediately:
+
+```
+Cannot assign to 'TAX_RATE' because it is a constant.
+```
+
+This is exactly what we want! The tax rate shouldn't change during the program's
+execution, and `const` enforces that.
+
+🦉 Notice how `cartTotal` needed to be `let` because we updated it multiple
+times. The pattern of accumulating a total is a classic use case for `let`.

@@ -1,0 +1,22 @@
+# Conditionals
+
+👨‍💼 Nice work! You've built a grade calculator with branching logic.
+
+🦉 Notice how the `else if` chain works: once a condition is true, the rest are
+skipped. That's why we can write `score >= 80` for B—we already know it's not
+>= 90 because that check came first.
+
+An alternative approach uses **early returns** in functions (we'll cover this
+soon):
+
+```ts
+function getGrade(score: number): string {
+	if (score >= 90) return 'A'
+	if (score >= 80) return 'B'
+	if (score >= 70) return 'C'
+	if (score >= 60) return 'D'
+	return 'F'
+}
+```
+
+This pattern is often cleaner for this type of logic.

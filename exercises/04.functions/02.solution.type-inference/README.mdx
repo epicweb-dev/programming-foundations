@@ -1,0 +1,26 @@
+# Type Inference
+
+👨‍💼 Great detective work! You found and fixed the bug.
+
+When you added `: number` as the return type, TypeScript immediately flagged the
+string return as an error. This is why explicit return types can be valuable:
+
+```ts
+// Without explicit return type - no error, bug ships to production
+function divide(a: number, b: number) {
+	if (b === 0) return 'error' // 😱
+	return a / b
+}
+
+// With explicit return type - caught at compile time!
+function divide(a: number, b: number): number {
+	if (b === 0) return 'error' // ❌ Type 'string' is not assignable to 'number'
+	return a / b
+}
+```
+
+🦉 The rule of thumb:
+
+- **Let inference work** for simple, obvious functions
+- **Add explicit types** for public APIs and when you want to catch this class
+  of bugs early

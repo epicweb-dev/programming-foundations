@@ -1,0 +1,32 @@
+# Explicit Return Types
+
+👨‍💼 Let's practice writing functions with explicit return types. This is
+especially important for functions that will be used by others.
+
+When to use explicit return types:
+
+- **Public API functions** - Makes the contract clear
+- **Functions with multiple returns** - Ensures consistency
+- **Complex logic** - Documents your intent
+- **When inference isn't what you want** - Override the default
+
+🐨 Open <InlineFile file="index.ts" /> and create these functions with explicit
+return types:
+
+1. `getFullName(firstName, lastName)` → returns string
+2. `parseAge(ageString)` → returns number (use `parseInt`)
+3. `isValidEmail(email)` → returns boolean (check for @ symbol)
+
+💰 Check if string contains a character:
+
+```ts
+email.includes('@')
+```
+
+💰 Parse string to integer:
+
+```ts
+parseInt(str, 10)
+```
+
+📜 [TypeScript Handbook - Return Type Annotations](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#return-type-annotations)

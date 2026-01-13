@@ -1,0 +1,46 @@
+# Variables and Immutability
+
+Variables are containers for values. In TypeScript (and modern JavaScript), you
+have two main ways to declare them: `let` and `const`.
+
+```ts
+let count = 0 // Can be reassigned
+const name = 'Alice' // Cannot be reassigned
+```
+
+## When to Use Each
+
+**Use `const` by default.** It signals that this binding won't change, making
+your code easier to understand.
+
+**Use `let` when you need to reassign.** Loop counters, accumulators, and state
+that changes over time.
+
+```ts
+const TAX_RATE = 0.08 // Never changes
+let total = 0 // Will be updated
+
+for (const item of items) {
+	total += item.price // Reassigning total
+}
+```
+
+## Reassignment vs Mutation
+
+An important distinction:
+
+- **Reassignment** - Pointing the variable to a new value
+- **Mutation** - Changing the contents of the existing value
+
+```ts
+let arr = [1, 2, 3]
+arr = [4, 5, 6] // Reassignment - arr points to a NEW array
+arr.push(7) // Mutation - modifying the SAME array
+```
+
+<callout-warning>
+`const` prevents reassignment but NOT mutation. You can still modify the
+contents of a `const` array or object.
+</callout-warning>
+
+Understanding this distinction helps you write predictable, bug-free code.

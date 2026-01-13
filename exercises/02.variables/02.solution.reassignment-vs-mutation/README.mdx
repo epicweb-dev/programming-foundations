@@ -1,0 +1,20 @@
+# Reassignment vs Mutation
+
+👨‍💼 You've discovered an important truth about `const`!
+
+When you write `const arr = [1, 2, 3]`:
+
+- The variable `arr` will always point to this specific array
+- But the array itself can be modified
+
+This is like having a permanent address (const) to a house where the furniture
+can be rearranged (mutation).
+
+🦉 If you want truly immutable data in TypeScript, you can use:
+
+- `as const` for literal values
+- `readonly` arrays: `readonly string[]`
+- Libraries like Immer for complex immutability
+
+But for now, just remember: `const` = "I won't reassign this variable" not "this
+value can never change."

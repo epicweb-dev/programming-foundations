@@ -1,0 +1,31 @@
+# Functions
+
+👨‍💼 Fantastic! You now know how to write type-safe functions.
+
+You learned:
+
+- 📥 **Parameter types** specify what a function accepts
+- 📤 **Return types** specify what a function produces
+- 🔮 **Type inference** figures out return types automatically
+- ✍️ **Explicit return types** document your intent and catch mistakes
+
+🦉 A good practice: Always type your parameters. Let TypeScript infer simple
+return types, but add explicit return types for:
+
+- Public API functions
+- Functions with multiple return statements
+- Complex logic where inference might not match your intent
+
+```ts
+// Let inference work for simple functions
+function double(n: number) {
+	return n * 2
+}
+
+// Be explicit for public APIs or complex functions
+function processOrder(items: CartItem[]): OrderResult {
+	// Complex logic...
+}
+```
+
+Next up: Special return types—`void` and `never`!

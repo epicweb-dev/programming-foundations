@@ -1,0 +1,31 @@
+# Loops
+
+👨‍💼 We need to calculate the total price of items in a shopping cart. This is a
+classic use case for loops—processing each item in a collection.
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Use a `for` loop to iterate through the prices array
+2. Add each price to a running total
+3. Count how many items cost more than $10
+
+💰 Traditional `for` loop structure:
+
+```ts
+for (let i = 0; i < array.length; i++) {
+	const item = array[i]
+	// do something with item
+}
+```
+
+💰 Accumulator pattern:
+
+```ts
+let total = 0
+for (...) {
+  total = total + value
+  // or: total += value
+}
+```
+
+📜 [MDN - for statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)

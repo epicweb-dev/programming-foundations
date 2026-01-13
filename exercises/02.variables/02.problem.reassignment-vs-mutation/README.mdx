@@ -1,0 +1,39 @@
+# Reassignment vs Mutation
+
+👨‍💼 There's a subtle but important distinction between **reassignment** and
+**mutation**. Understanding this prevents bugs that are hard to track down.
+
+**Reassignment**: Pointing a variable to a completely new value
+
+```ts
+let x = 1
+x = 2 // x now points to a new value
+```
+
+**Mutation**: Modifying the contents of an existing value
+
+```ts
+const arr = [1, 2, 3]
+arr.push(4) // The array itself is modified (mutated)
+```
+
+<callout-warning>
+`const` prevents reassignment but NOT mutation! You can still push to a `const`
+array or add properties to a `const` object.
+</callout-warning>
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Try to reassign the `const` array (see the error)
+2. Mutate the `const` array by adding an item
+3. Observe that mutation works even with `const`
+
+💰 Common array mutations:
+
+```ts
+arr.push(item) // Add to end
+arr.pop() // Remove from end
+arr[0] = newValue // Replace at index
+```
+
+📜 [MDN - Array methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)

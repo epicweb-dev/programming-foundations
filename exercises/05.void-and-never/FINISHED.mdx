@@ -1,0 +1,33 @@
+# Void and Never
+
+👨‍💼 Excellent work! You now understand two important return types.
+
+You learned:
+
+- 🚫 **`void`** - Function performs a side effect, returns nothing
+- ⛔ **`never`** - Function never returns (throws or loops forever)
+- 🔍 **Exhaustiveness checking** - Using `never` to ensure all cases are handled
+
+🦉 Key insight: These types communicate **intent**.
+
+- `void` says "I do something, but don't expect a value back"
+- `never` says "I won't return—ever"
+
+This is especially powerful for error handling functions:
+
+```ts
+function fail(message: string): never {
+	throw new Error(message)
+}
+
+function process(data: string | null): string {
+	if (data === null) {
+		fail('Data cannot be null') // TypeScript knows we won't continue
+	}
+	return data.toUpperCase() // TypeScript knows data is string here
+}
+```
+
+🎉 Congratulations! You've completed the Typed Foundations workshop. You have
+the essential skills to write TypeScript code that compiles and communicates its
+intent clearly.

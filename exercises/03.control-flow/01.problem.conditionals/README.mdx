@@ -1,0 +1,27 @@
+# Conditionals
+
+👨‍💼 We're building a grade calculator for a school system. Based on a numeric
+score, we need to determine the letter grade.
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Write an `if`/`else if`/`else` chain to determine the letter grade:
+   - 90 and above: "A"
+   - 80-89: "B"
+   - 70-79: "C"
+   - 60-69: "D"
+   - Below 60: "F"
+
+2. Add a check to see if the student passed (grade C or above)
+
+💰 Check ranges with comparisons:
+
+```ts
+if (score >= 90) {
+	// A
+} else if (score >= 80) {
+	// B (we know score < 90 because first check failed)
+}
+```
+
+📜 [MDN - if...else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)

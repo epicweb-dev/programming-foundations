@@ -1,0 +1,60 @@
+# Functions
+
+Functions are the building blocks of any program. They let you package up logic
+into reusable pieces with clear inputs and outputs.
+
+```ts
+function add(a: number, b: number): number {
+	return a + b
+}
+```
+
+## Anatomy of a TypeScript Function
+
+```ts
+function greet(name: string): string {
+	//       ↑ parameter    ↑ return type
+	return `Hello, ${name}!`
+}
+```
+
+- **Parameters** have types that specify what the function accepts
+- **Return type** specifies what the function produces
+- TypeScript enforces both at compile time
+
+## Why Type Functions?
+
+Types create a **contract**. Anyone calling your function knows:
+
+- What arguments to provide
+- What they'll get back
+
+```ts
+// Without types - what does this accept? Return?
+function process(data) {
+	// 🤷
+}
+
+// With types - crystal clear!
+function process(data: string[]): number {
+	return data.length
+}
+```
+
+## Type Inference
+
+TypeScript is smart! It can often **infer** the return type:
+
+```ts
+function double(n: number) {
+	return n * 2 // TypeScript knows this returns number
+}
+```
+
+But explicit return types are helpful for:
+
+- Documentation
+- Catching mistakes early
+- Complex functions
+
+In this exercise, you'll write functions with proper TypeScript types.

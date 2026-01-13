@@ -1,0 +1,68 @@
+# Void and Never
+
+Not all functions return meaningful values. TypeScript has two special types for
+these situations: `void` and `never`.
+
+## The `void` Type
+
+`void` means "this function doesn't return a value." It performs a **side
+effect** like logging, updating state, or sending data.
+
+```ts
+function logMessage(message: string): void {
+	console.log(message)
+	// No return statement (or return;)
+}
+```
+
+Common side effects:
+
+- Logging to console
+- Updating DOM elements
+- Sending analytics events
+- Writing to a database
+
+## The `never` Type
+
+`never` means "this function never returns." It either:
+
+1. **Throws an error** (execution stops)
+2. **Runs forever** (infinite loop)
+
+```ts
+function throwError(message: string): never {
+	throw new Error(message)
+}
+
+function infiniteLoop(): never {
+	while (true) {
+		// Never exits
+	}
+}
+```
+
+## Why Does This Matter?
+
+TypeScript uses `never` for **exhaustiveness checking**. If you handle all
+possible cases, the code should be unreachable:
+
+```ts
+type Status = 'pending' | 'success' | 'error'
+
+function handleStatus(status: Status) {
+	switch (status) {
+		case 'pending':
+			return 'Loading...'
+		case 'success':
+			return 'Done!'
+		case 'error':
+			return 'Failed!'
+		default:
+			// If we handled all cases, this is unreachable
+			const _exhaustive: never = status
+			return _exhaustive
+	}
+}
+```
+
+In this exercise, you'll work with both `void` and `never`.

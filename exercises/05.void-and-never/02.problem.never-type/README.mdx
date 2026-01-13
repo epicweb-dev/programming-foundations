@@ -1,0 +1,39 @@
+# The Never Type
+
+👨‍💼 Some functions never return. Not because they return `void` (nothing), but
+because they **can't** return—they throw an error or run forever.
+
+```ts
+function fail(message: string): never {
+	throw new Error(message)
+}
+```
+
+TypeScript uses this for smart type narrowing. After calling a `never` function,
+TypeScript knows the code won't continue:
+
+```ts
+function process(value: string | null): string {
+	if (value === null) {
+		fail('Value cannot be null')
+		// TypeScript knows we won't reach here
+	}
+	return value.toUpperCase() // value is definitely string
+}
+```
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Create a `throwError` function that throws and returns `never`
+2. Create an `assertNonNull` function that throws if value is null
+3. Use exhaustiveness checking in a switch statement
+
+💰 Exhaustiveness pattern:
+
+```ts
+const _exhaustive: never = value
+// If value can be something other than never,
+// TypeScript will error here
+```
+
+📜 [TypeScript Handbook - never](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#the-never-type)

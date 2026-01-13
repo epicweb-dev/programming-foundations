@@ -1,0 +1,23 @@
+# The Never Type
+
+👨‍💼 You've mastered one of TypeScript's most powerful features!
+
+🦉 The exhaustiveness pattern is incredibly useful. If someone adds a new status
+like `'cancelled'` to the union type, TypeScript will error at the default case:
+
+```ts
+type Status = 'pending' | 'success' | 'error' | 'cancelled'
+
+// Now TypeScript errors:
+// Type 'string' is not assignable to type 'never'
+const _exhaustive: never = status // status could be 'cancelled'
+```
+
+This forces you to handle the new case—you can't forget!
+
+This pattern catches bugs at compile time that would otherwise be runtime
+surprises. It's especially valuable when:
+
+- Working with state machines
+- Handling action types (like Redux)
+- Processing API responses with different shapes

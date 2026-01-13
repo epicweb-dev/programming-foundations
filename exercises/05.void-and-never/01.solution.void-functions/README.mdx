@@ -1,0 +1,27 @@
+# Void Functions
+
+👨‍💼 Perfect! You've created functions that do work without returning values.
+
+🦉 Why explicitly write `: void`?
+
+1. **Documentation** - Makes it clear this function is for side effects
+2. **Catch mistakes** - If you accidentally return something, TypeScript warns
+   you
+3. **Consistency** - Matches common style in typed codebases
+
+Note that TypeScript allows `void` functions to have no return statement at all,
+or to use `return;` (with no value). Both are valid:
+
+```ts
+function noReturn(): void {
+	console.log('Done')
+}
+
+function explicitReturn(): void {
+	console.log('Done')
+	return // Explicit but still void
+}
+```
+
+In practice, most teams omit the explicit `return;` if there's nothing to
+return.

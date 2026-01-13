@@ -1,0 +1,19 @@
+# Numbers and Strings
+
+👨‍💼 Perfect! You've created your first typed variables.
+
+Notice how TypeScript gives you autocomplete and error checking:
+
+- If you tried to assign a string to `price`, TypeScript would catch it
+- Template literals automatically convert values to strings when interpolating
+
+🦉 In practice, TypeScript can often **infer** these types:
+
+```ts
+const price = 29.99 // TypeScript infers: number
+const productName = 'TypeScript Guide' // TypeScript infers: string
+```
+
+The explicit type annotations (`: number`, `: string`) are optional here but
+help document your intent. We'll see when they become essential in later
+exercises.

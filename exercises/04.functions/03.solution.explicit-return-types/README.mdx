@@ -1,0 +1,20 @@
+# Explicit Return Types
+
+👨‍💼 Excellent! Your functions now have clear contracts.
+
+🦉 Notice how explicit return types make the function signature tell the whole
+story:
+
+```ts
+function getFullName(firstName: string, lastName: string): string
+function parseAge(ageString: string): number
+function isValidEmail(email: string): boolean
+```
+
+Even without seeing the implementation, you know exactly what each function
+expects and produces. This is invaluable in larger codebases where you might not
+have time to read every function body.
+
+In real projects, teams often have conventions about when to use explicit return
+types. A common approach: explicit for exported functions, inference for
+internal helpers.

@@ -1,0 +1,28 @@
+// Understanding Type Inference
+// When to let TypeScript infer vs. when to be explicit
+
+// TypeScript infers the return type here
+function multiply(a: number, b: number) {
+	return a * b
+}
+
+// With explicit return type, TypeScript catches the bug!
+function divide(a: number, b: number): number {
+	if (b === 0) {
+		throw new Error('Cannot divide by zero')
+	}
+	return a / b
+}
+
+// TypeScript infers boolean from the comparison
+function isEven(n: number) {
+	return n % 2 === 0
+}
+
+// ✅ Test
+console.log(multiply(4, 5)) // 20
+console.log(divide(10, 2)) // 5
+console.log(isEven(4)) // true
+console.log(isEven(7)) // false
+
+export {}

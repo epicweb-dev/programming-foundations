@@ -1,0 +1,39 @@
+# Null and Undefined
+
+👨‍💼 Not every product has all fields filled in. We need to handle missing data
+gracefully. This is where `null` and `undefined` come in.
+
+The difference:
+
+- **`undefined`** - The value hasn't been set (default for uninitialized
+  variables)
+- **`null`** - The value was intentionally set to "nothing"
+
+```ts
+let middleName: string | undefined // might not exist
+const deletedAt: Date | null = null // intentionally empty
+```
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Create a variable `discountCode` that can be `string` or `undefined`
+2. Create a variable `lastPurchaseDate` that can be `string` or `null`, set to
+   `null`
+3. Check if `discountCode` has a value and log an appropriate message
+4. Handle the case where `lastPurchaseDate` is `null`
+
+💰 Use union types with the pipe `|`:
+
+```ts
+let value: string | null = null
+```
+
+💰 Check for null/undefined:
+
+```ts
+if (value !== undefined) {
+	// value is definitely defined here
+}
+```
+
+📜 [TypeScript Handbook - Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)

@@ -1,0 +1,35 @@
+# Type Inference
+
+👨‍💼 TypeScript is smart about inferring types. You don't always need to write
+them explicitly—especially for return types.
+
+```ts
+function add(a: number, b: number) {
+	return a + b // TypeScript knows this returns number
+}
+```
+
+But TypeScript **cannot** infer parameter types (in most cases). You must
+specify them:
+
+```ts
+// ❌ Error: Parameter 'a' implicitly has 'any' type
+function add(a, b) {
+	return a + b
+}
+
+// ✅ Correct
+function add(a: number, b: number) {
+	return a + b
+}
+```
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Observe what TypeScript infers for each function
+2. Hover over function names to see the inferred return types
+3. Add an explicit return type where it catches a bug
+
+💰 In VS Code/Cursor, hover over a function name to see its full type signature.
+
+📜 [TypeScript Handbook - Type Inference](https://www.typescriptlang.org/docs/handbook/type-inference.html)

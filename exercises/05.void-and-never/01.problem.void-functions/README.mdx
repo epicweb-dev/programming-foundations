@@ -1,0 +1,34 @@
+# Void Functions
+
+👨‍💼 Many functions in real applications don't return values—they perform
+actions. These are called **side effects**, and they return `void`.
+
+Examples of side effects:
+
+- Logging information
+- Updating the UI
+- Sending data to a server
+- Playing a sound
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Create a `logInfo` function that logs a message with "[INFO]" prefix
+2. Create a `logError` function that logs with "[ERROR]" prefix
+3. Create a `logWithTimestamp` function that includes the current time
+
+💰 Getting current time:
+
+```ts
+new Date().toISOString()
+```
+
+💰 Void function syntax:
+
+```ts
+function doSomething(param: string): void {
+	console.log(param)
+	// No return needed
+}
+```
+
+📜 [TypeScript Handbook - void](https://www.typescriptlang.org/docs/handbook/2/functions.html#void)

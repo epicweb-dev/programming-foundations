@@ -1,0 +1,71 @@
+# Control Flow
+
+Control flow is how programs make decisions and repeat work. Without it, code
+would just run straight through from top to bottom.
+
+## Conditionals
+
+The `if` statement runs code only when a condition is true:
+
+```ts
+if (temperature > 30) {
+	console.log("It's hot!")
+}
+```
+
+Add `else` for an alternative:
+
+```ts
+if (temperature > 30) {
+	console.log("It's hot!")
+} else {
+	console.log("It's comfortable")
+}
+```
+
+Chain conditions with `else if`:
+
+```ts
+if (temperature > 30) {
+	console.log("It's hot!")
+} else if (temperature > 20) {
+	console.log("It's warm")
+} else {
+	console.log("It's cool")
+}
+```
+
+## Loops
+
+Loops repeat code multiple times:
+
+**`for` loop** - When you know how many times:
+
+```ts
+for (let i = 0; i < 5; i++) {
+	console.log(i)
+}
+```
+
+**`while` loop** - When you don't know how many times:
+
+```ts
+while (condition) {
+	// Keep going until condition is false
+}
+```
+
+**`for...of` loop** - For iterating over arrays (preferred!):
+
+```ts
+for (const item of items) {
+	console.log(item)
+}
+```
+
+<callout-info>
+TypeScript's type narrowing works inside conditionals. When you check a type,
+TypeScript knows the more specific type inside that block.
+</callout-info>
+
+In this exercise, you'll use control flow to build real features.

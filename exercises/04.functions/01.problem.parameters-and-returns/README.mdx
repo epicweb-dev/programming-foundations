@@ -1,0 +1,29 @@
+# Parameters and Return Values
+
+👨‍💼 We need utility functions for our e-commerce platform. Let's start with
+functions that have clear inputs and outputs.
+
+🐨 Open <InlineFile file="index.ts" /> and create these functions:
+
+1. `calculateTax(amount: number, rate: number)` - Returns the tax amount
+2. `formatPrice(cents: number)` - Converts cents to dollar string (e.g., 1999 →
+   "$19.99")
+3. `applyDiscount(price: number, discountPercent: number)` - Returns discounted
+   price
+
+💰 Function syntax:
+
+```ts
+function functionName(param: Type): ReturnType {
+	return value
+}
+```
+
+💰 Converting cents to dollars:
+
+```ts
+const dollars = cents / 100
+dollars.toFixed(2) // "19.99"
+```
+
+📜 [TypeScript Handbook - More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html)
