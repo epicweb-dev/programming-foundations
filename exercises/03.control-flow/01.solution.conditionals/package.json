@@ -2,6 +2,7 @@
   "name": "exercises_03.control-flow_01.solution.conditionals",
   "type": "module",
   "scripts": {
-    "start": "node index.ts"
+    "start": "node index.ts",
+    "test": "node --test index.test.ts"
   }
 }

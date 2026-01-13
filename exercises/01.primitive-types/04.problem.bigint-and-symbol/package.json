@@ -2,6 +2,7 @@
   "name": "exercises_01.primitive-types_04.problem.bigint-and-symbol",
   "type": "module",
   "scripts": {
-    "start": "node index.ts"
+    "start": "node index.ts",
+    "test": "node --test index.test.ts"
   }
 }

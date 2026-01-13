@@ -2,6 +2,7 @@
   "name": "exercises_01.primitive-types_01.solution.numbers-and-strings",
   "type": "module",
   "scripts": {
-    "start": "node index.ts"
+    "start": "node index.ts",
+    "test": "node --test index.test.ts"
   }
 }

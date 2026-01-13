@@ -2,6 +2,7 @@
   "name": "exercises_04.functions_01.problem.parameters-and-returns",
   "type": "module",
   "scripts": {
-    "start": "node index.ts"
+    "start": "node index.ts",
+    "test": "node --test index.test.ts"
   }
 }
