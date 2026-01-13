@@ -1,10 +1,10 @@
 <div>
-  <h1 align="center"><a href="https://www.epicweb.dev/workshops">Workshop Title 🎃</a></h1>
+  <h1 align="center"><a href="https://www.epicweb.dev/workshops">Programming Foundations 🧱</a></h1>
   <strong>
-    Workshop subtitle
+    Master the core building blocks of TypeScript programming
   </strong>
   <p>
-    Workshop summary
+    Learn primitive types, variables, control flow, and functions—the essential foundation for everything you'll build in TypeScript.
   </p>
 </div>
 
@@ -13,7 +13,7 @@
 <div align="center">
   <a
     alt="Epic Web logo with the words Deployed Version"
-    href="https://epicweb-dev-workshop-template.fly.dev/"
+    href="https://epicweb-dev-programming-foundations.fly.dev/"
   >
     <img
       width="300px"
@@ -32,23 +32,22 @@
 
 ## Prerequisites
 
-- TODO: add prerequisites
-- Some
-- Pre-requisite
-- links
-- here
+- Basic familiarity with JavaScript syntax
+- A code editor (VS Code recommended)
+- Curiosity and willingness to learn!
 
 ## Pre-workshop Resources
 
 Here are some resources you can read before taking the workshop to get you up to
 speed on some of the tools and concepts we'll be covering:
 
-- TODO: add resources
+- [TypeScript Handbook - The Basics](https://www.typescriptlang.org/docs/handbook/2/basic-types.html)
+- [JavaScript.info - Data Types](https://javascript.info/types)
 
 ## System Requirements
 
 - [git][git] v2.18 or greater
-- [NodeJS][node] v18 or greater
+- [NodeJS][node] v20 or greater
 - [npm][npm] v8 or greater
 
 All of these must be available in your `PATH`. To verify things are set up
@@ -69,7 +68,7 @@ variable and how to fix it here for [windows][win-path] or
 Use the Epic Workshop CLI to get this setup:
 
 ```sh nonumber
-npx --yes epicshop@latest add workshop-template
+npx --yes epicshop@latest add programming-foundations
 ```
 
 If you experience errors here, please open [an issue][issue] with as many
@@ -86,13 +85,13 @@ Learn all about the workshop app on the
 [npm]: https://www.npmjs.com/
 [node]: https://nodejs.org
 [git]: https://git-scm.com/
-[build-badge]: https://img.shields.io/github/actions/workflow/status/epicweb-dev/workshop-template/validate.yml?branch=main&logo=github&style=flat-square
-[build]: https://github.com/epicweb-dev/workshop-template/actions?query=workflow%3Avalidate
+[build-badge]: https://img.shields.io/github/actions/workflow/status/epicweb-dev/programming-foundations/validate.yml?branch=main&logo=github&style=flat-square
+[build]: https://github.com/epicweb-dev/programming-foundations/actions?query=workflow%3Avalidate
 [license-badge]: https://img.shields.io/badge/license-GPL%203.0%20License-blue.svg?style=flat-square
-[license]: https://github.com/epicweb-dev/workshop-template/blob/main/LICENSE
+[license]: https://github.com/epicweb-dev/programming-foundations/blob/main/LICENSE
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
 [coc]: https://kentcdodds.com/conduct
 [win-path]: https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/
 [mac-path]: http://stackoverflow.com/a/24322978/971592
-[issue]: https://github.com/epicweb-dev/workshop-template/issues/new
+[issue]: https://github.com/epicweb-dev/programming-foundations/issues/new
 <!-- prettier-ignore-end -->
