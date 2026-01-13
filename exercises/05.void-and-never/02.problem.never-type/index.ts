@@ -10,6 +10,8 @@
 // 🐨 Create `assertNonNull` that takes a value of type T | null
 // If null, throw an error. Otherwise, return the value.
 // 💰 function assertNonNull<T>(value: T | null, message: string): T
+// 🦉 Note: The <T> syntax is called "generics" - we'll cover this in detail
+// in the Type Safety workshop. For now, just follow the pattern above.
 
 // Example of exhaustiveness checking
 type Status = 'pending' | 'success' | 'error'

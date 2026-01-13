@@ -1,7 +1,7 @@
 // Shopping Cart Analysis
 // Using for...of for cleaner iteration
 
-const prices: number[] = [29.99, 9.99, 49.99, 4.99, 19.99]
+const prices: Array<number> = [29.99, 9.99, 49.99, 4.99, 19.99]
 
 // 🐨 Create variables for total, count, and highest price
 // let total = 0

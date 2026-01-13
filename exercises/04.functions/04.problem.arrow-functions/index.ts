@@ -12,7 +12,7 @@ function greet(name: string): string {
 }
 
 // 🐨 Convert this to an arrow function (keep the explicit return - it has multiple lines)
-function calculateTotal(prices: number[], taxRate: number): number {
+function calculateTotal(prices: Array<number>, taxRate: number): number {
 	const subtotal = prices.reduce((sum, price) => sum + price, 0)
 	const tax = subtotal * taxRate
 	return subtotal + tax
