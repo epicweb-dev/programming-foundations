@@ -2,8 +2,8 @@
   "name": "programming-foundations",
   "private": true,
   "epicshop": {
-    "title": "Typed Foundations 🧱",
-    "subtitle": "Values, Control Flow, and Functions - How values move through programs",
+    "title": "Programming Foundations 🧱",
+    "subtitle": "Master the core building blocks of TypeScript programming",
     "githubRepo": "https://github.com/epicweb-dev/programming-foundations",
     "subdomain": "programming-foundations",
     "instructor": {
