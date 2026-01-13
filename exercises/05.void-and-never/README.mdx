@@ -22,6 +22,12 @@ Common side effects:
 - Sending analytics events
 - Writing to a database
 
+<callout-info>
+	Most functions should return a value (be "pure"). Functions with `void` return
+	types are the exception—they exist to cause side effects. When you see `void`,
+	you know the function is doing something beyond computing a result.
+</callout-info>
+
 ## The `never` Type
 
 `never` means "this function never returns." It either:
