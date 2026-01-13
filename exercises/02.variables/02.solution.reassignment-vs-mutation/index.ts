@@ -22,4 +22,4 @@ console.log('Modified list:', shoppingList)
 // The variable shoppingList always points to the SAME array,
 // but the contents of that array can change.
 
-export {}
+export { shoppingList }

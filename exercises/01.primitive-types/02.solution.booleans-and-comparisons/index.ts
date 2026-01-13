@@ -18,4 +18,4 @@ console.log('Is On Sale:', isOnSale)
 console.log('Has Discount:', hasDiscount)
 console.log('Can Purchase:', canPurchase)
 
-export {}
+export { isAvailable, isOnSale, hasDiscount, canPurchase }

@@ -40,4 +40,4 @@ console.log(getStatusMessage('pending'))
 console.log(getStatusMessage('success'))
 console.log(getStatusMessage('error'))
 
-export {}
+export { throwError, assertNonNull, getStatusMessage }

@@ -19,4 +19,4 @@ console.log(parseAge('25')) // 25
 console.log(isValidEmail('test@example.com')) // true
 console.log(isValidEmail('invalid-email')) // false
 
-export {}
+export { getFullName, parseAge, isValidEmail }

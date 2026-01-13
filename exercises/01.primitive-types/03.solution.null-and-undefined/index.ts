@@ -17,4 +17,4 @@ if (lastPurchaseDate !== null) {
 	console.log('No previous purchases')
 }
 
-export {}
+export { discountCode, lastPurchaseDate }

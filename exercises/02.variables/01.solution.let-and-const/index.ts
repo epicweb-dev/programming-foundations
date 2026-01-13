@@ -23,4 +23,4 @@ console.log('Cart subtotal:', cartTotal)
 console.log('Tax:', cartTotal * TAX_RATE)
 console.log('Final total:', finalTotal)
 
-export {}
+export { TAX_RATE, cartTotal, finalTotal }

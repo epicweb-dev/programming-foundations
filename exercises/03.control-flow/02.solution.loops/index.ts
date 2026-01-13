@@ -19,4 +19,4 @@ for (let i = 0; i < prices.length; i++) {
 console.log(`Total: $${total.toFixed(2)}`)
 console.log(`Expensive items (>$10): ${expensiveItemCount}`)
 
-export {}
+export { prices, total, expensiveItemCount }
