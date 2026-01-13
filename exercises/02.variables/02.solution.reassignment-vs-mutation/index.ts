@@ -1,7 +1,7 @@
 // Understanding Reassignment vs Mutation
 
 // This array is declared with const
-const shoppingList: string[] = ['milk', 'eggs', 'bread']
+const shoppingList: Array<string> = ['milk', 'eggs', 'bread']
 
 console.log('Original list:', shoppingList)
 

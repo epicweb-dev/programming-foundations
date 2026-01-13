@@ -1,0 +1,32 @@
+# BigInt and Symbol
+
+👨‍💼 Nice work! You now know all of TypeScript's primitive types.
+
+🦉 When to use these types:
+
+**BigInt:**
+
+- Financial calculations requiring precision beyond `number`
+- Cryptographic operations
+- Working with database IDs that exceed safe integer limits
+- Any math requiring very large integers
+
+**Symbol:**
+
+- Creating unique object keys that won't collide with string keys
+- Library-internal properties that shouldn't be accessed directly
+- Well-known symbols like `Symbol.iterator` for custom iteration
+
+In practice, `number`, `string`, `boolean`, `null`, and `undefined` cover 99% of
+use cases. But it's good to know `bigint` and `symbol` exist when you need them!
+
+```ts
+// The complete set of TypeScript primitives:
+const str: string = 'hello'
+const num: number = 42
+const bool: boolean = true
+const nul: null = null
+const undef: undefined = undefined
+const big: bigint = 9007199254740993n
+const sym: symbol = Symbol('unique')
+```

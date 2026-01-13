@@ -1,0 +1,27 @@
+# Arrow Functions
+
+👨‍💼 Great work! You've learned when and how to use arrow functions.
+
+🦉 Key takeaways:
+
+1. **Implicit returns** work when the function body is a single expression—no
+   braces, no `return` keyword needed
+2. **Arrow functions are perfect for callbacks** because they're concise and
+   don't rebind `this`
+3. **Function declarations** are still best for top-level named functions
+   because of hoisting and clearer stack traces
+
+```ts
+// Use arrow functions for callbacks
+const doubled = numbers.map((n) => n * 2)
+const evens = numbers.filter((n) => n % 2 === 0)
+
+// Use function declarations for top-level functions
+function processOrder(order: Order): Receipt {
+	// ...
+}
+```
+
+The `this` binding difference matters in React class components (rarely used
+now) and some object-oriented patterns. Arrow functions capture `this` from
+their surrounding scope, while regular functions get their own `this`.

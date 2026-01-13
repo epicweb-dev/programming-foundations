@@ -43,7 +43,7 @@ function process(data) {
 }
 
 // With types - crystal clear!
-function process(data: string[]): number {
+function process(data: Array<string>): number {
 	return data.length
 }
 ```
@@ -64,4 +64,22 @@ But explicit return types are helpful for:
 - Catching mistakes early
 - Complex functions
 
-In this exercise, you'll write functions with proper TypeScript types.
+## Function Forms
+
+TypeScript supports multiple ways to write functions:
+
+```ts
+// Function declaration - best for top-level named functions
+function processOrder(order: Order): Receipt {
+	// ...
+}
+
+// Arrow function - best for callbacks and short functions
+const double = (n: number): number => n * 2
+
+// Arrow function with implicit return
+const items = numbers.map((n) => n * 2)
+```
+
+In this exercise, you'll write functions with proper TypeScript types and learn
+when to use each function form.

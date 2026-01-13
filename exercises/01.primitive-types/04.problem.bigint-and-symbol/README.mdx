@@ -1,0 +1,52 @@
+# BigInt and Symbol
+
+👨‍💼 TypeScript has two more primitive types that are less commonly used but good
+to know about: `bigint` and `symbol`.
+
+## BigInt - Large Integers
+
+Regular `number` has limits—it can't accurately represent integers larger than
+`Number.MAX_SAFE_INTEGER` (about 9 quadrillion). `bigint` handles arbitrarily
+large integers:
+
+```ts
+const big: bigint = 9007199254740993n // Note the 'n' suffix
+const alsoBig: bigint = BigInt('9007199254740993')
+
+// BigInt arithmetic
+const sum = 1000000000000000000n + 1n // Works correctly!
+```
+
+<callout-warning>
+	BigInt and number don't mix directly. You can't do `5n + 3`—you need to
+	convert one type to the other.
+</callout-warning>
+
+## Symbol - Unique Identifiers
+
+Symbols are guaranteed-unique values, useful as object keys when you need to
+avoid name collisions:
+
+```ts
+const id: symbol = Symbol('userId')
+const anotherId: symbol = Symbol('userId')
+
+id === anotherId // false - each Symbol() creates a unique value!
+```
+
+Symbols are often used for "hidden" object properties or library-internal keys.
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Create a bigint literal with the `n` suffix
+2. Perform arithmetic with bigint values
+3. Create symbols and observe their uniqueness
+
+💰 BigInt syntax:
+
+```ts
+const big: bigint = 123456789012345678901234567890n
+```
+
+📜 [MDN - BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
+📜 [MDN - Symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)

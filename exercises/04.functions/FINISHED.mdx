@@ -8,24 +8,27 @@ You learned:
 - 📤 **Return types** specify what a function produces
 - 🔮 **Type inference** figures out return types automatically
 - ✍️ **Explicit return types** document your intent and catch mistakes
+- ➡️ **Arrow functions** for concise callbacks and implicit returns
 
-🦉 A good practice: Always type your parameters. Let TypeScript infer simple
-return types, but add explicit return types for:
+🦉 **When to use each function form:**
 
-- Public API functions
-- Functions with multiple return statements
-- Complex logic where inference might not match your intent
+| Context                   | Use                  | Example                           |
+| ------------------------- | -------------------- | --------------------------------- |
+| Top-level named functions | Function declaration | `function processOrder() { ... }` |
+| Callbacks                 | Arrow function       | `items.map((n) => n * 2)`         |
+| Single-expression funcs   | Arrow (implicit)     | `const double = (n) => n * 2`     |
 
 ```ts
-// Let inference work for simple functions
-function double(n: number) {
-	return n * 2
-}
-
-// Be explicit for public APIs or complex functions
+// Function declaration for top-level functions
 function processOrder(items: CartItem[]): OrderResult {
 	// Complex logic...
 }
+
+// Arrow functions for callbacks
+const doubled = items.map((item) => item.price * 2)
+
+// Arrow function with implicit return
+const isExpensive = (price: number): boolean => price > 100
 ```
 
 Next up: Special return types—`void` and `never`!

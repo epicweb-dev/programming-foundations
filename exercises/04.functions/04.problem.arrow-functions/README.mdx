@@ -1,0 +1,48 @@
+# Arrow Functions
+
+👨‍💼 Arrow functions are a concise syntax for writing functions. They're
+especially useful for callbacks and short functions.
+
+```ts
+// Function declaration
+function double(n: number): number {
+	return n * 2
+}
+
+// Arrow function equivalent
+const double = (n: number): number => {
+	return n * 2
+}
+
+// Arrow function with implicit return (no braces!)
+const double = (n: number): number => n * 2
+```
+
+## When to Use Each Form
+
+| Context                       | Use                  | Example                           |
+| ----------------------------- | -------------------- | --------------------------------- |
+| Top-level named functions     | Function declaration | `function processOrder() { ... }` |
+| Callbacks                     | Arrow function       | `items.map((item) => item.price)` |
+| Short single-expression funcs | Arrow (implicit)     | `const double = (n) => n * 2`     |
+| Object methods                | Method shorthand     | `{ calculate() { ... } }`         |
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Convert the function declarations to arrow functions
+2. Use implicit returns where the function body is a single expression
+3. Create a `processNumbers` function that uses callbacks with arrow functions
+
+💰 Implicit return syntax (no braces, no `return` keyword):
+
+```ts
+const add = (a: number, b: number): number => a + b
+```
+
+💰 Arrow functions in callbacks:
+
+```ts
+const doubled = numbers.map((n) => n * 2)
+```
+
+📜 [Function Forms](https://kentcdodds.com/blog/function-forms)
