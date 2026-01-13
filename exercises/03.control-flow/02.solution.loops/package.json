@@ -1,0 +1,7 @@
+{
+  "name": "exercises_03.control-flow_02.solution.loops",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

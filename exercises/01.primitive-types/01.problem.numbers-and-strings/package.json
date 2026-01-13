@@ -1,0 +1,7 @@
+{
+  "name": "exercises_01.primitive-types_01.problem.numbers-and-strings",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

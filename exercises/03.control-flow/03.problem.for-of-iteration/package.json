@@ -1,0 +1,7 @@
+{
+  "name": "exercises_03.control-flow_03.problem.for-of-iteration",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

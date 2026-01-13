@@ -1,0 +1,7 @@
+{
+  "name": "exercises_04.functions_02.problem.type-inference",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "exercises_05.void-and-never_02.solution.never-type",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

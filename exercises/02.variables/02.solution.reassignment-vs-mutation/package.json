@@ -1,0 +1,7 @@
+{
+  "name": "exercises_02.variables_02.solution.reassignment-vs-mutation",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

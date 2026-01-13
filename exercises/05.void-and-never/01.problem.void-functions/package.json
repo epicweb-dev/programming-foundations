@@ -1,0 +1,7 @@
+{
+  "name": "exercises_05.void-and-never_01.problem.void-functions",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

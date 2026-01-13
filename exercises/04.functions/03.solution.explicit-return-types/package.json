@@ -1,0 +1,7 @@
+{
+  "name": "exercises_04.functions_03.solution.explicit-return-types",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}
