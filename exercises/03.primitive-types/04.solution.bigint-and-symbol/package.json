@@ -1,0 +1,8 @@
+{
+  "name": "exercises_03.primitive-types_04.solution.bigint-and-symbol",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts",
+    "test": "node --test index.test.ts"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "exercises_01.expressions-and-output_01.solution.hello-world",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts",
+    "test": "node --test index.test.ts"
+  }
+}

@@ -1,0 +1,69 @@
+# Primitive Types
+
+Now that you know how to use `console.log()` and variables, let's learn about
+**type annotations** - one of TypeScript's superpowers.
+
+You've already been using values like numbers and strings. TypeScript can
+**infer** their types automatically:
+
+```ts
+const age = 25 // TypeScript knows this is a number
+const name = 'Alice' // TypeScript knows this is a string
+```
+
+But you can also be **explicit** about types using annotations:
+
+```ts
+const age: number = 25
+const name: string = 'Alice'
+const isActive: boolean = true
+```
+
+The core types you'll use most often:
+
+- **`number`** - All numeric values (integers, decimals, negatives)
+- **`string`** - Text data (always in quotes)
+- **`boolean`** - True or false values
+- **`null`** - Intentional absence of a value
+- **`undefined`** - Variable not yet assigned
+- **`bigint`** - Arbitrarily large integers
+- **`symbol`** - Unique identifiers
+
+## Why Types Matter
+
+Without types, errors hide until your code runs:
+
+```js
+// JavaScript - no error until runtime
+function double(x) {
+	return x * 2
+}
+double('hello') // Returns NaN at runtime 😱
+```
+
+With TypeScript, you catch the mistake immediately:
+
+```ts
+function double(x: number): number {
+	return x * 2
+}
+double('hello') // ❌ Error: Argument of type 'string' is not assignable
+```
+
+<callout-info>
+	TypeScript's type annotations are like documentation that the compiler can
+	verify. They tell other developers (and future you) exactly what kind of data
+	your code expects.
+</callout-info>
+
+## Null and Undefined
+
+TypeScript also has two special types for representing "absence of value":
+
+- **`undefined`** - A variable that hasn't been assigned a value
+- **`null`** - An intentional absence of any value
+
+Understanding the difference helps you handle edge cases gracefully.
+
+In this exercise, you'll work with these primitive types to build confidence in
+TypeScript's type system.

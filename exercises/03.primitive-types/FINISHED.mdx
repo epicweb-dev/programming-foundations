@@ -1,0 +1,30 @@
+# Primitive Types
+
+👨‍💼 Excellent work! You now have a solid understanding of TypeScript's primitive
+types.
+
+You learned:
+
+- 🔢 **Numbers** represent all numeric values in TypeScript
+- 📝 **Strings** hold text data and support template literals
+- ✅ **Booleans** are the foundation of conditional logic
+- ❓ **Null and undefined** represent absence of value in different ways
+- 🔢 **BigInt** handles integers larger than `Number.MAX_SAFE_INTEGER`
+- 🔑 **Symbol** creates unique identifiers that never collide
+
+🦉 A key insight: TypeScript's type inference often figures out types for you.
+You don't always need to write `: number` or `: string`—TypeScript can infer
+them from the values you assign.
+
+```ts
+const age = 25 // TypeScript knows this is a number
+const name = 'Alice' // TypeScript knows this is a string
+```
+
+But explicit types are valuable when:
+
+- You want to document your intent
+- TypeScript can't infer the type (like function parameters)
+- You're declaring a variable without an initial value
+
+Next up: Control flow - making decisions and repeating work!

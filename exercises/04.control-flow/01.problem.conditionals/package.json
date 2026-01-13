@@ -1,0 +1,8 @@
+{
+  "name": "exercises_04.control-flow_01.problem.conditionals",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts",
+    "test": "node --test index.test.ts"
+  }
+}

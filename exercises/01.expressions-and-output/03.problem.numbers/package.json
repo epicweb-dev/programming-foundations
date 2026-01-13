@@ -1,0 +1,8 @@
+{
+  "name": "exercises_01.expressions-and-output_03.problem.numbers",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts",
+    "test": "node --test index.test.ts"
+  }
+}

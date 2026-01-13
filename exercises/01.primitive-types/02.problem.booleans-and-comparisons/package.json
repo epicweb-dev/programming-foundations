@@ -1,8 +1,0 @@
-{
-  "name": "exercises_01.primitive-types_02.problem.booleans-and-comparisons",
-  "type": "module",
-  "scripts": {
-    "start": "node index.ts",
-    "test": "node --test index.test.ts"
-  }
-}
