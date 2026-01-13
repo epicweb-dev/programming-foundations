@@ -20,3 +20,16 @@ console.log(isValidEmail('test@example.com')) // true
 console.log(isValidEmail('invalid-email')) // false
 
 export { getFullName, parseAge, isValidEmail }
+
+// 🦉 Alternative: Inference-first approach
+// In practice, many developers prefer to let TypeScript infer return types.
+// This reduces redundancy since TypeScript can figure out the return type:
+//
+// function getFullName(firstName: string, lastName: string) {
+//   return `${firstName} ${lastName}`  // TypeScript infers: string
+// }
+//
+// Explicit return types are most valuable when:
+// - The function is exported as part of a public API
+// - You want to catch implementation mistakes early
+// - The inferred type would be too wide (e.g., string | number vs string)

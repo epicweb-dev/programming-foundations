@@ -1,15 +1,15 @@
 // BigInt and Symbol
 // Less common but important primitive types
 
-// BigInt for large integers
-const largeNumber: bigint = 9007199254740993n
-const anotherLarge: bigint = 1000000000000000000n
-const sum: bigint = largeNumber + anotherLarge
+// BigInt for large integers (TypeScript infers bigint from the n suffix)
+const largeNumber = 9007199254740993n
+const anotherLarge = 1000000000000000000n
+const sum = largeNumber + anotherLarge
 
-// Symbols are unique
-const userId: symbol = Symbol('user-id')
-const anotherId: symbol = Symbol('user-id')
-const areEqual: boolean = userId === anotherId // false!
+// Symbols are unique (TypeScript infers symbol from Symbol())
+const userId = Symbol('user-id')
+const anotherId = Symbol('user-id')
+const areEqual = userId === anotherId // false!
 
 console.log('Large number:', largeNumber)
 console.log('Another large:', anotherLarge)
