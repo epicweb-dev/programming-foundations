@@ -16,6 +16,3 @@ const grade: string = 'B'
 // 💰 Don't forget the `break` after each case!
 
 // console.log(`Grade ${grade}: ${description}`)
-
-// 🦺 This line ensures TypeScript treats this as a module
-export {}
