@@ -1,5 +1,5 @@
 {
-  "name": "exercises_01.expressions-and-output_04.problem.template-literals",
+  "name": "exercises_01.expressions-and-output_04.solution.numbers",
   "type": "module",
   "scripts": {
     "start": "node index.ts",

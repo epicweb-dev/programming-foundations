@@ -1,0 +1,52 @@
+# Escaping Strings
+
+👨‍💼 Sometimes you need to include special characters inside your strings. What
+happens if you want to include a quote character inside a string that's wrapped
+in quotes?
+
+If you use single quotes, you need to **escape** single quotes inside the string
+using a backslash (`\`):
+
+{/* prettier-ignore */}
+```ts
+console.log('It\'s great')  // Prints: It's great
+```
+
+And if you use double quotes, you need to escape double quotes inside the string:
+
+{/* prettier-ignore */}
+```ts
+console.log("He said \"Hello\"")  // Prints: He said "Hello"
+```
+
+## Special Characters
+
+The backslash also lets you include other special characters that you can't
+easily type:
+
+| Escape Sequence | Character    |
+| --------------- | ------------ |
+| `\n`            | Newline      |
+| `\t`            | Tab          |
+| `\\`            | Backslash    |
+| `\'`            | Single quote |
+| `\"`            | Double quote |
+
+```ts
+console.log('Line 1\nLine 2') // Prints on two lines
+console.log('Name:\tKody') // Prints with a tab between
+```
+
+🐨 Open <InlineFile file="index.ts" /> and complete the following tasks:
+
+1. Log a string using single quotes that contains an apostrophe (like "It's
+   working!")
+2. Log a string using double quotes that contains a quoted phrase (like: She
+   said "Hi")
+3. Log "Hello" and "World" on separate lines using `\n` in a single string
+4. Log tab-separated column headers: "Name:" "Age:" "City:" using `\t`
+
+💰 Remember: use `\'` to escape single quotes, `\"` to escape double quotes,
+`\n` for newlines, and `\t` for tabs!
+
+📜 [Escape sequences on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#escape_sequences)

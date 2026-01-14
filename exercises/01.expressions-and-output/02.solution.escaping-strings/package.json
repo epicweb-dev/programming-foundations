@@ -1,5 +1,5 @@
 {
-  "name": "exercises_01.expressions-and-output_03.solution.numbers",
+  "name": "exercises_01.expressions-and-output_02.solution.escaping-strings",
   "type": "module",
   "scripts": {
     "start": "node index.ts",

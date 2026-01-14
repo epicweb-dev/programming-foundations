@@ -3,8 +3,23 @@
 👨‍💼 Remember how tedious string concatenation was? Template literals make
 combining strings and expressions much easier!
 
-Instead of quotes, template literals use **backticks** (`` ` ``). Inside them,
-you can embed any expression using `${expression}`:
+Instead of quotes, template literals use **backticks**:
+
+```ts
+console.log(`Hello, World!`)
+```
+
+What makes these so special is you don't have to escape quotes or even
+newline characters:
+
+```ts
+console.log(`Hello,
+World!`)
+
+// Prints the same thing as: console.log('Hello,\nWorld!')
+```
+
+In addition, while you can still use string concatenation, you can embed any expression using `${expression}`:
 
 ```ts
 console.log(`2 + 2 = ${2 + 2}`) // Prints: 2 + 2 = 4
