@@ -35,6 +35,24 @@ if (temperature > 30) {
 }
 ```
 
+## Switch Statements
+
+When comparing one value against many specific options, `switch` is cleaner than
+a long `if`/`else if` chain:
+
+```ts
+switch (day) {
+	case 'Monday':
+		console.log('Start of week')
+		break
+	case 'Friday':
+		console.log('Almost weekend!')
+		break
+	default:
+		console.log('Regular day')
+}
+```
+
 ## Loops
 
 Loops repeat code multiple times:

@@ -1,5 +1,5 @@
 {
-  "name": "exercises_04.control-flow_02.solution.loops",
+  "name": "exercises_04.control-flow_03.solution.loops",
   "type": "module",
   "scripts": {
     "start": "node index.ts",

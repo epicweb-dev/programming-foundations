@@ -1,0 +1,28 @@
+# Switch Statements
+
+👨‍💼 Nice! The `switch` statement makes it clear we're matching one value against
+several options.
+
+🦉 When to use `switch` vs `if`/`else`:
+
+- **Use `switch`** when comparing one value against multiple specific values
+- **Use `if`/`else`** when checking different conditions or ranges
+
+```ts
+// ✅ Good use of switch - matching exact values
+switch (grade) {
+	case 'A':
+		return 'Excellent'
+	// ...
+}
+
+// ✅ Good use of if/else - checking ranges
+if (score >= 90) {
+	grade = 'A'
+} else if (score >= 80) {
+	grade = 'B'
+}
+```
+
+The `switch` statement also supports "fall-through" where multiple cases can
+share the same code—but that's an advanced pattern we won't cover here.

@@ -1,5 +1,5 @@
 {
-  "name": "exercises_04.control-flow_03.solution.for-of-iteration",
+  "name": "exercises_04.control-flow_03.problem.loops",
   "type": "module",
   "scripts": {
     "start": "node index.ts",

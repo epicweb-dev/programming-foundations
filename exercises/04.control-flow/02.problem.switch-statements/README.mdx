@@ -1,0 +1,41 @@
+# Switch Statements
+
+👨‍💼 We've been using `if`/`else if` chains, but when you're checking one value
+against many possible matches, a `switch` statement is often cleaner.
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Create a `description` variable to hold the feedback text
+2. Write a `switch` statement that checks the `grade` value and sets the
+   appropriate description:
+   - 'A' → "Excellent"
+   - 'B' → "Good"
+   - 'C' → "Satisfactory"
+   - 'D' → "Needs Improvement"
+   - 'F' → "Failing"
+   - Any other value → "Invalid grade"
+
+💰 Switch statement structure:
+
+```ts
+switch (value) {
+	case 'option1':
+		// do something
+		break
+	case 'option2':
+		// do something else
+		break
+	default:
+	// handle all other cases
+}
+```
+
+<callout-warning>
+	Don't forget the `break` statement after each case! Without it, execution
+	"falls through" to the next case.
+</callout-warning>
+
+📜 [MDN - switch statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
+
+🐨 Once you've completed the exercise, run `node index.ts` in the playground to
+test your work!
