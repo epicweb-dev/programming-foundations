@@ -23,5 +23,3 @@ console.log('Is On Sale:', isOnSale)
 console.log('Has Discount:', hasDiscount)
 // @ts-expect-error - 💣 remove this comment
 console.log('Can Purchase:', canPurchase)
-
-export {}

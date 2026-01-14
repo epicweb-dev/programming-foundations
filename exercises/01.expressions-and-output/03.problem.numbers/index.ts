@@ -9,5 +9,3 @@
 
 // 🐨 Log the result of (10 + 5) * 2
 // 💰 Parentheses control order of operations
-
-export {}

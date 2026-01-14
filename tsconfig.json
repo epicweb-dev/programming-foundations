@@ -9,6 +9,6 @@
 		"noEmit": true,
 		"allowImportingTsExtensions": true
 	},
-	"include": ["**/*.ts", "**/*.tsx"],
+	"include": ["**/*.ts", "**/*.tsx", "playground/**/*.ts"],
 	"exclude": ["node_modules", "**/node_modules"]
 }

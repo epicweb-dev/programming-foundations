@@ -6,5 +6,3 @@ console.log('Hello' + ' ' + 'TypeScript')
 console.log('Kody' + ' ' + 'Koala')
 
 console.log('I' + ' ' + 'am' + ' ' + 'learning' + ' ' + 'to' + ' ' + 'code')
-
-export {}

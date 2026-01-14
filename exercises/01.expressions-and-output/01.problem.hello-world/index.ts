@@ -4,5 +4,3 @@
 // 🐨 Use console.log() to print "Hello, World!"
 
 // 🐨 Use console.log() to print your name (as a string)
-
-export {}

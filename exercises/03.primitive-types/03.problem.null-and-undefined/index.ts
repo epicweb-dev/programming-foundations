@@ -16,5 +16,3 @@
 // If it does, log "Last purchase: [date]"
 // If not, log "No previous purchases"
 // 💰 Use: if (lastPurchaseDate !== null)
-
-export {}

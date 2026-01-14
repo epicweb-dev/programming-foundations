@@ -20,5 +20,3 @@ console.log('Modified list:', shoppingList)
 // 🦉 Key insight: const prevents reassignment, not mutation!
 // The variable shoppingList always points to the SAME array,
 // but the contents of that array can change.
-
-export {}

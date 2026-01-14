@@ -20,5 +20,3 @@
 // console.log(calculateTax(100, 0.08)) // 8
 // console.log(formatPrice(1999)) // "$19.99"
 // console.log(applyDiscount(100, 20)) // 80
-
-export {}

@@ -39,5 +39,3 @@ function getStatusMessage(status: Status): string {
 console.log(getStatusMessage('pending'))
 // console.log(getStatusMessage('success'))
 // console.log(getStatusMessage('error'))
-
-export {}

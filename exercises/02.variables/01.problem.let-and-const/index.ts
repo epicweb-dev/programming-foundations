@@ -24,5 +24,3 @@ const laptopPrice = 999.99
 console.log('Cart subtotal:', cartTotal)
 // console.log('Tax:', cartTotal * TAX_RATE)
 // console.log('Final total:', finalTotal)
-
-export {}

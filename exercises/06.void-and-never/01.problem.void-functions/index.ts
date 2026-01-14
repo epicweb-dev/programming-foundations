@@ -14,5 +14,3 @@
 // logInfo('Application started')
 // logError('Connection failed')
 // logWithTimestamp('User logged in')
-
-export {}

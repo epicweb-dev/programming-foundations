@@ -24,5 +24,3 @@
 // console.log('userId:', userId)
 // console.log('anotherId:', anotherId)
 // console.log('Are symbols equal?', areEqual) // false
-
-export {}

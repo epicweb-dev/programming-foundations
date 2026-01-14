@@ -29,5 +29,3 @@ console.log(multiply(4, 5)) // 20
 console.log(divide(10, 2)) // 5
 // console.log(isEven(4)) // true
 // console.log(isEven(7)) // false
-
-export {}

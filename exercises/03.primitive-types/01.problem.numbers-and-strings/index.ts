@@ -22,4 +22,3 @@ console.log('Quantity:', quantity)
 console.log('Description:', description)
 
 // 🦺 This line ensures TypeScript treats this as a module
-export {}
