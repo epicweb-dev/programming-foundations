@@ -1,0 +1,50 @@
+# JSDoc Documentation
+
+👨‍💼 Code without documentation is like a recipe without instructions—technically
+all the ingredients are there, but good luck figuring out how to use them!
+
+JSDoc is a documentation format that lives in special comments above your
+functions. The best part? TypeScript and your IDE understand JSDoc, so your
+documentation shows up in tooltips and autocomplete.
+
+```ts
+/**
+ * Calculates the area of a rectangle.
+ * @param width - The width of the rectangle
+ * @param height - The height of the rectangle
+ * @returns The area in square units
+ * @example
+ * const area = calculateArea(5, 10)
+ * console.log(area) // 50
+ */
+function calculateArea(width: number, height: number): number {
+	return width * height
+}
+```
+
+When you hover over `calculateArea` anywhere in your codebase, you'll see this
+documentation!
+
+## Common JSDoc Tags
+
+| Tag        | Purpose                            |
+| ---------- | ---------------------------------- |
+| `@param`   | Documents a function parameter     |
+| `@returns` | Documents what the function returns|
+| `@example` | Shows how to use the function      |
+| `@throws`  | Documents errors the function throws|
+| `@see`     | Links to related documentation     |
+
+🐨 Open <InlineFile file="index.ts" /> and add JSDoc comments to each function.
+
+💰 The description goes right after the opening `/**`:
+
+```ts
+/**
+ * This is the description that explains what the function does.
+ * It can span multiple lines.
+ * @param name - Description of the parameter
+ */
+```
+
+📜 [JSDoc Reference](https://jsdoc.app/)

@@ -1,0 +1,8 @@
+{
+  "name": "exercises_05.functions_05.solution.jsdoc",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts",
+    "test": "node --test index.test.ts"
+  }
+}

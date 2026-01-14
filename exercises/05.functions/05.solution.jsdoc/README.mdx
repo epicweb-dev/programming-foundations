@@ -1,0 +1,38 @@
+# JSDoc Documentation
+
+👨‍💼 Excellent work! Your functions now have professional documentation.
+
+🦉 Key takeaways about JSDoc:
+
+1. **IDE Integration** - When you hover over a documented function, you'll see
+   the description, parameters, return type, and examples right in your editor
+2. **Self-Documenting Code** - Good JSDoc makes code easier to understand
+   without reading the implementation
+3. **`@example` is powerful** - Examples show how to actually use the function,
+   which is often clearer than a description
+
+```ts
+/**
+ * Constrains a value to be within a specified range.
+ * @param value - The value to clamp
+ * @param min - The minimum allowed value
+ * @param max - The maximum allowed value
+ * @returns The clamped value between min and max
+ * @example
+ * clamp(15, 0, 10)  // returns 10
+ * clamp(-5, 0, 10)  // returns 0
+ */
+function clamp(value: number, min: number, max: number): number {
+	return Math.max(min, Math.min(max, value))
+}
+```
+
+While TypeScript gives you type information automatically, JSDoc adds the
+*human* context: what does this function actually do? When should I use it?
+What do the numbers mean?
+
+📝 For your own projects, consider adding JSDoc to:
+
+- Public API functions
+- Complex utility functions
+- Functions with non-obvious parameter meanings
