@@ -32,7 +32,7 @@
 
 ## Prerequisites
 
-- Basic familiarity with JavaScript syntax
+- Basic familiarity with Programming syntax
 - A code editor (VS Code recommended)
 - Curiosity and willingness to learn!
 
