@@ -44,3 +44,14 @@ arr.push(7) // Mutation - modifying the SAME array
 </callout-warning>
 
 Understanding this distinction helps you write predictable, bug-free code.
+
+<callout-info>
+	You might encounter `var` in older JavaScript code. It's the original way to
+	declare variables, but it has confusing scoping rules (function scope instead
+	of block scope) and allows redeclaration. Modern JavaScript introduced `let`
+	and `const` specifically to fix these issues. There's no reason to use `var`
+	in new code, which is why we focus exclusively on `let` and `const`.
+</callout-info>
+
+📜 For more details, see MDN's guide on [variable
+declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations).

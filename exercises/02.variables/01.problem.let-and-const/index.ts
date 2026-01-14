@@ -20,7 +20,7 @@ const laptopPrice = 999.99
 // 🐨 Try uncommenting the line below - what happens?
 // TAX_RATE = 0.10
 
-// @ts-expect-error - 💣 remove this comment
-console.log('Cart subtotal:', cartTotal)
+// Uncomment the following lines to see the results
+// console.log('Cart subtotal:', cartTotal)
 // console.log('Tax:', cartTotal * TAX_RATE)
 // console.log('Final total:', finalTotal)
