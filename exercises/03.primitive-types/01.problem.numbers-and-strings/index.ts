@@ -12,13 +12,13 @@
 // 💰 Use backticks ` and ${variable} syntax
 
 // ✅ These console.logs will verify your work
-// @ts-expect-error - 💣 remove this comment
 console.log('Price:', price)
-// @ts-expect-error - 💣 remove this comment
+// @ts-expect-error - 💣 remove this comment once you create the productName variable
 console.log('Product:', productName)
-// @ts-expect-error - 💣 remove this comment
+// @ts-expect-error - 💣 remove this comment once you create the quantity variable
 console.log('Quantity:', quantity)
-// @ts-expect-error - 💣 remove this comment
+// @ts-expect-error - 💣 remove this comment once you create the description variable
 console.log('Description:', description)
 
 // 🦺 This line ensures TypeScript treats this as a module
+export {}

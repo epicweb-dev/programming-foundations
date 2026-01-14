@@ -18,3 +18,6 @@ const prices: Array<number> = [29.99, 9.99, 49.99, 4.99, 19.99]
 
 // console.log(`Total: $${total.toFixed(2)}`)
 // console.log(`Expensive items (>$10): ${expensiveItemCount}`)
+
+// 🦺 This line ensures TypeScript treats this as a module
+export {}
