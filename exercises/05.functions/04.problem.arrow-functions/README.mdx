@@ -23,7 +23,7 @@ const double = (n: number): number => n * 2
 | Context                       | Use                  | Example                           |
 | ----------------------------- | -------------------- | --------------------------------- |
 | Top-level named functions     | Function declaration | `function processOrder() { ... }` |
-| Callbacks                     | Arrow function       | `applyToNumber(5, (n) => n + 1)`   |
+| Callbacks                     | Arrow function       | `applyToNumber(5, (n) => n + 1)`  |
 | Short single-expression funcs | Arrow (implicit)     | `const double = (n) => n * 2`     |
 | Object methods                | Method shorthand     | `{ calculate() { ... } }`         |
 
@@ -42,7 +42,10 @@ const add = (a: number, b: number): number => a + b
 💰 Arrow functions in callbacks:
 
 ```ts
-function applyToNumber(value: number, transform: (n: number) => number): number {
+function applyToNumber(
+	value: number,
+	transform: (n: number) => number,
+): number {
 	return transform(value)
 }
 

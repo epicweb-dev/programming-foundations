@@ -13,7 +13,10 @@
 
 ```ts
 // Use arrow functions for callbacks
-function applyToNumber(value: number, transform: (n: number) => number): number {
+function applyToNumber(
+	value: number,
+	transform: (n: number) => number,
+): number {
 	return transform(value)
 }
 
