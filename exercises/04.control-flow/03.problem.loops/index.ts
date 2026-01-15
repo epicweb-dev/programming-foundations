@@ -15,4 +15,4 @@
 // console.log(output)
 
 // 🐨 When you're done, uncomment this:
-// console.log('Results JSON:', JSON.stringify({ output }))
+// console.log('Results:', JSON.stringify({ output }))

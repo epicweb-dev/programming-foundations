@@ -32,7 +32,7 @@ try {
 }
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		multiply: [multiply(4, 5), multiply(3, 7), multiply(-2, 4)],
 		divide: [divide(10, 2), divide(15, 3), divide(7, 2)],

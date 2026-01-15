@@ -23,4 +23,4 @@ console.log('Modified person:', person)
 
 // 🐨 When you're done, uncomment this and update the values:
 // const results = { name: 'Alice', age: 31, city: 'Portland' }
-// console.log('Results JSON:', JSON.stringify(results))
+// console.log('Results:', JSON.stringify(results))

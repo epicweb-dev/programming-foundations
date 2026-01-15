@@ -17,7 +17,4 @@ console.log(newlines)
 const tabs = 'Name:\tAge:\tCity:'
 console.log(tabs)
 
-console.log(
-	'Results JSON:',
-	JSON.stringify({ apostrophe, quotes, newlines, tabs }),
-)
+console.log('Results:', JSON.stringify({ apostrophe, quotes, newlines, tabs }))

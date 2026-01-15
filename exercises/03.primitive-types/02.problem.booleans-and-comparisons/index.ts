@@ -31,4 +31,4 @@ console.log('Can Purchase:', canPurchase)
 // 	hasDiscount: true,
 // 	canPurchase: true,
 // }
-// console.log('Results JSON:', JSON.stringify(results))
+// console.log('Results:', JSON.stringify(results))

@@ -23,7 +23,7 @@
 
 // 🐨 When you're done, uncomment this:
 // console.log(
-// 	'Results JSON:',
+// 	'Results:',
 // 	JSON.stringify({
 // 		calculateTax: [calculateTax(100, 0.08), calculateTax(50, 0.1)],
 // 		formatPrice: [formatPrice(1999), formatPrice(100), formatPrice(50)],

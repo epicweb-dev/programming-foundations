@@ -19,4 +19,4 @@ const grade: string = 'B'
 
 // 🐨 When you're done, uncomment this and update the values:
 // const results = { grade: 'B', description: 'Good' }
-// console.log('Results JSON:', JSON.stringify(results))
+// console.log('Results:', JSON.stringify(results))

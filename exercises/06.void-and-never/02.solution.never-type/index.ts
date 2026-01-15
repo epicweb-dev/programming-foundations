@@ -46,7 +46,7 @@ try {
 }
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		throwErrorMessage,
 		parseNumber: parseNumber('42'),

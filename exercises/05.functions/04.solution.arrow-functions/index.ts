@@ -35,7 +35,7 @@ console.log(isEven(4)) // true
 console.log(applyToNumber(5, triple)) // 15
 console.log(applyToNumber(5, square)) // 25
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		double: {
 			source: double.toString(),

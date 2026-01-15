@@ -47,7 +47,7 @@ function calculateCompoundInterest(
 
 // 🐨 When you're done, uncomment this:
 // console.log(
-// 	'Results JSON:',
+// 	'Results:',
 // 	JSON.stringify({
 // 		add: [add(2, 3), add(-1, 1)],
 // 		greet: [greet('Alice'), greet('World')],

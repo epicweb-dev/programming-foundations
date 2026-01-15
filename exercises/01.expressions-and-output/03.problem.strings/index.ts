@@ -14,4 +14,4 @@
 // 	fullName: 'Your Name',
 // 	sentence: 'I am learning to code',
 // }
-// console.log('Results JSON:', JSON.stringify(results))
+// console.log('Results:', JSON.stringify(results))

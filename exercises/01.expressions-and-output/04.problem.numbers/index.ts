@@ -17,4 +17,4 @@
 // 	divideResult: 25,
 // 	groupedResult: 30,
 // }
-// console.log('Results JSON:', JSON.stringify(results))
+// console.log('Results:', JSON.stringify(results))

@@ -34,4 +34,4 @@
 // 	anotherIdType: 'symbol',
 // 	areEqual: false,
 // }
-// console.log('Results JSON:', JSON.stringify(results))
+// console.log('Results:', JSON.stringify(results))

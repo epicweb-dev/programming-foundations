@@ -32,7 +32,7 @@ function calculateTotal(subtotal: number, taxRate: number): number {
 
 // 🐨 When you're done, uncomment this:
 // console.log(
-// 	'Results JSON:',
+// 	'Results:',
 // 	JSON.stringify({
 // 		double: {
 // 			source: double.toString(),

@@ -19,6 +19,6 @@ console.log('Has Discount:', hasDiscount)
 console.log('Can Purchase:', canPurchase)
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({ isAvailable, isOnSale, hasDiscount, canPurchase }),
 )

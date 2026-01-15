@@ -22,4 +22,4 @@ const score: number = 85
 
 // 🐨 When you're done, uncomment this and update the values:
 // const results = { score: 85, grade: 'B', passed: true }
-// console.log('Results JSON:', JSON.stringify(results))
+// console.log('Results:', JSON.stringify(results))

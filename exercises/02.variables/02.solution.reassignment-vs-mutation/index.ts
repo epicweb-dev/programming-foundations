@@ -22,4 +22,4 @@ console.log('Modified person:', person)
 // The variable person always points to the SAME object,
 // but the properties of that object can change.
 
-console.log('Results JSON:', JSON.stringify(person))
+console.log('Results:', JSON.stringify(person))

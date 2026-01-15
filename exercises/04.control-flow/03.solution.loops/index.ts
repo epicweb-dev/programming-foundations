@@ -14,4 +14,4 @@ for (let row = 1; row <= 5; row++) {
 
 console.log(output)
 
-console.log('Results JSON:', JSON.stringify({ output }))
+console.log('Results:', JSON.stringify({ output }))

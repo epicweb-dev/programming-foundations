@@ -13,4 +13,4 @@
 
 // 🐨 When you're done, uncomment this and update the values:
 // const results = { discountCode: 'undefined', lastPurchaseDate: null }
-// console.log('Results JSON:', JSON.stringify(results))
+// console.log('Results:', JSON.stringify(results))

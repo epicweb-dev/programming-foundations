@@ -24,7 +24,7 @@ console.log('Tax:', cartTotal * TAX_RATE)
 console.log('Final total:', finalTotal)
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		taxRate: TAX_RATE,
 		cartTotal,

@@ -23,6 +23,6 @@ console.log('Description:', description)
 
 // 🐨 When you're done, uncomment this:
 // console.log(
-// 	'Results JSON:',
+// 	'Results:',
 // 	JSON.stringify({ price, productName, quantity, description }),
 // )

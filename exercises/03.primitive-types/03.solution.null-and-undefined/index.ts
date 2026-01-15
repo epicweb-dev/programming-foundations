@@ -18,7 +18,7 @@ console.log(
 		: 'No previous purchases',
 )
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		discountCode: discountCode === undefined ? 'undefined' : discountCode,
 		lastPurchaseDate,

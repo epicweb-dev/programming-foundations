@@ -27,4 +27,4 @@ switch (grade) {
 
 console.log(`Grade ${grade}: ${description}`)
 
-console.log('Results JSON:', JSON.stringify({ grade, description }))
+console.log('Results:', JSON.stringify({ grade, description }))

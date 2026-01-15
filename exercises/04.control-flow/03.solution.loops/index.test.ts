@@ -7,11 +7,9 @@ await test('output should match the star staircase', () => {
 	const output = execSync('npm start --silent', { encoding: 'utf8' })
 	const jsonLine = output
 		.split('\n')
-		.find((line) => line.startsWith('Results JSON:'))
-	assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
-	const { output: actual } = JSON.parse(
-		jsonLine.replace('Results JSON:', '').trim(),
-	)
+		.find((line) => line.startsWith('Results:'))
+	assert.ok(jsonLine, '🚨 Missing "Results:" output line')
+	const { output: actual } = JSON.parse(jsonLine.replace('Results:', '').trim())
 	assert.strictEqual(
 		actual,
 		expected,

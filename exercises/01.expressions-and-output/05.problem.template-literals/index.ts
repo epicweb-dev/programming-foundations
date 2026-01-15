@@ -15,4 +15,4 @@
 // 	greeting: 'Hello, TypeScript!',
 // 	math: '10 times 5 equals 50',
 // }
-// console.log('Results JSON:', JSON.stringify(results))
+// console.log('Results:', JSON.stringify(results))

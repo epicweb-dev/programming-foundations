@@ -16,6 +16,6 @@ console.log('Quantity:', quantity)
 console.log('Description:', description)
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({ price, productName, quantity, description }),
 )

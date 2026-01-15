@@ -20,7 +20,7 @@ console.log(isValidEmail('test@example.com')) // true
 console.log(isValidEmail('invalid-email')) // false
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		getFullName: [getFullName('John', 'Doe'), getFullName('Jane', 'Smith')],
 		parseAge: [parseAge('25'), parseAge('30'), parseAge('18')],

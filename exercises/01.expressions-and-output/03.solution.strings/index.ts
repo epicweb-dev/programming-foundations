@@ -8,4 +8,4 @@ const sentence = 'I' + ' ' + 'am' + ' ' + 'learning' + ' ' + 'to' + ' ' + 'code'
 console.log(greeting)
 console.log(fullName)
 console.log(sentence)
-console.log('Results JSON:', JSON.stringify({ greeting, fullName, sentence }))
+console.log('Results:', JSON.stringify({ greeting, fullName, sentence }))

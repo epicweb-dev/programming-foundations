@@ -21,7 +21,7 @@
 
 // 🐨 When you're done, uncomment this:
 // console.log(
-// 	'Results JSON:',
+// 	'Results:',
 // 	JSON.stringify({
 // 		getFullName: [getFullName('John', 'Doe'), getFullName('Jane', 'Smith')],
 // 		parseAge: [parseAge('25'), parseAge('30'), parseAge('18')],

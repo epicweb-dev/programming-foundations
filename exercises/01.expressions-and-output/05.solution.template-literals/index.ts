@@ -8,4 +8,4 @@ const math = `10 times 5 equals ${10 * 5}`
 console.log(answer)
 console.log(greeting)
 console.log(math)
-console.log('Results JSON:', JSON.stringify({ answer, greeting, math }))
+console.log('Results:', JSON.stringify({ answer, greeting, math }))

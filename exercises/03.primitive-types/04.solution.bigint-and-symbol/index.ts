@@ -19,7 +19,7 @@ console.log('userId:', userId)
 console.log('anotherId:', anotherId)
 console.log('Are symbols equal?', areEqual) // false - each Symbol is unique
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		largeNumber: largeNumber.toString(),
 		anotherLarge: anotherLarge.toString(),

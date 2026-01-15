@@ -62,7 +62,7 @@ console.log(greet('World')) // "Hello, World!"
 console.log(calculateCompoundInterest(1000, 0.05, 10)) // ~1628.89
 console.log(clamp(15, 0, 10)) // 10
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		add: [add(2, 3), add(-1, 1)],
 		greet: [greet('Alice'), greet('World')],

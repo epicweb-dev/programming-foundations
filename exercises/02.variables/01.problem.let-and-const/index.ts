@@ -31,4 +31,4 @@ const laptopPrice = 999.99
 // 	cartTotal: 20.49,
 // 	finalTotal: 22.1292,
 // }
-// console.log('Results JSON:', JSON.stringify(results))
+// console.log('Results:', JSON.stringify(results))

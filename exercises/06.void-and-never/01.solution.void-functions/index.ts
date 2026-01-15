@@ -24,7 +24,7 @@ const logErrorResult = logError('test error')
 const logWithTimestampResult = logWithTimestamp('test message')
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		logInfoResult: logInfoResult ?? 'undefined',
 		logErrorResult: logErrorResult ?? 'undefined',

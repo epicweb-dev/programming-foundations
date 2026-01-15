@@ -4,11 +4,9 @@ import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
 
 const output = execSync('npm start --silent', { encoding: 'utf8' })
-const jsonLine = output
-	.split('\n')
-	.find((line) => line.startsWith('Results JSON:'))
-assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
-const { greeting } = JSON.parse(jsonLine.replace('Results JSON:', '').trim())
+const jsonLine = output.split('\n').find((line) => line.startsWith('Results:'))
+assert.ok(jsonLine, '🚨 Missing "Results:" output line')
+const { greeting } = JSON.parse(jsonLine.replace('Results:', '').trim())
 
 await test('should print Hello TypeScript', () => {
 	assert.ok(
