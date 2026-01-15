@@ -1,25 +1,41 @@
 import assert from 'node:assert/strict'
-import { execSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
+import * as solution from './index.ts'
 
-const output = execSync('npm start --silent', { encoding: 'utf8' })
-const jsonLine = output.split('\n').find((line) => line.startsWith('Results:'))
-assert.ok(jsonLine, '🚨 Missing "Results:" output line')
-const { greeting } = JSON.parse(jsonLine.replace('Results:', '').trim())
-
-await test('should print Hello TypeScript', () => {
+await test('greeting is exported', () => {
 	assert.ok(
-		greeting === 'Hello TypeScript',
-		'🚨 Output should include "Hello TypeScript" - concatenate "Hello" + " " + "TypeScript"',
+		'greeting' in solution,
+		'🚨 Make sure you export "greeting" - add: export { greeting, ... }',
 	)
 })
 
-await test('should print at least three lines', () => {
-	const lines = output.trim().split('\n').filter(Boolean)
+await test('should have Hello TypeScript', () => {
+	assert.strictEqual(
+		solution.greeting,
+		'Hello TypeScript',
+		'🚨 greeting should be "Hello TypeScript" - concatenate "Hello" + " " + "TypeScript"',
+	)
+})
+
+await test('fullName is exported', () => {
 	assert.ok(
-		lines.length >= 3,
-		'🚨 Output should have at least 3 lines - make sure you logged all three string expressions',
+		'fullName' in solution,
+		'🚨 Make sure you export "fullName" - add: export { greeting, fullName, ... }',
+	)
+})
+
+await test('fullName should have a space', () => {
+	assert.ok(
+		solution.fullName.includes(' '),
+		'🚨 fullName should contain a space between first and last name',
+	)
+})
+
+await test('sentence is exported', () => {
+	assert.ok(
+		'sentence' in solution,
+		'🚨 Make sure you export "sentence" - add: export { greeting, fullName, sentence }',
 	)
 })
 

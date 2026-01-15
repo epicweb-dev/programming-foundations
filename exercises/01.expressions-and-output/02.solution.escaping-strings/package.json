@@ -2,7 +2,7 @@
   "name": "exercises_01.expressions-and-output_02.solution.escaping-strings",
   "type": "module",
   "scripts": {
-    "start": "node index.ts",
+    "start": "npx @kentcdodds/log-module ./index.ts",
     "test": "node --test index.test.ts"
   }
 }

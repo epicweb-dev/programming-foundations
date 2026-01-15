@@ -8,10 +8,5 @@
 // 🐨 Log a sentence by concatenating multiple strings
 // 💰 Example: "I" + " " + "am" + " " + "learning" + " " + "to" + " " + "code"
 
-// 🐨 When you're done, uncomment this and update the values:
-// const results = {
-// 	greeting: 'Hello TypeScript',
-// 	fullName: 'Your Name',
-// 	sentence: 'I am learning to code',
-// }
-// console.log('Results:', JSON.stringify(results))
+// 🐨 Export your variables so we can verify your work
+// 💰 export { greeting, fullName, sentence }

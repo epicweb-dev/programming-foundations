@@ -23,11 +23,4 @@ console.log('Cart subtotal:', cartTotal)
 console.log('Tax:', cartTotal * TAX_RATE)
 console.log('Final total:', finalTotal)
 
-console.log(
-	'Results:',
-	JSON.stringify({
-		taxRate: TAX_RATE,
-		cartTotal,
-		finalTotal,
-	}),
-)
+export { TAX_RATE, cartTotal, finalTotal }

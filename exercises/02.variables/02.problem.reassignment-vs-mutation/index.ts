@@ -21,6 +21,5 @@ console.log('Modified person:', person)
 // The variable person always points to the SAME object,
 // but the properties of that object can change.
 
-// 🐨 When you're done, uncomment this and update the values:
-// const results = { name: 'Alice', age: 31, city: 'Portland' }
-// console.log('Results:', JSON.stringify(results))
+// 🐨 Export your variable so we can verify your work
+// 💰 export { person }

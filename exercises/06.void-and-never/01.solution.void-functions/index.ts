@@ -19,15 +19,4 @@ logInfo('Application started')
 logError('Connection failed')
 logWithTimestamp('User logged in')
 
-const logInfoResult = logInfo('test message')
-const logErrorResult = logError('test error')
-const logWithTimestampResult = logWithTimestamp('test message')
-
-console.log(
-	'Results:',
-	JSON.stringify({
-		logInfoResult: logInfoResult ?? 'undefined',
-		logErrorResult: logErrorResult ?? 'undefined',
-		logWithTimestampResult: logWithTimestampResult ?? 'undefined',
-	}),
-)
+export { logInfo, logError, logWithTimestamp }

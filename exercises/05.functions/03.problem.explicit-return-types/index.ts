@@ -19,17 +19,5 @@
 // console.log(isValidEmail('test@example.com')) // true
 // console.log(isValidEmail('invalid-email')) // false
 
-// 🐨 When you're done, uncomment this:
-// console.log(
-// 	'Results:',
-// 	JSON.stringify({
-// 		getFullName: [getFullName('John', 'Doe'), getFullName('Jane', 'Smith')],
-// 		parseAge: [parseAge('25'), parseAge('30'), parseAge('18')],
-// 		isValidEmail: [
-// 			isValidEmail('test@example.com'),
-// 			isValidEmail('user@domain.co.uk'),
-// 			isValidEmail('invalid-email'),
-// 			isValidEmail('no-at-sign'),
-// 		],
-// 	}),
-// )
+// 🐨 Export your functions so we can verify your work
+// 💰 export { getFullName, parseAge, isValidEmail }

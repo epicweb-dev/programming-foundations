@@ -2,7 +2,7 @@
   "name": "exercises_04.control-flow_02.solution.switch-statements",
   "type": "module",
   "scripts": {
-    "start": "node index.ts",
+    "start": "npx @kentcdodds/log-module ./index.ts",
     "test": "node --test index.test.ts"
   }
 }

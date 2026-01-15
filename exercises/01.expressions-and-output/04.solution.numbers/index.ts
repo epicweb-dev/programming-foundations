@@ -10,7 +10,5 @@ console.log(addResult)
 console.log(multiplyResult)
 console.log(divideResult)
 console.log(groupedResult)
-console.log(
-	'Results:',
-	JSON.stringify({ addResult, multiplyResult, divideResult, groupedResult }),
-)
+
+export { addResult, multiplyResult, divideResult, groupedResult }

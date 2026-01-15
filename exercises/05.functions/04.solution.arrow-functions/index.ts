@@ -34,29 +34,5 @@ console.log(calculateTotal(60, 0.1)) // 66
 console.log(isEven(4)) // true
 console.log(applyToNumber(5, triple)) // 15
 console.log(applyToNumber(5, square)) // 25
-console.log(
-	'Results:',
-	JSON.stringify({
-		double: {
-			source: double.toString(),
-			outputs: [double(5), double(0), double(-3)],
-		},
-		greet: {
-			source: greet.toString(),
-			outputs: [greet('Alice'), greet('Bob')],
-		},
-		calculateTotal: {
-			source: calculateTotal.toString(),
-			outputs: [calculateTotal(60, 0.1), calculateTotal(100, 0.05)],
-		},
-		isEven: {
-			source: isEven.toString(),
-			outputs: [isEven(4), isEven(7), isEven(0)],
-		},
-		applyToNumber: {
-			outputs: [applyToNumber(5, triple), applyToNumber(6, square)],
-		},
-		tripleSource: triple.toString(),
-		squareSource: square.toString(),
-	}),
-)
+
+export { double, greet, calculateTotal, isEven, applyToNumber, triple, square }

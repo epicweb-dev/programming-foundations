@@ -15,7 +15,4 @@ console.log('Product:', productName)
 console.log('Quantity:', quantity)
 console.log('Description:', description)
 
-console.log(
-	'Results:',
-	JSON.stringify({ price, productName, quantity, description }),
-)
+export { price, productName, quantity, description }

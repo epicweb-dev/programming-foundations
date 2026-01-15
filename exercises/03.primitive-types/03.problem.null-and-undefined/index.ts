@@ -11,6 +11,5 @@
 // 🐨 Log whether lastPurchaseDate has a value using a ternary operator
 // 💰 console.log(lastPurchaseDate !== null ? 'Last purchase: ' + lastPurchaseDate : 'No previous purchases')
 
-// 🐨 When you're done, uncomment this and update the values:
-// const results = { discountCode: 'undefined', lastPurchaseDate: null }
-// console.log('Results:', JSON.stringify(results))
+// 🐨 Export your variables so we can verify your work
+// 💰 export { discountCode, lastPurchaseDate }

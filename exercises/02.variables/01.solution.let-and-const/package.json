@@ -2,7 +2,7 @@
   "name": "exercises_02.variables_01.solution.let-and-const",
   "type": "module",
   "scripts": {
-    "start": "node index.ts",
+    "start": "npx @kentcdodds/log-module ./index.ts",
     "test": "node --test index.test.ts"
   }
 }

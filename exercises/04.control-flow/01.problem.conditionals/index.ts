@@ -20,6 +20,5 @@ const score: number = 85
 // console.log(`Grade: ${grade}`)
 // console.log(`Passed: ${passed}`)
 
-// 🐨 When you're done, uncomment this and update the values:
-// const results = { score: 85, grade: 'B', passed: true }
-// console.log('Results:', JSON.stringify(results))
+// 🐨 Export your variables so we can verify your work
+// 💰 export { score, grade, passed }

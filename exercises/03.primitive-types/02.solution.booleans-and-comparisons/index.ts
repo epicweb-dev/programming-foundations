@@ -18,7 +18,4 @@ console.log('Is On Sale:', isOnSale)
 console.log('Has Discount:', hasDiscount)
 console.log('Can Purchase:', canPurchase)
 
-console.log(
-	'Results:',
-	JSON.stringify({ isAvailable, isOnSale, hasDiscount, canPurchase }),
-)
+export { isAvailable, isOnSale, hasDiscount, canPurchase }

@@ -15,15 +15,5 @@
 // logError('Connection failed')
 // logWithTimestamp('User logged in')
 
-// 🐨 When you're done, uncomment this:
-// const logInfoResult = logInfo('test message')
-// const logErrorResult = logError('test error')
-// const logWithTimestampResult = logWithTimestamp('test message')
-// console.log(
-// 	'Results:',
-// 	JSON.stringify({
-// 		logInfoResult: logInfoResult ?? 'undefined',
-// 		logErrorResult: logErrorResult ?? 'undefined',
-// 		logWithTimestampResult: logWithTimestampResult ?? 'undefined',
-// 	}),
-// )
+// 🐨 Export your functions so we can verify your work
+// 💰 export { logInfo, logError, logWithTimestamp }

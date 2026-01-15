@@ -14,5 +14,5 @@
 
 // console.log(output)
 
-// 🐨 When you're done, uncomment this:
-// console.log('Results:', JSON.stringify({ output }))
+// 🐨 Export your variable so we can verify your work
+// 💰 export { output }

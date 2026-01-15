@@ -25,13 +25,5 @@
 // console.log('anotherId:', anotherId)
 // console.log('Are symbols equal?', areEqual) // false
 
-// 🐨 When you're done, uncomment this and update the values:
-// const results = {
-// 	largeNumber: '9007199254740993',
-// 	anotherLarge: '1000000000000000000',
-// 	sum: '1000009007199254740993',
-// 	userIdType: 'symbol',
-// 	anotherIdType: 'symbol',
-// 	areEqual: false,
-// }
-// console.log('Results:', JSON.stringify(results))
+// 🐨 Export your variables so we can verify your work
+// 💰 export { largeNumber, anotherLarge, sum, userId, anotherId, areEqual }

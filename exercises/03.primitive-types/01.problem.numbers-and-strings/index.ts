@@ -21,8 +21,5 @@ console.log('Product:', productName)
 console.log('Quantity:', quantity)
 console.log('Description:', description)
 
-// 🐨 When you're done, uncomment this:
-// console.log(
-// 	'Results:',
-// 	JSON.stringify({ price, productName, quantity, description }),
-// )
+// 🐨 Export your variables so we can verify your work
+// 💰 export { price, productName, quantity, description }

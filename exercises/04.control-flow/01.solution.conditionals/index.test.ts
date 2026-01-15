@@ -1,33 +1,47 @@
 import assert from 'node:assert/strict'
-import { execSync } from 'node:child_process'
 import { test } from 'node:test'
+import * as solution from './index.ts'
 
-const output = execSync('npm start --silent', { encoding: 'utf8' })
-const jsonLine = output.split('\n').find((line) => line.startsWith('Results:'))
-assert.ok(jsonLine, '🚨 Missing "Results:" output line')
-const { score, grade, passed } = JSON.parse(
-	jsonLine.replace('Results:', '').trim(),
-)
+await test('score is exported', () => {
+	assert.ok(
+		'score' in solution,
+		'🚨 Make sure you export "score" - add: export { score, ... }',
+	)
+})
 
 await test('score should be 85', () => {
 	assert.strictEqual(
-		score,
+		solution.score,
 		85,
 		'🚨 score should be 85 - check your variable assignment',
 	)
 })
 
+await test('grade is exported', () => {
+	assert.ok(
+		'grade' in solution,
+		'🚨 Make sure you export "grade" - add: export { score, grade, ... }',
+	)
+})
+
 await test('grade should be "B" for score 85', () => {
 	assert.strictEqual(
-		grade,
+		solution.grade,
 		'B',
 		'🚨 grade should be "B" for score 85 - use if/else if statements to check score ranges (80-89 = B)',
 	)
 })
 
+await test('passed is exported', () => {
+	assert.ok(
+		'passed' in solution,
+		'🚨 Make sure you export "passed" - add: export { score, grade, passed }',
+	)
+})
+
 await test('passed should be true for grade "B"', () => {
 	assert.strictEqual(
-		passed,
+		solution.passed,
 		true,
 		'🚨 passed should be true for grade "B" - check that grades A, B, and C are considered passing',
 	)

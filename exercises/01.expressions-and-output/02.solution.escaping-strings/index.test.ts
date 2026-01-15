@@ -1,38 +1,62 @@
 import assert from 'node:assert/strict'
-import { execSync } from 'node:child_process'
 import { test } from 'node:test'
+import * as solution from './index.ts'
 
-const output = execSync('npm start --silent', { encoding: 'utf8' })
-const jsonLine = output.split('\n').find((line) => line.startsWith('Results:'))
-assert.ok(jsonLine, '🚨 Missing "Results:" output line')
-const { apostrophe, quotes, newlines, tabs } = JSON.parse(
-	jsonLine.replace('Results:', '').trim(),
-)
-
-await test('should print string with apostrophe', () => {
+await test('apostrophe is exported', () => {
 	assert.ok(
-		apostrophe === "It's working!",
-		'🚨 Output should include "It\'s working!" - make sure you escaped the apostrophe',
+		'apostrophe' in solution,
+		'🚨 Make sure you export "apostrophe" - add: export { apostrophe, ... }',
 	)
 })
 
-await test('should print string with quotes', () => {
-	assert.ok(
-		quotes === 'She said "Hi"',
-		'🚨 Output should include: She said "Hi" - make sure you escaped the double quotes',
+await test('should have string with apostrophe', () => {
+	assert.strictEqual(
+		solution.apostrophe,
+		"It's working!",
+		'🚨 apostrophe should be "It\'s working!" - make sure you escaped the apostrophe with \\\'',
 	)
 })
 
-await test('should print Hello and World on separate lines', () => {
+await test('quotes is exported', () => {
 	assert.ok(
-		newlines === 'Hello\nWorld',
-		'🚨 Output should include "Hello" and "World" on separate lines - use \\n in a single string',
+		'quotes' in solution,
+		'🚨 Make sure you export "quotes" - add: export { apostrophe, quotes, ... }',
 	)
 })
 
-await test('should print tab-separated values', () => {
+await test('should have string with quotes', () => {
+	assert.strictEqual(
+		solution.quotes,
+		'She said "Hi"',
+		'🚨 quotes should be: She said "Hi" - make sure you escaped the double quotes with \\"',
+	)
+})
+
+await test('newlines is exported', () => {
 	assert.ok(
-		tabs.includes('\t'),
-		'🚨 Output should include tab characters - make sure you used \\t for tabs',
+		'newlines' in solution,
+		'🚨 Make sure you export "newlines" - add: export { ..., newlines, ... }',
+	)
+})
+
+await test('should have Hello and World on separate lines', () => {
+	assert.strictEqual(
+		solution.newlines,
+		'Hello\nWorld',
+		'🚨 newlines should be "Hello\\nWorld" - use \\n in a single string',
+	)
+})
+
+await test('tabs is exported', () => {
+	assert.ok(
+		'tabs' in solution,
+		'🚨 Make sure you export "tabs" - add: export { ..., tabs }',
+	)
+})
+
+await test('should have tab-separated values', () => {
+	assert.ok(
+		solution.tabs.includes('\t'),
+		'🚨 tabs should include tab characters - make sure you used \\t for tabs',
 	)
 })

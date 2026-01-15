@@ -1,53 +1,67 @@
 import assert from 'node:assert/strict'
-import { execSync } from 'node:child_process'
 import { test } from 'node:test'
+import * as solution from './index.ts'
 
-const output = execSync('npm start --silent', { encoding: 'utf8' })
-const jsonLine = output.split('\n').find((line) => line.startsWith('Results:'))
-assert.ok(jsonLine, '🚨 Missing "Results:" output line')
-const { getFullName, parseAge, isValidEmail } = JSON.parse(
-	jsonLine.replace('Results:', '').trim(),
-)
+await test('getFullName is exported', () => {
+	assert.ok(
+		'getFullName' in solution,
+		'🚨 Make sure you export "getFullName" - add: export { getFullName, ... }',
+	)
+})
 
 await test('getFullName should concatenate first and last name', () => {
 	assert.strictEqual(
-		getFullName[0],
+		solution.getFullName('John', 'Doe'),
 		'John Doe',
 		'🚨 getFullName("John", "Doe") should return "John Doe" - concatenate first and last name with a space',
 	)
 	assert.strictEqual(
-		getFullName[1],
+		solution.getFullName('Jane', 'Smith'),
 		'Jane Smith',
 		'🚨 getFullName("Jane", "Smith") should return "Jane Smith" - concatenate first and last name with a space',
 	)
 })
 
+await test('parseAge is exported', () => {
+	assert.ok(
+		'parseAge' in solution,
+		'🚨 Make sure you export "parseAge" - add: export { getFullName, parseAge, ... }',
+	)
+})
+
 await test('parseAge should parse age string to number', () => {
 	assert.strictEqual(
-		parseAge[0],
+		solution.parseAge('25'),
 		25,
 		'🚨 parseAge("25") should return 25 - convert the string to a number using Number() or parseInt()',
 	)
 	assert.strictEqual(
-		parseAge[1],
+		solution.parseAge('30'),
 		30,
 		'🚨 parseAge("30") should return 30 - convert the string to a number using Number() or parseInt()',
 	)
 	assert.strictEqual(
-		parseAge[2],
+		solution.parseAge('18'),
 		18,
 		'🚨 parseAge("18") should return 18 - convert the string to a number using Number() or parseInt()',
 	)
 })
 
+await test('isValidEmail is exported', () => {
+	assert.ok(
+		'isValidEmail' in solution,
+		'🚨 Make sure you export "isValidEmail" - add: export { getFullName, parseAge, isValidEmail }',
+	)
+})
+
 await test('isValidEmail should return true for valid emails', () => {
 	assert.strictEqual(
-		isValidEmail[0],
+		solution.isValidEmail('test@example.com'),
 		true,
 		'🚨 isValidEmail("test@example.com") should return true - check if the string includes "@"',
 	)
 	assert.strictEqual(
-		isValidEmail[1],
+		solution.isValidEmail('user@domain.co.uk'),
 		true,
 		'🚨 isValidEmail("user@domain.co.uk") should return true - check if the string includes "@"',
 	)
@@ -55,12 +69,12 @@ await test('isValidEmail should return true for valid emails', () => {
 
 await test('isValidEmail should return false for invalid emails', () => {
 	assert.strictEqual(
-		isValidEmail[2],
+		solution.isValidEmail('invalid-email'),
 		false,
 		'🚨 isValidEmail("invalid-email") should return false - check if the string does not include "@"',
 	)
 	assert.strictEqual(
-		isValidEmail[3],
+		solution.isValidEmail('no-at-sign'),
 		false,
 		'🚨 isValidEmail("no-at-sign") should return false - check if the string does not include "@"',
 	)

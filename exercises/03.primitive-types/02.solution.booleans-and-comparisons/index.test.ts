@@ -1,61 +1,82 @@
 import assert from 'node:assert/strict'
-import { execSync } from 'node:child_process'
 import { test } from 'node:test'
+import * as solution from './index.ts'
 
-const output = execSync('npm start --silent', { encoding: 'utf8' })
-const jsonLine = output.split('\n').find((line) => line.startsWith('Results:'))
-assert.ok(jsonLine, '🚨 Missing "Results:" output line')
-const { isAvailable, isOnSale, hasDiscount, canPurchase } = JSON.parse(
-	jsonLine.replace('Results:', '').trim(),
-)
+await test('isAvailable is exported', () => {
+	assert.ok(
+		'isAvailable' in solution,
+		'🚨 Make sure you export "isAvailable" - add: export { isAvailable, ... }',
+	)
+})
 
 await test('isAvailable should be true', () => {
 	assert.strictEqual(
-		isAvailable,
+		solution.isAvailable,
 		true,
-		'🚨 isAvailable should be true - check your comparison or assignment',
+		'🚨 isAvailable should be true - check your assignment',
 	)
 	assert.strictEqual(
-		typeof isAvailable,
+		typeof solution.isAvailable,
 		'boolean',
 		'🚨 isAvailable should be a boolean type - use true or false, not a string',
 	)
 })
 
+await test('isOnSale is exported', () => {
+	assert.ok(
+		'isOnSale' in solution,
+		'🚨 Make sure you export "isOnSale" - add: export { isAvailable, isOnSale, ... }',
+	)
+})
+
 await test('isOnSale should be false', () => {
 	assert.strictEqual(
-		isOnSale,
+		solution.isOnSale,
 		false,
-		'🚨 isOnSale should be false - check your comparison or assignment',
+		'🚨 isOnSale should be false - check your assignment',
 	)
 	assert.strictEqual(
-		typeof isOnSale,
+		typeof solution.isOnSale,
 		'boolean',
 		'🚨 isOnSale should be a boolean type - use true or false, not a string',
 	)
 })
 
+await test('hasDiscount is exported', () => {
+	assert.ok(
+		'hasDiscount' in solution,
+		'🚨 Make sure you export "hasDiscount" - add: export { ..., hasDiscount, ... }',
+	)
+})
+
 await test('hasDiscount should be true (price < 50)', () => {
 	assert.strictEqual(
-		hasDiscount,
+		solution.hasDiscount,
 		true,
-		'🚨 hasDiscount should be true when price is less than 50 - check your comparison operator',
+		'🚨 hasDiscount should be true when price is less than 50 - use: price < 50',
 	)
 	assert.strictEqual(
-		typeof hasDiscount,
+		typeof solution.hasDiscount,
 		'boolean',
 		'🚨 hasDiscount should be a boolean type - use a comparison that returns true or false',
 	)
 })
 
+await test('canPurchase is exported', () => {
+	assert.ok(
+		'canPurchase' in solution,
+		'🚨 Make sure you export "canPurchase" - add: export { ..., canPurchase }',
+	)
+})
+
 await test('canPurchase should be true (isAvailable && stockCount > 0)', () => {
 	assert.strictEqual(
-		canPurchase,
+		solution.canPurchase,
 		true,
 		'🚨 canPurchase should be true when both isAvailable is true AND stockCount > 0 - use the && operator',
 	)
 	assert.strictEqual(
-		typeof canPurchase,
+		typeof solution.canPurchase,
 		'boolean',
 		'🚨 canPurchase should be a boolean type - use a logical expression that returns true or false',
 	)

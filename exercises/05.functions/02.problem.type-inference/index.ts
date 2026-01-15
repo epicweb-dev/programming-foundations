@@ -30,19 +30,5 @@ console.log(divide(10, 2)) // 5
 // console.log(isEven(4)) // true
 // console.log(isEven(7)) // false
 
-// 🐨 When you're done, uncomment this:
-// let divideError: string | null = null
-// try {
-// 	divide(10, 0)
-// } catch (error) {
-// 	divideError = error instanceof Error ? error.message : 'Unknown error'
-// }
-// console.log(
-// 	'Results:',
-// 	JSON.stringify({
-// 		multiply: [multiply(4, 5), multiply(3, 7), multiply(-2, 4)],
-// 		divide: [divide(10, 2), divide(15, 3), divide(7, 2)],
-// 		divideError,
-// 		isEven: [isEven(4), isEven(2), isEven(0), isEven(7), isEven(3), isEven(1)],
-// 	}),
-// )
+// 🐨 Export your functions so we can verify your work
+// 💰 export { multiply, divide, isEven }

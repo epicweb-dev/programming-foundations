@@ -9,10 +9,5 @@
 // 🐨 Log a math problem like "10 times 5 equals 50"
 // 💰 Use ${10 * 5} for the result
 
-// 🐨 When you're done, uncomment this and update the values:
-// const results = {
-// 	answer: 'The answer is 42',
-// 	greeting: 'Hello, TypeScript!',
-// 	math: '10 times 5 equals 50',
-// }
-// console.log('Results:', JSON.stringify(results))
+// 🐨 Export your variables so we can verify your work
+// 💰 export { answer, greeting, math }

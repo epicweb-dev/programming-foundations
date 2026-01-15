@@ -13,11 +13,5 @@
 // 🐨 Log tab-separated data: Name: [tab] Age: [tab] City: (like column headers)
 // 💰 Use \t to create tabs between words
 
-// 🐨 When you're done, uncomment this and update the values:
-// const results = {
-// 	apostrophe: "It's working!",
-// 	quotes: 'She said "Hi"',
-// 	newlines: 'Hello\nWorld',
-// 	tabs: 'Name:\tAge:\tCity:',
-// }
-// console.log('Results:', JSON.stringify(results))
+// 🐨 Export your variables so we can verify your work
+// 💰 export { apostrophe, quotes, newlines, tabs }

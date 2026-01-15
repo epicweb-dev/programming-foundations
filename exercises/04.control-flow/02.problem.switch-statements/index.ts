@@ -17,6 +17,5 @@ const grade: string = 'B'
 
 // console.log(`Grade ${grade}: ${description}`)
 
-// 🐨 When you're done, uncomment this and update the values:
-// const results = { grade: 'B', description: 'Good' }
-// console.log('Results:', JSON.stringify(results))
+// 🐨 Export your variables so we can verify your work
+// 💰 export { grade, description }

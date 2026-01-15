@@ -24,11 +24,5 @@ console.log('Has Discount:', hasDiscount)
 // @ts-expect-error - 💣 remove this comment
 console.log('Can Purchase:', canPurchase)
 
-// 🐨 When you're done, uncomment this and update the values:
-// const results = {
-// 	isAvailable: true,
-// 	isOnSale: false,
-// 	hasDiscount: true,
-// 	canPurchase: true,
-// }
-// console.log('Results:', JSON.stringify(results))
+// 🐨 Export your variables so we can verify your work
+// 💰 export { isAvailable, isOnSale, hasDiscount, canPurchase }
