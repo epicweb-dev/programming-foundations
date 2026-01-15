@@ -8,5 +8,3 @@ const sentence = 'I' + ' ' + 'am' + ' ' + 'learning' + ' ' + 'to' + ' ' + 'code'
 console.log(greeting)
 console.log(fullName)
 console.log(sentence)
-
-export { greeting, fullName, sentence }

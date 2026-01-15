@@ -9,5 +9,4 @@
 // 🐨 Log a math problem like "10 times 5 equals 50"
 // 💰 Use ${10 * 5} for the result
 
-// 🐨 Export your variables so we can verify your work
-// 💰 export { answer, greeting, math }
+// 🐨 No exports needed for this exercise

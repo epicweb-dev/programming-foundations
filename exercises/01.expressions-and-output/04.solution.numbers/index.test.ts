@@ -1,63 +1,53 @@
 import assert from 'node:assert/strict'
+import { spawnSync } from 'node:child_process'
 import { test } from 'node:test'
-import * as solution from './index.ts'
 
-await test('addResult is exported', () => {
-	assert.ok(
-		'addResult' in solution,
-		'🚨 Make sure you export "addResult" - add: export { addResult, ... }',
-	)
-})
+function getOutput() {
+	const result = spawnSync('npm', ['start', '--silent'], { encoding: 'utf8' })
 
-await test('addResult should be 42', () => {
+	if (result.error) {
+		throw result.error
+	}
+
 	assert.strictEqual(
-		solution.addResult,
-		42,
-		'🚨 addResult should be 42 (the result of 25 + 17)',
+		result.status,
+		0,
+		result.stderr || '🚨 Running the program failed',
 	)
-})
 
-await test('multiplyResult is exported', () => {
+	return result.stdout.replace(/\r\n/g, '\n')
+}
+
+const output = getOutput()
+const lines = output
+	.split('\n')
+	.map((line) => line.trim())
+	.filter(Boolean)
+
+await test('should print 42', () => {
 	assert.ok(
-		'multiplyResult' in solution,
-		'🚨 Make sure you export "multiplyResult" - add: export { ..., multiplyResult, ... }',
+		lines.includes('42'),
+		'🚨 Output should include 42 (the result of 25 + 17)',
 	)
 })
 
-await test('multiplyResult should be 48', () => {
-	assert.strictEqual(
-		solution.multiplyResult,
-		48,
-		'🚨 multiplyResult should be 48 (the result of 8 * 6)',
-	)
-})
-
-await test('divideResult is exported', () => {
+await test('should print 48', () => {
 	assert.ok(
-		'divideResult' in solution,
-		'🚨 Make sure you export "divideResult" - add: export { ..., divideResult, ... }',
+		lines.includes('48'),
+		'🚨 Output should include 48 (the result of 8 * 6)',
 	)
 })
 
-await test('divideResult should be 25', () => {
-	assert.strictEqual(
-		solution.divideResult,
-		25,
-		'🚨 divideResult should be 25 (the result of 100 / 4)',
-	)
-})
-
-await test('groupedResult is exported', () => {
+await test('should print 25', () => {
 	assert.ok(
-		'groupedResult' in solution,
-		'🚨 Make sure you export "groupedResult" - add: export { ..., groupedResult }',
+		lines.includes('25'),
+		'🚨 Output should include 25 (the result of 100 / 4)',
 	)
 })
 
-await test('groupedResult should be 30', () => {
-	assert.strictEqual(
-		solution.groupedResult,
-		30,
-		'🚨 groupedResult should be 30 (the result of (10 + 5) * 2)',
+await test('should print 30', () => {
+	assert.ok(
+		lines.includes('30'),
+		'🚨 Output should include 30 (the result of (10 + 5) * 2)',
 	)
 })

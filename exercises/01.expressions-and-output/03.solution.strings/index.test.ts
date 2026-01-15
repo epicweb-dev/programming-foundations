@@ -1,41 +1,44 @@
 import assert from 'node:assert/strict'
+import { spawnSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
-import * as solution from './index.ts'
 
-await test('greeting is exported', () => {
-	assert.ok(
-		'greeting' in solution,
-		'🚨 Make sure you export "greeting" - add: export { greeting, ... }',
-	)
-})
+function getOutput() {
+	const result = spawnSync('npm', ['start', '--silent'], { encoding: 'utf8' })
 
-await test('should have Hello TypeScript', () => {
+	if (result.error) {
+		throw result.error
+	}
+
 	assert.strictEqual(
-		solution.greeting,
-		'Hello TypeScript',
-		'🚨 greeting should be "Hello TypeScript" - concatenate "Hello" + " " + "TypeScript"',
+		result.status,
+		0,
+		result.stderr || '🚨 Running the program failed',
+	)
+
+	return result.stdout.replace(/\r\n/g, '\n')
+}
+
+const output = getOutput()
+
+await test('should print Hello TypeScript', () => {
+	assert.ok(
+		output.includes('Hello TypeScript'),
+		'🚨 Output should include "Hello TypeScript" - concatenate "Hello" + " " + "TypeScript"',
 	)
 })
 
-await test('fullName is exported', () => {
+await test('should print a full name with a space', () => {
 	assert.ok(
-		'fullName' in solution,
-		'🚨 Make sure you export "fullName" - add: export { greeting, fullName, ... }',
+		output.includes('Kody Koala'),
+		'🚨 Output should include a full name with a space between first and last name',
 	)
 })
 
-await test('fullName should have a space', () => {
+await test('should print the concatenated sentence', () => {
 	assert.ok(
-		solution.fullName.includes(' '),
-		'🚨 fullName should contain a space between first and last name',
-	)
-})
-
-await test('sentence is exported', () => {
-	assert.ok(
-		'sentence' in solution,
-		'🚨 Make sure you export "sentence" - add: export { greeting, fullName, sentence }',
+		output.includes('I am learning to code'),
+		'🚨 Output should include "I am learning to code" - concatenate multiple strings',
 	)
 })
 

@@ -10,5 +10,4 @@
 // 🐨 Use console.log to show the result of (10 + 5) multiplied by 2
 // 💰 Use parentheses to control order of operations
 
-// 🐨 Export your variables so we can verify your work
-// 💰 export { addResult, multiplyResult, divideResult, groupedResult }
+// 🐨 No exports needed for this exercise

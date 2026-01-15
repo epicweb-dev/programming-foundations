@@ -13,5 +13,4 @@
 // 🐨 Log tab-separated data: Name: [tab] Age: [tab] City: (like column headers)
 // 💰 Use \t to create tabs between words
 
-// 🐨 Export your variables so we can verify your work
-// 💰 export { apostrophe, quotes, newlines, tabs }
+// 🐨 No exports needed for this exercise

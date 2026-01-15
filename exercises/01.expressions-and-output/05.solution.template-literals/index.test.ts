@@ -1,47 +1,43 @@
 import assert from 'node:assert/strict'
+import { spawnSync } from 'node:child_process'
 import { test } from 'node:test'
-import * as solution from './index.ts'
 
-await test('answer is exported', () => {
-	assert.ok(
-		'answer' in solution,
-		'🚨 Make sure you export "answer" - add: export { answer, ... }',
-	)
-})
+function getOutput() {
+	const result = spawnSync('npm', ['start', '--silent'], { encoding: 'utf8' })
 
-await test('should have "The answer is 42"', () => {
+	if (result.error) {
+		throw result.error
+	}
+
 	assert.strictEqual(
-		solution.answer,
-		'The answer is 42',
-		'🚨 answer should be "The answer is 42" - use a template literal with ${40 + 2}',
+		result.status,
+		0,
+		result.stderr || '🚨 Running the program failed',
+	)
+
+	return result.stdout.replace(/\r\n/g, '\n')
+}
+
+const output = getOutput()
+
+await test('should print "The answer is 42"', () => {
+	assert.ok(
+		output.includes('The answer is 42'),
+		'🚨 Output should include "The answer is 42" - use a template literal with ${40 + 2}',
 	)
 })
 
-await test('greeting is exported', () => {
+await test('should print Hello, TypeScript! greeting', () => {
 	assert.ok(
-		'greeting' in solution,
-		'🚨 Make sure you export "greeting" - add: export { answer, greeting, ... }',
+		output.toLowerCase().includes('hello') &&
+			output.toLowerCase().includes('typescript'),
+		'🚨 Output should include "Hello" and "TypeScript"',
 	)
 })
 
-await test('should have Hello, TypeScript! greeting', () => {
+await test('should print math result with 50', () => {
 	assert.ok(
-		solution.greeting.toLowerCase().includes('hello') &&
-			solution.greeting.toLowerCase().includes('typescript'),
-		'🚨 greeting should include "Hello" and "TypeScript"',
-	)
-})
-
-await test('math is exported', () => {
-	assert.ok(
-		'math' in solution,
-		'🚨 Make sure you export "math" - add: export { answer, greeting, math }',
-	)
-})
-
-await test('should have math result with 50', () => {
-	assert.ok(
-		solution.math.includes('50'),
-		'🚨 math should include 50 (the result of 10 * 5) - use ${10 * 5} in a template literal',
+		output.includes('50'),
+		'🚨 Output should include 50 (the result of 10 * 5) - use ${10 * 5} in a template literal',
 	)
 })

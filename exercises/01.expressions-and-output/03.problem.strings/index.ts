@@ -8,5 +8,4 @@
 // 🐨 Log a sentence by concatenating multiple strings
 // 💰 Example: "I" + " " + "am" + " " + "learning" + " " + "to" + " " + "code"
 
-// 🐨 Export your variables so we can verify your work
-// 💰 export { greeting, fullName, sentence }
+// 🐨 No exports needed for this exercise

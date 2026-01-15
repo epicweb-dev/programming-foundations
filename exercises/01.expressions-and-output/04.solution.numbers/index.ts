@@ -10,5 +10,3 @@ console.log(addResult)
 console.log(multiplyResult)
 console.log(divideResult)
 console.log(groupedResult)
-
-export { addResult, multiplyResult, divideResult, groupedResult }

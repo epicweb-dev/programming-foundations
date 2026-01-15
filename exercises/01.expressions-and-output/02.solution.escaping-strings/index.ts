@@ -16,5 +16,3 @@ console.log(newlines)
 // prettier-ignore
 const tabs = 'Name:\tAge:\tCity:'
 console.log(tabs)
-
-export { apostrophe, quotes, newlines, tabs }
