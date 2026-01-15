@@ -61,5 +61,21 @@ console.log(add(2, 3)) // 5
 console.log(greet('World')) // "Hello, World!"
 console.log(calculateCompoundInterest(1000, 0.05, 10)) // ~1628.89
 console.log(clamp(15, 0, 10)) // 10
-
-export { add, greet, calculateCompoundInterest, clamp }
+console.log(
+	'Results JSON:',
+	JSON.stringify({
+		add: [add(2, 3), add(-1, 1)],
+		greet: [greet('Alice'), greet('World')],
+		calculateCompoundInterest: [
+			calculateCompoundInterest(1000, 0.05, 10),
+			calculateCompoundInterest(100, 0.1, 1),
+		],
+		clamp: [
+			clamp(15, 0, 10),
+			clamp(-5, 0, 10),
+			clamp(5, 0, 10),
+			clamp(0, 0, 10),
+			clamp(10, 0, 10),
+		],
+	}),
+)

@@ -17,5 +17,10 @@ console.log(
 		? 'Last purchase: ' + lastPurchaseDate
 		: 'No previous purchases',
 )
-
-export { discountCode, lastPurchaseDate }
+console.log(
+	'Results JSON:',
+	JSON.stringify({
+		discountCode: discountCode === undefined ? 'undefined' : discountCode,
+		lastPurchaseDate,
+	}),
+)

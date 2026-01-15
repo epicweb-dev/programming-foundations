@@ -15,5 +15,7 @@ console.log('Product:', productName)
 console.log('Quantity:', quantity)
 console.log('Description:', description)
 
-// 🦺 This line ensures TypeScript treats this as a module
-export { price, productName, quantity, description }
+console.log(
+	'Results JSON:',
+	JSON.stringify({ price, productName, quantity, description }),
+)

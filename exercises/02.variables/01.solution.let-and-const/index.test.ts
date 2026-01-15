@@ -1,10 +1,19 @@
 import assert from 'node:assert/strict'
+import { execSync } from 'node:child_process'
 import { test } from 'node:test'
-import { TAX_RATE, cartTotal, finalTotal } from './index.ts'
+
+const output = execSync('npm start --silent', { encoding: 'utf8' })
+const jsonLine = output
+	.split('\n')
+	.find((line) => line.startsWith('Results JSON:'))
+assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
+const { taxRate, cartTotal, finalTotal } = JSON.parse(
+	jsonLine.replace('Results JSON:', '').trim(),
+)
 
 await test('TAX_RATE should be 0.08', () => {
 	assert.strictEqual(
-		TAX_RATE,
+		taxRate,
 		0.08,
 		'🚨 TAX_RATE should be 0.08 - use const for a value that never changes',
 	)

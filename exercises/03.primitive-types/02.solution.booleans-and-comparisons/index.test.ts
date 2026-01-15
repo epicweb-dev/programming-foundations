@@ -1,6 +1,15 @@
 import assert from 'node:assert/strict'
+import { execSync } from 'node:child_process'
 import { test } from 'node:test'
-import { isAvailable, isOnSale, hasDiscount, canPurchase } from './index.ts'
+
+const output = execSync('npm start --silent', { encoding: 'utf8' })
+const jsonLine = output
+	.split('\n')
+	.find((line) => line.startsWith('Results JSON:'))
+assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
+const { isAvailable, isOnSale, hasDiscount, canPurchase } = JSON.parse(
+	jsonLine.replace('Results JSON:', '').trim(),
+)
 
 await test('isAvailable should be true', () => {
 	assert.strictEqual(

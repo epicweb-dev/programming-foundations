@@ -18,5 +18,14 @@ console.log('Sum of bigints:', sum)
 console.log('userId:', userId)
 console.log('anotherId:', anotherId)
 console.log('Are symbols equal?', areEqual) // false - each Symbol is unique
-
-export { largeNumber, anotherLarge, sum, userId, anotherId, areEqual }
+console.log(
+	'Results JSON:',
+	JSON.stringify({
+		largeNumber: largeNumber.toString(),
+		anotherLarge: anotherLarge.toString(),
+		sum: sum.toString(),
+		userIdType: typeof userId,
+		anotherIdType: typeof anotherId,
+		areEqual,
+	}),
+)

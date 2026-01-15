@@ -51,3 +51,17 @@ console.log('Hello' + ' World') // Prints: Hello World
 
 In this exercise, you'll learn to use `console.log()` to output different types
 of expressions.
+
+## JSON.stringify
+
+Some tests in this workshop read structured values from the terminal output.
+To do that, we use `JSON.stringify(...)` to convert objects into strings that
+can be printed and parsed reliably.
+
+```ts
+const result = { greeting: 'Hello', count: 3 }
+console.log('Results JSON:', JSON.stringify(result))
+```
+
+`JSON.stringify` turns JavaScript values into a JSON string so the test can
+compare exact results.

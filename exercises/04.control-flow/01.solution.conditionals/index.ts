@@ -23,4 +23,4 @@ console.log(`Score: ${score}`)
 console.log(`Grade: ${grade}`)
 console.log(`Passed: ${passed}`)
 
-export { score, grade, passed }
+console.log('Results JSON:', JSON.stringify({ score, grade, passed }))

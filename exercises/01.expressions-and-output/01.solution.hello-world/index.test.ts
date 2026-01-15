@@ -3,15 +3,16 @@ import { execSync } from 'node:child_process'
 import { test } from 'node:test'
 
 await test('should print Hello, World!', () => {
-	const output = execSync('node index.ts', { encoding: 'utf8' })
 	assert.ok(
-		output.includes('Hello, World!'),
+		execSync('npm start --silent', { encoding: 'utf8' }).includes(
+			'Hello, World!',
+		),
 		'🚨 Output should include "Hello, World!" - make sure you used console.log() with that exact string',
 	)
 })
 
 await test('should print at least two lines', () => {
-	const output = execSync('node index.ts', { encoding: 'utf8' })
+	const output = execSync('npm start --silent', { encoding: 'utf8' })
 	const lines = output.trim().split('\n').filter(Boolean)
 	assert.ok(
 		lines.length >= 2,

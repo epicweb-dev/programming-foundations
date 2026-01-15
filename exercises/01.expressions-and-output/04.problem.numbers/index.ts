@@ -9,3 +9,12 @@
 
 // 🐨 Use console.log to show the result of (10 + 5) multiplied by 2
 // 💰 Use parentheses to control order of operations
+
+// 🐨 When you're done, uncomment this and update the values:
+// const results = {
+// 	addResult: 42,
+// 	multiplyResult: 48,
+// 	divideResult: 25,
+// 	groupedResult: 30,
+// }
+// console.log('Results JSON:', JSON.stringify(results))

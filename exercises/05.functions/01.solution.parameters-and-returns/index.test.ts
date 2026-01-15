@@ -1,15 +1,24 @@
 import assert from 'node:assert/strict'
+import { execSync } from 'node:child_process'
 import { test } from 'node:test'
-import { calculateTax, formatPrice, applyDiscount } from './index.ts'
+
+const output = execSync('npm start --silent', { encoding: 'utf8' })
+const jsonLine = output
+	.split('\n')
+	.find((line) => line.startsWith('Results JSON:'))
+assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
+const { calculateTax, formatPrice, applyDiscount } = JSON.parse(
+	jsonLine.replace('Results JSON:', '').trim(),
+)
 
 await test('calculateTax should calculate tax correctly', () => {
 	assert.strictEqual(
-		calculateTax(100, 0.08),
+		calculateTax[0],
 		8,
 		'🚨 calculateTax(100, 0.08) should return 8 - multiply the amount by the tax rate',
 	)
 	assert.strictEqual(
-		calculateTax(50, 0.1),
+		calculateTax[1],
 		5,
 		'🚨 calculateTax(50, 0.1) should return 5 - multiply the amount by the tax rate',
 	)
@@ -17,17 +26,17 @@ await test('calculateTax should calculate tax correctly', () => {
 
 await test('formatPrice should format cents as dollars', () => {
 	assert.strictEqual(
-		formatPrice(1999),
+		formatPrice[0],
 		'$19.99',
 		'🚨 formatPrice(1999) should return "$19.99" - divide by 100 and format with dollar sign and 2 decimals',
 	)
 	assert.strictEqual(
-		formatPrice(100),
+		formatPrice[1],
 		'$1.00',
 		'🚨 formatPrice(100) should return "$1.00" - divide by 100 and format with dollar sign and 2 decimals',
 	)
 	assert.strictEqual(
-		formatPrice(50),
+		formatPrice[2],
 		'$0.50',
 		'🚨 formatPrice(50) should return "$0.50" - divide by 100 and format with dollar sign and 2 decimals',
 	)
@@ -35,17 +44,17 @@ await test('formatPrice should format cents as dollars', () => {
 
 await test('applyDiscount should apply discount percentage', () => {
 	assert.strictEqual(
-		applyDiscount(100, 20),
+		applyDiscount[0],
 		80,
 		'🚨 applyDiscount(100, 20) should return 80 - subtract the discount percentage from the price',
 	)
 	assert.strictEqual(
-		applyDiscount(50, 10),
+		applyDiscount[1],
 		45,
 		'🚨 applyDiscount(50, 10) should return 45 - subtract the discount percentage from the price',
 	)
 	assert.strictEqual(
-		applyDiscount(200, 25),
+		applyDiscount[2],
 		150,
 		'🚨 applyDiscount(200, 25) should return 150 - subtract the discount percentage from the price',
 	)

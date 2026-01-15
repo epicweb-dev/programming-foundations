@@ -3,16 +3,21 @@ import { execSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
 
+const output = execSync('npm start --silent', { encoding: 'utf8' })
+const jsonLine = output
+	.split('\n')
+	.find((line) => line.startsWith('Results JSON:'))
+assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
+const { greeting } = JSON.parse(jsonLine.replace('Results JSON:', '').trim())
+
 await test('should print Hello TypeScript', () => {
-	const output = execSync('node index.ts', { encoding: 'utf8' })
 	assert.ok(
-		output.includes('Hello TypeScript'),
+		greeting === 'Hello TypeScript',
 		'🚨 Output should include "Hello TypeScript" - concatenate "Hello" + " " + "TypeScript"',
 	)
 })
 
 await test('should print at least three lines', () => {
-	const output = execSync('node index.ts', { encoding: 'utf8' })
 	const lines = output.trim().split('\n').filter(Boolean)
 	assert.ok(
 		lines.length >= 3,

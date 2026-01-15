@@ -24,3 +24,11 @@ const laptopPrice = 999.99
 // console.log('Cart subtotal:', cartTotal)
 // console.log('Tax:', cartTotal * TAX_RATE)
 // console.log('Final total:', finalTotal)
+
+// 🐨 When you're done, uncomment this and update the values:
+// const results = {
+// 	taxRate: 0.08,
+// 	cartTotal: 20.49,
+// 	finalTotal: 22.1292,
+// }
+// console.log('Results JSON:', JSON.stringify(results))

@@ -20,3 +20,9 @@ console.log('Price:', price)
 console.log('Product:', productName)
 console.log('Quantity:', quantity)
 console.log('Description:', description)
+
+// 🐨 When you're done, uncomment this:
+// console.log(
+// 	'Results JSON:',
+// 	JSON.stringify({ price, productName, quantity, description }),
+// )

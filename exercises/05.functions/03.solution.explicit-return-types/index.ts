@@ -19,7 +19,19 @@ console.log(parseAge('25')) // 25
 console.log(isValidEmail('test@example.com')) // true
 console.log(isValidEmail('invalid-email')) // false
 
-export { getFullName, parseAge, isValidEmail }
+console.log(
+	'Results JSON:',
+	JSON.stringify({
+		getFullName: [getFullName('John', 'Doe'), getFullName('Jane', 'Smith')],
+		parseAge: [parseAge('25'), parseAge('30'), parseAge('18')],
+		isValidEmail: [
+			isValidEmail('test@example.com'),
+			isValidEmail('user@domain.co.uk'),
+			isValidEmail('invalid-email'),
+			isValidEmail('no-at-sign'),
+		],
+	}),
+)
 
 // 🦉 Alternative: Inference-first approach
 // In practice, many developers prefer to let TypeScript infer return types.

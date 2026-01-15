@@ -1,6 +1,13 @@
 import assert from 'node:assert/strict'
+import { execSync } from 'node:child_process'
 import { test } from 'node:test'
-import { person } from './index.ts'
+
+const output = execSync('npm start --silent', { encoding: 'utf8' })
+const jsonLine = output
+	.split('\n')
+	.find((line) => line.startsWith('Results JSON:'))
+assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
+const person = JSON.parse(jsonLine.replace('Results JSON:', '').trim())
 
 await test('person object should be mutated correctly', () => {
 	assert.deepStrictEqual(

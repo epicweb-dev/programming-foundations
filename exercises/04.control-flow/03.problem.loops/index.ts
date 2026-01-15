@@ -13,3 +13,6 @@
 // 🐨 Add that line plus a "\n" to the output
 
 // console.log(output)
+
+// 🐨 When you're done, uncomment this:
+// console.log('Results JSON:', JSON.stringify({ output }))

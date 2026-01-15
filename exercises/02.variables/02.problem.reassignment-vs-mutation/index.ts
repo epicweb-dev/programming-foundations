@@ -20,3 +20,7 @@ console.log('Modified person:', person)
 // 🦉 Key insight: const prevents reassignment, not mutation!
 // The variable person always points to the SAME object,
 // but the properties of that object can change.
+
+// 🐨 When you're done, uncomment this and update the values:
+// const results = { name: 'Alice', age: 31, city: 'Portland' }
+// console.log('Results JSON:', JSON.stringify(results))

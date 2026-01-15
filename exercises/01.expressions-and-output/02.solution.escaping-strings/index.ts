@@ -2,13 +2,22 @@
 // Learn to include special characters in strings
 
 // prettier-ignore
-console.log('It\'s working!')
+const apostrophe = 'It\'s working!'
+console.log(apostrophe)
 
 // prettier-ignore
-console.log("She said \"Hi\"")
+const quotes = "She said \"Hi\""
+console.log(quotes)
 
 // prettier-ignore
-console.log('Hello\nWorld')
+const newlines = 'Hello\nWorld'
+console.log(newlines)
 
 // prettier-ignore
-console.log('Name:\tAge:\tCity:')
+const tabs = 'Name:\tAge:\tCity:'
+console.log(tabs)
+
+console.log(
+	'Results JSON:',
+	JSON.stringify({ apostrophe, quotes, newlines, tabs }),
+)

@@ -45,4 +45,22 @@ function calculateCompoundInterest(
 // - Has a complete JSDoc comment with description, @param, @returns, and @example
 // 💰 Math.max(min, Math.min(max, value)) will clamp a value
 
-export { add, greet, calculateCompoundInterest }
+// 🐨 When you're done, uncomment this:
+// console.log(
+// 	'Results JSON:',
+// 	JSON.stringify({
+// 		add: [add(2, 3), add(-1, 1)],
+// 		greet: [greet('Alice'), greet('World')],
+// 		calculateCompoundInterest: [
+// 			calculateCompoundInterest(1000, 0.05, 10),
+// 			calculateCompoundInterest(100, 0.1, 1),
+// 		],
+// 		clamp: [
+// 			clamp(15, 0, 10),
+// 			clamp(-5, 0, 10),
+// 			clamp(5, 0, 10),
+// 			clamp(0, 0, 10),
+// 			clamp(10, 0, 10),
+// 		],
+// 	}),
+// )

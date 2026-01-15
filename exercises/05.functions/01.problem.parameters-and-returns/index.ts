@@ -20,3 +20,17 @@
 // console.log(calculateTax(100, 0.08)) // 8
 // console.log(formatPrice(1999)) // "$19.99"
 // console.log(applyDiscount(100, 20)) // 80
+
+// 🐨 When you're done, uncomment this:
+// console.log(
+// 	'Results JSON:',
+// 	JSON.stringify({
+// 		calculateTax: [calculateTax(100, 0.08), calculateTax(50, 0.1)],
+// 		formatPrice: [formatPrice(1999), formatPrice(100), formatPrice(50)],
+// 		applyDiscount: [
+// 			applyDiscount(100, 20),
+// 			applyDiscount(50, 10),
+// 			applyDiscount(200, 25),
+// 		],
+// 	}),
+// )

@@ -16,3 +16,7 @@ const grade: string = 'B'
 // 💰 Don't forget the `break` after each case!
 
 // console.log(`Grade ${grade}: ${description}`)
+
+// 🐨 When you're done, uncomment this and update the values:
+// const results = { grade: 'B', description: 'Good' }
+// console.log('Results JSON:', JSON.stringify(results))

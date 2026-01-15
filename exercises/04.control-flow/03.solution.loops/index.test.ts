@@ -1,11 +1,19 @@
 import assert from 'node:assert/strict'
+import { execSync } from 'node:child_process'
 import { test } from 'node:test'
-import { output } from './index.ts'
 
 await test('output should match the star staircase', () => {
 	const expected = '*\n**\n***\n****\n*****\n'
+	const output = execSync('npm start --silent', { encoding: 'utf8' })
+	const jsonLine = output
+		.split('\n')
+		.find((line) => line.startsWith('Results JSON:'))
+	assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
+	const { output: actual } = JSON.parse(
+		jsonLine.replace('Results JSON:', '').trim(),
+	)
 	assert.strictEqual(
-		output,
+		actual,
 		expected,
 		'🚨 output should be a 5-line staircase of stars',
 	)
