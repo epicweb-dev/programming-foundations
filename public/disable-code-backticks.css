@@ -1,0 +1,5 @@
+/* This is confusing for some of the first exercises when we're talking about syntax for strings and stuff */
+.prose code::before,
+.prose code::after {
+	content: none !important;
+}

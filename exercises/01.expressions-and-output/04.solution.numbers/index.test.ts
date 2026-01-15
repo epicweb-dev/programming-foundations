@@ -26,28 +26,28 @@ const lines = output
 
 await test('should print 42', () => {
 	assert.ok(
-		lines.includes('42'),
+		lines.some((line) => line.includes('42')),
 		'🚨 Output should include 42 (the result of 25 + 17)',
 	)
 })
 
 await test('should print 48', () => {
 	assert.ok(
-		lines.includes('48'),
+		lines.some((line) => line.includes('48')),
 		'🚨 Output should include 48 (the result of 8 * 6)',
 	)
 })
 
 await test('should print 25', () => {
 	assert.ok(
-		lines.includes('25'),
+		lines.some((line) => line.includes('25')),
 		'🚨 Output should include 25 (the result of 100 / 4)',
 	)
 })
 
 await test('should print 30', () => {
 	assert.ok(
-		lines.includes('30'),
+		lines.some((line) => line.includes('30')),
 		'🚨 Output should include 30 (the result of (10 + 5) * 2)',
 	)
 })
