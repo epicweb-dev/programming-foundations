@@ -23,7 +23,7 @@ const double = (n: number): number => n * 2
 | Context                       | Use                  | Example                           |
 | ----------------------------- | -------------------- | --------------------------------- |
 | Top-level named functions     | Function declaration | `function processOrder() { ... }` |
-| Callbacks                     | Arrow function       | `items.map((item) => item.price)` |
+| Callbacks                     | Arrow function       | `applyToNumber(5, (n) => n + 1)`   |
 | Short single-expression funcs | Arrow (implicit)     | `const double = (n) => n * 2`     |
 | Object methods                | Method shorthand     | `{ calculate() { ... } }`         |
 
@@ -31,7 +31,7 @@ const double = (n: number): number => n * 2
 
 1. Convert the function declarations to arrow functions
 2. Use implicit returns where the function body is a single expression
-3. Create a `processNumbers` function that uses callbacks with arrow functions
+3. Create a function that uses a callback with arrow functions (no arrays)
 
 💰 Implicit return syntax (no braces, no `return` keyword):
 
@@ -42,7 +42,11 @@ const add = (a: number, b: number): number => a + b
 💰 Arrow functions in callbacks:
 
 ```ts
-const doubled = numbers.map((n) => n * 2)
+function applyToNumber(value: number, transform: (n: number) => number): number {
+	return transform(value)
+}
+
+const result = applyToNumber(5, (n) => n + 1) // 6
 ```
 
 📜 [Function Forms](https://kentcdodds.com/blog/function-forms)

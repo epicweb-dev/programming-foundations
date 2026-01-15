@@ -5,7 +5,9 @@ import {
 	greet,
 	calculateTotal,
 	isEven,
-	processNumbers,
+	applyToNumber,
+	triple,
+	square,
 } from './index.ts'
 
 await test('double should be an arrow function', () => {
@@ -41,14 +43,14 @@ await test('calculateTotal should be an arrow function', () => {
 		'🚨 calculateTotal should be an arrow function',
 	)
 	assert.strictEqual(
-		calculateTotal([10, 20, 30], 0.1),
+		calculateTotal(60, 0.1),
 		66,
-		'🚨 calculateTotal([10, 20, 30], 0.1) should return 66 - sum prices and add tax',
+		'🚨 calculateTotal(60, 0.1) should return 66 - add tax to the subtotal',
 	)
 	assert.strictEqual(
-		calculateTotal([100], 0.05),
+		calculateTotal(100, 0.05),
 		105,
-		'🚨 calculateTotal([100], 0.05) should return 105',
+		'🚨 calculateTotal(100, 0.05) should return 105',
 	)
 })
 
@@ -62,24 +64,15 @@ await test('isEven should be an arrow function', () => {
 	assert.strictEqual(isEven(0), true, '🚨 isEven(0) should return true')
 })
 
-await test('processNumbers should use arrow function callbacks', () => {
-	const result = processNumbers([1, 2, 3, 4, 5])
-
+await test('applyToNumber should use a callback', () => {
 	assert.strictEqual(
-		JSON.stringify(result.doubled),
-		JSON.stringify([2, 4, 6, 8, 10]),
-		'🚨 doubled should be [2, 4, 6, 8, 10] - use map with arrow function',
-	)
-
-	assert.strictEqual(
-		JSON.stringify(result.evens),
-		JSON.stringify([2, 4]),
-		'🚨 evens should be [2, 4] - use filter with arrow function',
-	)
-
-	assert.strictEqual(
-		result.sum,
+		applyToNumber(5, triple),
 		15,
-		'🚨 sum should be 15 - use reduce with arrow function',
+		'🚨 applyToNumber(5, triple) should return 15',
+	)
+	assert.strictEqual(
+		applyToNumber(6, square),
+		36,
+		'🚨 applyToNumber(6, square) should return 36',
 	)
 })

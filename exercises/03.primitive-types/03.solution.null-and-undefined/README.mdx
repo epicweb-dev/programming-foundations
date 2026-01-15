@@ -3,20 +3,16 @@
 👨‍💼 You've handled missing data safely! This is a crucial skill in real-world
 applications.
 
-🦉 The key insight is **narrowing**. When you check for `null` or `undefined`,
-TypeScript knows the type is more specific inside that block:
+🦉 The key insight: `null` and `undefined` represent two different kinds of
+"missing" values. You can check for each directly to decide what to do.
 
 ```ts
-let value: string | undefined
+const value = undefined
 
-if (value !== undefined) {
-	// TypeScript knows value is `string` here, not `string | undefined`
-	console.log(value.toUpperCase()) // ✅ Safe!
+if (value === undefined) {
+	console.log('Missing value')
 }
 ```
-
-This is one of TypeScript's superpowers—it tracks what you've checked and
-updates its understanding of types accordingly.
 
 In practice, many developers prefer `null` for intentional absence (like "user
 hasn't set this yet") and let `undefined` represent truly missing values.

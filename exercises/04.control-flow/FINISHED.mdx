@@ -8,22 +8,5 @@ You learned:
 - 🔃 **`switch`** for matching one value against many options
 - 🔁 **`for` loops** for counted repetition
 - 🔄 **`while` loops** for conditional repetition
-- 📦 **`for...of`** for iterating over collections (the cleanest option!)
-
-🦉 A best practice: Prefer `for...of` over traditional `for` loops when working
-with arrays. It's cleaner, harder to mess up, and TypeScript gives you better
-type inference.
-
-```ts
-// ✅ Preferred
-for (const item of items) {
-	process(item)
-}
-
-// 😐 Works but more error-prone
-for (let i = 0; i < items.length; i++) {
-	process(items[i])
-}
-```
 
 Next up: Functions—packaging up reusable logic with type-safe contracts!

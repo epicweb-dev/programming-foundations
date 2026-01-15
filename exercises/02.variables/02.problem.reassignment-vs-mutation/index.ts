@@ -1,22 +1,22 @@
 // Understanding Reassignment vs Mutation
 
-// This array is declared with const
-const shoppingList = ['milk', 'eggs', 'bread']
+// This object is declared with const
+const person = { name: 'Alice', age: 30, city: 'Seattle' }
 
-console.log('Original list:', shoppingList)
+console.log('Original person:', person)
 
-// 🐨 Try to reassign shoppingList to a new array:
-// shoppingList = ['apples', 'oranges']
+// 🐨 Try to reassign person to a new object:
+// person = { name: 'Bob', age: 25, city: 'Portland' }
 // 💣 Uncomment the line above and see the TypeScript error
 
-// 🐨 Now try MUTATING the array by adding an item with push()
-// 💰 shoppingList.push('butter')
+// 🐨 Now try MUTATING the object by changing the age property
+// 💰 person.age = 31
 
-// 🐨 Mutate again by changing the first item
-// 💰 shoppingList[0] = 'almond milk'
+// 🐨 Mutate again by changing the city
+// 💰 person.city = 'Portland'
 
-console.log('Modified list:', shoppingList)
+console.log('Modified person:', person)
 
 // 🦉 Key insight: const prevents reassignment, not mutation!
-// The variable shoppingList always points to the SAME array,
-// but the contents of that array can change.
+// The variable person always points to the SAME object,
+// but the properties of that object can change.

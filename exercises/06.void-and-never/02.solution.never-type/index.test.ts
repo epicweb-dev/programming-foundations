@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { throwError, assertNonNull, getStatusMessage } from './index.ts'
+import { throwError, parseNumber, ensurePositive } from './index.ts'
 
 await test('throwError should throw an error', () => {
 	assert.throws(
@@ -10,43 +10,34 @@ await test('throwError should throw an error', () => {
 	)
 })
 
-await test('assertNonNull should return value when not null', () => {
-	const value = assertNonNull('Alice', 'Name is required')
+await test('parseNumber should parse valid numbers', () => {
 	assert.strictEqual(
-		value,
-		'Alice',
-		"🚨 assertNonNull should return the value when it's not null - check if value is null, if not return it",
+		parseNumber('42'),
+		42,
+		'🚨 parseNumber("42") should return 42 - use Number(...) to parse the value',
 	)
 })
 
-await test('assertNonNull should throw when value is null', () => {
+await test('parseNumber should throw on invalid input', () => {
 	assert.throws(
-		() => assertNonNull(null, 'Name is required'),
-		{ message: 'Name is required' },
-		'🚨 assertNonNull should throw the error message when value is null - check if value is null and throw if so',
+		() => parseNumber('not-a-number'),
+		{ message: 'Invalid number' },
+		'🚨 parseNumber should throw "Invalid number" for invalid input',
 	)
 })
 
-await test('getStatusMessage should return correct message for "pending"', () => {
+await test('ensurePositive should return number when positive', () => {
 	assert.strictEqual(
-		getStatusMessage('pending'),
-		'Loading...',
-		'🚨 getStatusMessage("pending") should return "Loading..." - use a switch statement or if/else to handle different status values',
+		ensurePositive(5),
+		5,
+		'🚨 ensurePositive(5) should return 5',
 	)
 })
 
-await test('getStatusMessage should return correct message for "success"', () => {
-	assert.strictEqual(
-		getStatusMessage('success'),
-		'Completed successfully!',
-		'🚨 getStatusMessage("success") should return "Completed successfully!" - use a switch statement or if/else to handle different status values',
-	)
-})
-
-await test('getStatusMessage should return correct message for "error"', () => {
-	assert.strictEqual(
-		getStatusMessage('error'),
-		'An error occurred.',
-		'🚨 getStatusMessage("error") should return "An error occurred." - use a switch statement or if/else to handle different status values',
+await test('ensurePositive should throw when negative', () => {
+	assert.throws(
+		() => ensurePositive(-1),
+		{ message: 'Number must be positive' },
+		'🚨 ensurePositive should throw "Number must be positive" for negatives',
 	)
 })

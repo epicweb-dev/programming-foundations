@@ -1,30 +1,28 @@
 # Loops
 
-👨‍💼 We need to calculate the total price of items in a shopping cart. This is a
-classic use case for loops—processing each item in a collection.
+👨‍💼 Let's build a fun text banner using loops. We'll make a simple "staircase"
+pattern of `*` characters.
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Use a `for` loop to iterate through the prices array
-2. Add each price to a running total
-3. Count how many items cost more than $10
+1. Use a `for` loop to build 5 rows of stars
+2. Each row should have one more `*` than the previous row
+3. Put each row on its own line using `\n`
 
 💰 Traditional `for` loop structure:
 
 ```ts
-for (let i = 0; i < array.length; i++) {
-	const item = array[i]
-	// do something with item
+for (let i = 0; i < count; i++) {
+	// do something
 }
 ```
 
-💰 Accumulator pattern:
+💰 String building with a loop:
 
 ```ts
-let total = 0
+let output = ''
 for (...) {
-  total = total + value
-  // or: total += value
+	output += 'x'
 }
 ```
 

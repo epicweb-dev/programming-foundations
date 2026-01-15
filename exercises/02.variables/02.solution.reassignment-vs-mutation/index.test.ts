@@ -1,32 +1,27 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { shoppingList } from './index.ts'
+import { person } from './index.ts'
 
-await test('shoppingList should be mutated correctly', () => {
+await test('person object should be mutated correctly', () => {
 	assert.deepStrictEqual(
-		shoppingList,
-		['almond milk', 'eggs', 'bread', 'butter'],
-		'🚨 shoppingList should contain ["almond milk", "eggs", "bread", "butter"] - use array methods like push() to add items',
-	)
-	assert.strictEqual(
-		shoppingList.length,
-		4,
-		'🚨 shoppingList should have 4 items - make sure you added all the required items',
+		person,
+		{ name: 'Alice', age: 31, city: 'Portland' },
+		'🚨 person should have age: 31 and city: "Portland" - mutate the object properties',
 	)
 })
 
-await test('first element should be "almond milk"', () => {
+await test('person age should be 31', () => {
 	assert.strictEqual(
-		shoppingList[0],
-		'almond milk',
-		'🚨 The first item should be "almond milk" - check the order you added items to the array',
+		person.age,
+		31,
+		'🚨 person.age should be 31 - change the age property from 30 to 31',
 	)
 })
 
-await test('last element should be "butter"', () => {
+await test('person city should be Portland', () => {
 	assert.strictEqual(
-		shoppingList[shoppingList.length - 1],
-		'butter',
-		'🚨 The last item should be "butter" - make sure you added it as the final item',
+		person.city,
+		'Portland',
+		'🚨 person.city should be "Portland" - change the city property',
 	)
 })

@@ -10,32 +10,32 @@ The difference:
 - **`null`** - The value was intentionally set to "nothing"
 
 ```ts
-let middleName: string | undefined // might not exist
-const deletedAt: Date | null = null // intentionally empty
+let middleName = undefined // not set yet
+const deletedAt = null // intentionally empty
+```
+
+## Ternary Operator
+
+The ternary operator is a concise way to choose between two values based on a
+condition:
+
+```ts
+const result = condition ? valueIfTrue : valueIfFalse
 ```
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Create a variable `discountCode` that can be `string` or `undefined`
-2. Create a variable `lastPurchaseDate` that can be `string` or `null`, set to
-   `null`
-3. Check if `discountCode` has a value and log an appropriate message
-4. Handle the case where `lastPurchaseDate` is `null`
+1. Create a variable `discountCode` set to `undefined`
+2. Create a variable `lastPurchaseDate` set to `null`
+3. Use the ternary operator to log whether `discountCode` has a value
+4. Use the ternary operator to handle `lastPurchaseDate` being `null`
 
-💰 Use union types with the pipe `|`:
-
-```ts
-let value: string | null = null
-```
-
-💰 Check for null/undefined:
+💰 Check for null/undefined with ternary:
 
 ```ts
-if (value !== undefined) {
-	// value is definitely defined here
-}
+console.log(value !== undefined ? 'Has value: ' + value : 'No value')
 ```
 
-📜 [TypeScript Handbook - Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)
+📜 [TypeScript Handbook - Null and Undefined](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#null-and-undefined)
 
 🐨 Once you've completed the exercise, run `node index.ts` in the playground to test your work!

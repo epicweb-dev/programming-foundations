@@ -13,8 +13,11 @@
 
 ```ts
 // Use arrow functions for callbacks
-const doubled = numbers.map((n) => n * 2)
-const evens = numbers.filter((n) => n % 2 === 0)
+function applyToNumber(value: number, transform: (n: number) => number): number {
+	return transform(value)
+}
+
+const result = applyToNumber(5, (n) => n + 1)
 
 // Use function declarations for top-level functions
 function processOrder(order: Order): Receipt {

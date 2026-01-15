@@ -13,29 +13,28 @@ x = 2 // x now points to a new value
 **Mutation**: Modifying the contents of an existing value
 
 ```ts
-const arr = [1, 2, 3]
-arr.push(4) // The array itself is modified (mutated)
+const obj = { count: 1 }
+obj.count = 2 // The object itself is modified (mutated)
 ```
 
 <callout-warning>
-	`const` prevents reassignment but NOT mutation! You can still push to a
-	`const` array or add properties to a `const` object.
+	`const` prevents reassignment but NOT mutation! You can still change
+	properties on a `const` object.
 </callout-warning>
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Try to reassign the `const` array (see the error)
-2. Mutate the `const` array by adding an item
+1. Try to reassign the `const` object (see the error)
+2. Mutate the `const` object by changing its properties
 3. Observe that mutation works even with `const`
 
-💰 Common array mutations:
+💰 Common object mutations:
 
 ```ts
-arr.push(item) // Add to end
-arr.pop() // Remove from end
-arr[0] = newValue // Replace at index
+obj.property = newValue // Change a property
+obj.newProp = value // Add a new property
 ```
 
-📜 [MDN - Array methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+📜 [MDN - Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 
 🐨 Once you've completed the exercise, run `node index.ts` in the playground to test your work!

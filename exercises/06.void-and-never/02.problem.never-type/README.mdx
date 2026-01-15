@@ -9,32 +9,19 @@ function fail(message: string): never {
 }
 ```
 
-TypeScript uses this for smart type narrowing. After calling a `never` function,
-TypeScript knows the code won't continue:
-
-```ts
-function process(value: string | null): string {
-	if (value === null) {
-		fail('Value cannot be null')
-		// TypeScript knows we won't reach here
-	}
-	return value.toUpperCase() // value is definitely string
-}
-```
+TypeScript uses this to mark code paths that can't continue. A `never` function
+is one that always throws or exits early.
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
 1. Create a `throwError` function that throws and returns `never`
-2. Create an `assertNonNull` function that throws if value is null
-3. Use exhaustiveness checking in a switch statement
+2. Create a `parseNumber` function that converts a string to a number
+3. Create an `ensurePositive` function that throws if the number is negative
 
-💰 Exhaustiveness pattern:
-
-```ts
-const _exhaustive: never = value
-// If value can be something other than never,
-// TypeScript will error here
-```
+<callout-info>
+	`Number(value)` converts a string to a number. If the string can't be parsed,
+	it returns `NaN` (Not a Number). Check for `NaN` using `Number.isNaN(result)`.
+</callout-info>
 
 📜 [TypeScript Handbook - never](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#the-never-type)
 

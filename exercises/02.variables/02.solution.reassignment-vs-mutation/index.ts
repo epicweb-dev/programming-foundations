@@ -1,25 +1,25 @@
 // Understanding Reassignment vs Mutation
 
-// This array is declared with const
-const shoppingList = ['milk', 'eggs', 'bread']
+// This object is declared with const
+const person = { name: 'Alice', age: 30, city: 'Seattle' }
 
-console.log('Original list:', shoppingList)
+console.log('Original person:', person)
 
 // ❌ This would cause an error - can't reassign a const
-// shoppingList = ['apples', 'oranges']
-// Error: Cannot assign to 'shoppingList' because it is a constant
+// person = { name: 'Bob', age: 25, city: 'Portland' }
+// Error: Cannot assign to 'person' because it is a constant
 
-// ✅ But we CAN mutate the array
-shoppingList.push('butter')
+// ✅ But we CAN mutate the object
+person.age = 31
 
-// ✅ And we can modify elements
-shoppingList[0] = 'almond milk'
+// ✅ And we can modify other properties
+person.city = 'Portland'
 
-console.log('Modified list:', shoppingList)
-// Output: ['almond milk', 'eggs', 'bread', 'butter']
+console.log('Modified person:', person)
+// Output: { name: 'Alice', age: 31, city: 'Portland' }
 
 // 🦉 Key insight: const prevents reassignment, not mutation!
-// The variable shoppingList always points to the SAME array,
-// but the contents of that array can change.
+// The variable person always points to the SAME object,
+// but the properties of that object can change.
 
-export { shoppingList }
+export { person }

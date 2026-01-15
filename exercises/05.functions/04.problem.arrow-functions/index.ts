@@ -12,8 +12,7 @@ function greet(name: string): string {
 }
 
 // 🐨 Convert this to an arrow function (keep the explicit return - it has multiple lines)
-function calculateTotal(prices: Array<number>, taxRate: number): number {
-	const subtotal = prices.reduce((sum, price) => sum + price, 0)
+function calculateTotal(subtotal: number, taxRate: number): number {
 	const tax = subtotal * taxRate
 	return subtotal + tax
 }
@@ -21,14 +20,14 @@ function calculateTotal(prices: Array<number>, taxRate: number): number {
 // 🐨 Create an arrow function `isEven` that returns true if a number is even
 // 💰 Use implicit return: const isEven = (n: number): boolean => ...
 
-// 🐨 Create a function `processNumbers` that:
-// - Takes an array of numbers
-// - Returns an object with: doubled, evens, and sum
-// - Use arrow functions in the callbacks (map, filter, reduce)
-// 💰 {
-//   doubled: numbers.map((n) => ...),
-//   evens: numbers.filter((n) => ...),
-//   sum: numbers.reduce((acc, n) => ..., 0)
-// }
+// 🐨 Create a function `applyToNumber` that:
+// - Takes a number and a transform function
+// - Returns the transformed number
+// 💰 function applyToNumber(value: number, transform: (n: number) => number): number
+
+// 🐨 Create arrow functions:
+// - `triple` that multiplies a number by 3
+// - `square` that multiplies a number by itself
+// Then call applyToNumber with each.
 
 export { double, greet, calculateTotal }

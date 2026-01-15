@@ -1,20 +1,15 @@
-// Shopping Cart Calculator
-// Using loops to process arrays
+// Star Staircase
+// Using loops to build a fun string pattern
 
-const prices: Array<number> = [29.99, 9.99, 49.99, 4.99, 19.99]
+// 🐨 Create a variable `output` starting as an empty string
+// 💰 let output = ''
 
-// 🐨 Create a variable `total` starting at 0
-// 💰 let total = 0
-
-// 🐨 Create a variable `expensiveItemCount` starting at 0
-// (items over $10)
-
-// 🐨 Write a for loop to iterate through prices
-// 💰 for (let i = 0; i < prices.length; i++)
+// 🐨 Write a for loop that builds 5 rows of stars
+// Each row should be one star longer than the previous
+// 💰 for (let row = 1; row <= 5; row++)
 
 // Inside the loop:
-// 🐨 Add the current price to total
-// 🐨 If the price is over 10, increment expensiveItemCount
+// 🐨 Build a single line of stars for this row
+// 🐨 Add that line plus a "\n" to the output
 
-// console.log(`Total: $${total.toFixed(2)}`)
-// console.log(`Expensive items (>$10): ${expensiveItemCount}`)
+// console.log(output)

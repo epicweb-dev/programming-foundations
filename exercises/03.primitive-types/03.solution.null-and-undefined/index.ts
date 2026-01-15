@@ -1,20 +1,21 @@
 // Handling Missing Data
 // Working with null and undefined
 
-let discountCode: string | undefined
+const discountCode = undefined
 
-const lastPurchaseDate: string | null = null
+const lastPurchaseDate = null
 
-if (discountCode !== undefined) {
-	console.log(`Discount code: ${discountCode}`)
-} else {
-	console.log('No discount code available')
-}
+// Using ternary operators to check for values
+console.log(
+	discountCode !== undefined
+		? 'Discount code: ' + discountCode
+		: 'No discount code available',
+)
 
-if (lastPurchaseDate !== null) {
-	console.log(`Last purchase: ${lastPurchaseDate}`)
-} else {
-	console.log('No previous purchases')
-}
+console.log(
+	lastPurchaseDate !== null
+		? 'Last purchase: ' + lastPurchaseDate
+		: 'No previous purchases',
+)
 
 export { discountCode, lastPurchaseDate }

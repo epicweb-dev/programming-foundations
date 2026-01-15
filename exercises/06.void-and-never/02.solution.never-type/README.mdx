@@ -1,23 +1,15 @@
 # The Never Type
 
-👨‍💼 You've mastered one of TypeScript's most powerful features!
+👨‍💼 You've learned how `never` works in functions that always throw.
 
-🦉 The exhaustiveness pattern is incredibly useful. If someone adds a new status
-like `'cancelled'` to the union type, TypeScript will error at the default case:
+🦉 A `never` return type is perfect for helpers like `throwError`. It tells
+TypeScript (and other readers) that the function does not return normally:
 
 ```ts
-type Status = 'pending' | 'success' | 'error' | 'cancelled'
-
-// Now TypeScript errors:
-// Type 'string' is not assignable to type 'never'
-const _exhaustive: never = status // status could be 'cancelled'
+function throwError(message: string): never {
+	throw new Error(message)
+}
 ```
 
-This forces you to handle the new case—you can't forget!
-
-This pattern catches bugs at compile time that would otherwise be runtime
-surprises. It's especially valuable when:
-
-- Working with state machines
-- Handling action types (like Redux)
-- Processing API responses with different shapes
+This makes it clear that execution stops on that path, which helps keep your
+code safe and predictable.
