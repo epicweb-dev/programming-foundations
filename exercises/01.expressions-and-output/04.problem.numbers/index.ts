@@ -9,5 +9,3 @@
 
 // 🐨 Use console.log to show the result of (10 + 5) multiplied by 2
 // 💰 Use parentheses to control order of operations
-
-// 🐨 No exports needed for this exercise

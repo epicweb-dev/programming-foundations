@@ -55,3 +55,27 @@ Understanding this distinction helps you write predictable, bug-free code.
 
 📜 For more details, see MDN's guide on [variable
 declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations).
+
+## Exporting Variables
+
+In this and future exercises, you'll be required to see the `export`
+variables. This makes the variable available to other files. It's how the app
+displays your values and how tests verify your solutions. For now, just know
+that `export` shares your variable with the outside world.
+
+Example of exporting a single variable:
+
+```ts
+export const FAVORITE_COLOR = 'blue'
+```
+
+Example of exporting multiple variables:
+
+```ts
+const FAVORITE_COLOR = 'blue'
+let currentAge = 25
+
+export { FAVORITE_COLOR, currentAge }
+```
+
+We'll cover modules in depth later in the workshop series.

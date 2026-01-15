@@ -8,5 +8,3 @@
 
 // 🐨 Log a math problem like "10 times 5 equals 50"
 // 💰 Use ${10 * 5} for the result
-
-// 🐨 No exports needed for this exercise

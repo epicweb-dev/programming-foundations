@@ -12,5 +12,3 @@
 
 // 🐨 Log tab-separated data: Name: [tab] Age: [tab] City: (like column headers)
 // 💰 Use \t to create tabs between words
-
-// 🐨 No exports needed for this exercise

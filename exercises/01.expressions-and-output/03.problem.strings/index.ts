@@ -7,5 +7,3 @@
 
 // 🐨 Log a sentence by concatenating multiple strings
 // 💰 Example: "I" + " " + "am" + " " + "learning" + " " + "to" + " " + "code"
-
-// 🐨 No exports needed for this exercise
