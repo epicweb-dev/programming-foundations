@@ -26,8 +26,9 @@ await test('greeting is exported', () => {
 
 await test('should have Hello, TypeScript! greeting', () => {
 	assert.ok(
-		solution.greeting.toLowerCase().includes('hello typescript'),
-		'🚨 greeting should include "Hello TypeScript"',
+		solution.greeting.toLowerCase().includes('hello') &&
+			solution.greeting.toLowerCase().includes('typescript'),
+		'🚨 greeting should include "Hello" and "TypeScript"',
 	)
 })
 
