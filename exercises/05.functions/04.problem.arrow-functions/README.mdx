@@ -52,6 +52,14 @@ function applyToNumber(
 const result = applyToNumber(5, (n) => n + 1) // 6
 ```
 
+<callout-info>
+	A **callback** is a function you pass to another function to be called later.
+	In the example above, `(n) => n + 1` is a callback—we're passing it to
+	`applyToNumber`, which calls it with the value `5`. Functions that accept
+	other functions as arguments are called **higher-order functions**. You'll use
+	this pattern a lot with array methods like `map`, `filter`, and `reduce`.
+</callout-info>
+
 📜 [Function Forms](https://kentcdodds.com/blog/function-forms)
 
 🐨 Once you've completed the exercise, run `node index.ts` in the playground to test your work!

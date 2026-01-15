@@ -26,6 +26,20 @@ for (...) {
 }
 ```
 
+💰 You'll need **two loops** for this exercise—an outer loop for each row, and
+an inner loop to build the stars for that row. This is called a "nested loop":
+
+```ts
+for (let row = 1; row <= 5; row++) {
+	// inner loop builds stars for this row
+	for (let star = 0; star < row; star++) {
+		// add a star
+	}
+}
+```
+
 📜 [MDN - for statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+
+📜 [MDN - for...of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) (an alternative loop syntax you'll see in the wild)
 
 🐨 Once you've completed the exercise, run `node index.ts` in the playground to test your work!

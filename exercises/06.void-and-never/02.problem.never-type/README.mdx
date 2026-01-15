@@ -15,8 +15,17 @@ is one that always throws or exits early.
 🐨 Open <InlineFile file="index.ts" /> and:
 
 1. Create a `throwError` function that throws and returns `never`
-2. Create a `parseNumber` function that converts a string to a number
-3. Create an `ensurePositive` function that throws if the number is negative
+2. Create a `parseNumber` function that converts a string to a number, using
+   `throwError("Invalid number")` if the input can't be parsed
+3. Create an `ensurePositive` function that returns the number if positive, or
+   uses `throwError("Number must be positive")` if negative
+
+<callout-info>
+	The key learning here is that `parseNumber` and `ensurePositive` should
+	**use** the `throwError` function rather than throwing directly. This
+	demonstrates how TypeScript's flow analysis understands that code after a
+	`never`-returning function call is unreachable.
+</callout-info>
 
 <callout-info>
 	`Number(value)` converts a string to a number. If the string can't be parsed,
