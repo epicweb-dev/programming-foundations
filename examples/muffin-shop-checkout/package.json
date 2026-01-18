@@ -1,5 +1,5 @@
 {
-  "name": "examples_coffee-cart-checkout",
+  "name": "examples_muffin-shop-checkout",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module ./index.ts"

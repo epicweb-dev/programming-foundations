@@ -1,16 +1,16 @@
-// Coffee Cart Checkout
-// Build a simple receipt for a coffee cart order.
+// Muffin Shop Checkout
+// Build a simple receipt for a muffin shop order.
 
-const shopName = 'Bean & Birch'
+const shopName = 'Morning Muffins'
 const customerName = 'Avery'
 const isMember = true
-const drinkCount = 2
-const pastryCount = 1
-const drinkPrice = 4.5
-const pastryPrice = 3.25
+const muffinCount = 3
+const coffeeCount = 2
+const muffinPrice = 3.25
+const coffeePrice = 4
 const tipPercent = 0.15
 const taxRate = 0.0825
-const shippingSpeed = 'standard'
+const pickupMethod = 'counter'
 
 function buildDivider(char: string, length: number) {
   // 🐨 Build and return a divider string by repeating char
@@ -40,34 +40,34 @@ function calculateTip(totalBeforeTip: number, percent: number) {
   return 0
 }
 
-function calculateShipping(speed: string) {
+function calculatePickupFee(method: string) {
   // 🐨 Use a switch statement to return:
-  // 'pickup' -> 0
-  // 'standard' -> 5
-  // 'express' -> 15
+  // 'counter' -> 0
+  // 'curbside' -> 3
+  // 'delivery' -> 7
   return 0
 }
 
 let subtotal = 0
 // 🐨 Set subtotal using item counts and prices
-// 💰 (drinkCount * drinkPrice) + (pastryCount * pastryPrice)
+// 💰 (muffinCount * muffinPrice) + (coffeeCount * coffeePrice)
 
 const discount = calculateDiscount(subtotal, isMember)
 const taxableAmount = subtotal - discount
 const tax = calculateTax(taxableAmount, taxRate)
 const tip = calculateTip(taxableAmount + tax, tipPercent)
-const shipping = calculateShipping(shippingSpeed)
+const pickupFee = calculatePickupFee(pickupMethod)
 
-let shippingLabel = ''
-// 🐨 If shipping is 0, set shippingLabel to 'FREE'
-// otherwise set it to formatMoney(shipping)
+let pickupLabel = ''
+// 🐨 If pickupFee is 0, set pickupLabel to 'FREE'
+// otherwise set it to formatMoney(pickupFee)
 
 let memberMessage = ''
 // 🐨 If isMember is true, set memberMessage to 'Member discount applied'
 // otherwise set it to 'Join the club for 10% off'
 
 let total = 0
-// 🐨 Set total using subtotal, discount, tax, tip, and shipping
+// 🐨 Set total using subtotal, discount, tax, tip, and pickupFee
 
 const header = buildDivider('=', 32)
 const divider = buildDivider('-', 32)
@@ -77,14 +77,14 @@ const receipt =
   `${shopName}\n` +
   `Order for ${customerName}\n` +
   `${divider}\n` +
-  `Drinks: ${drinkCount} x ${formatMoney(drinkPrice)}\n` +
-  `Pastries: ${pastryCount} x ${formatMoney(pastryPrice)}\n` +
+  `Muffins: ${muffinCount} x ${formatMoney(muffinPrice)}\n` +
+  `Coffee: ${coffeeCount} x ${formatMoney(coffeePrice)}\n` +
   `${divider}\n` +
   `Subtotal: ${formatMoney(subtotal)}\n` +
   `Discount: -${formatMoney(discount)}\n` +
   `Tax: ${formatMoney(tax)}\n` +
   `Tip: ${formatMoney(tip)}\n` +
-  `Shipping: ${shippingLabel}\n` +
+  `Pickup fee: ${pickupLabel}\n` +
   `${divider}\n` +
   `Total: ${formatMoney(total)}\n` +
   `${memberMessage}\n` +
