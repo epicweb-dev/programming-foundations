@@ -1,0 +1,61 @@
+# Muffin Shop Checkout
+
+👨‍💼 The muffin shop needs a simple receipt that totals an order and prints a
+clean summary for customers.
+
+📜 This example sticks to the skills from the workshop: numbers, strings,
+booleans, variables, functions, if/else, switch statements, and loops.
+
+🐨 Open <InlineFile file="index.ts" /> and complete the following tasks:
+
+1. Build the divider string with a loop.
+2. Calculate `subtotal`.
+3. Implement `calculateDiscount`.
+4. Implement `calculateTax`.
+5. Implement `calculateTip`.
+6. Implement `calculatePickupFee` with a switch statement.
+7. Set `pickupLabel` with an if/else.
+8. Set `memberMessage` with an if/else.
+9. Calculate `total`.
+10. Make sure the receipt prints with `console.log`.
+
+💰 Flip `isMember` to see the discount and message change.
+💰 Try `pickupMethod` as `curbside` or `delivery` to test the switch logic.
+
+## Run the example
+
+```sh nonumber
+npm run start --workspace examples/muffin-shop-checkout
+```
+
+## What the output can look like
+
+Here is a sample console receipt output:
+
+```text
+================================
+Morning Muffins
+Order for Avery
+--------------------------------
+Muffins: 3 x $3.25
+Coffee: 2 x $4
+--------------------------------
+Subtotal: $17.75
+Discount: -$1.78
+Tax: $1.31
+Tip: $2.86
+Pickup fee: FREE
+--------------------------------
+Total: $20.14
+Member discount applied
+================================
+```
+
+## Try next
+
+- 🐨 Add a `dailySpecialCount` and `dailySpecialPrice`, then include them in the
+  `subtotal`.
+- 🐨 Create a `hasCoupon` boolean and apply an extra discount with an `if` check.
+- 🐨 Use a loop to build a `summaryLine` like `Items: 5 total`.
+- 🐨 Add a `rushOrder` flag that increases the `tipPercent` when true.
+- 💰 Try a new `pickupMethod` value and update the switch to handle it.
