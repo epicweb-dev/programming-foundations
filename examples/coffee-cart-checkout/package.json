@@ -1,0 +1,7 @@
+{
+  "name": "examples_coffee-cart-checkout",
+  "type": "module",
+  "scripts": {
+    "start": "npx @kentcdodds/log-module ./index.ts"
+  }
+}
