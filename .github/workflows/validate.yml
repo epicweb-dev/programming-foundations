@@ -32,6 +32,12 @@ jobs:
           npm_config_cache: ${{ runner.temp }}/npm-cache
           SKIP_PLAYGROUND: true
 
+      - name: ↪ Checkout PR ref
+        if: ${{ github.event_name == 'pull_request' }}
+        run: |
+          git -C ./workshop fetch origin pull/${{ github.event.pull_request.number }}/head:pr
+          git -C ./workshop checkout pr
+
       - name: ʦ TypeScript
         run: npm run typecheck
         working-directory: ./workshop
