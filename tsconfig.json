@@ -3,6 +3,7 @@
 		"moduleDetection": "force",
 		"target": "ES2022",
 		"module": "ESNext",
+		"jsx": "react-jsx",
 		"moduleResolution": "bundler",
 		"esModuleInterop": true,
 		"strict": true,
