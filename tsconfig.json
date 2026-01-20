@@ -2,6 +2,6 @@
 	"files": [],
 	"references": [
 		{ "path": "./tsconfig.base.json" },
-		{ "path": "./extras/muffin-shop-dashboard/tsconfig.json" }
+		{ "path": "./extra/muffin-shop-dashboard/tsconfig.json" }
 	]
 }
