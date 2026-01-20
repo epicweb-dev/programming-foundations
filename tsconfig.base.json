@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"moduleDetection": "force",
+		"target": "ES2022",
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"esModuleInterop": true,
+		"strict": true,
+		"skipLibCheck": true,
+		"noEmit": true,
+		"allowImportingTsExtensions": true,
+		"jsx": "react-jsx"
+	},
+	"include": ["**/*.ts", "**/*.tsx", "playground/**/*.ts"],
+	"exclude": ["node_modules", "**/node_modules"]
+}

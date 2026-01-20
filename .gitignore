@@ -21,3 +21,4 @@ data.db
 *.ignored/
 
 saved-playgrounds
+*.tsbuildinfo

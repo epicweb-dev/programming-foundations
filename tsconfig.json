@@ -1,15 +1,7 @@
 {
-	"compilerOptions": {
-		"moduleDetection": "force",
-		"target": "ES2022",
-		"module": "ESNext",
-		"moduleResolution": "bundler",
-		"esModuleInterop": true,
-		"strict": true,
-		"skipLibCheck": true,
-		"noEmit": true,
-		"allowImportingTsExtensions": true
-	},
-	"include": ["**/*.ts", "**/*.tsx", "playground/**/*.ts"],
-	"exclude": ["node_modules", "**/node_modules"]
+	"files": [],
+	"references": [
+		{ "path": "./tsconfig.base.json" },
+		{ "path": "./extras/muffin-shop-dashboard/tsconfig.json" }
+	]
 }
