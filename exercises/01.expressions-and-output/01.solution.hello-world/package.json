@@ -2,7 +2,9 @@
   "name": "exercises_01.expressions-and-output_01.solution.hello-world",
   "type": "module",
   "scripts": {
-    "start": "npx @kentcdodds/log-module@latest ./index.ts",
-    "test": "node --test index.test.ts"
+    "start": "npx @kentcdodds/log-module ./index.ts",
+    "start:watch": "npx @kentcdodds/log-module --watch ./index.ts",
+    "test": "node --test index.test.ts",
+    "test:watch": "echo \"watch does not work in exercise 1, try it in the other exercises though!\""
   }
 }
