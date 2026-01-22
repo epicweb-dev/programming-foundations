@@ -3,6 +3,8 @@
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module ./index.ts",
-    "test": "node --test index.test.ts"
+    "start:watch": "npx @kentcdodds/log-module --watch ./index.ts",
+    "test": "node --test index.test.ts",
+    "test:watch": "node --watch --test index.test.ts"
   }
 }
