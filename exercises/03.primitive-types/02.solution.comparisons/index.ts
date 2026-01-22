@@ -13,8 +13,8 @@ const strictEqual = price === quantity
 console.log('Loose equality (==):', looseEqual)
 console.log('Strict equality (===):', strictEqual)
 
-const a = 10
-const b = 20
+const a: number = 10
+const b: number = 20
 
 const notEqualLoose = a != b
 
