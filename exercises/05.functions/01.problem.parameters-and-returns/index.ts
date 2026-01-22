@@ -22,4 +22,4 @@
 // console.log(applyDiscount(100, 20)) // 80
 
 // 🐨 Export your functions so we can verify your work
-// 💰 export { calculateTax, formatPrice, applyDiscount }
+// export { calculateTax, formatPrice, applyDiscount }

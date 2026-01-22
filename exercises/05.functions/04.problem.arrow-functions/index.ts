@@ -31,4 +31,4 @@ function calculateTotal(subtotal: number, taxRate: number): number {
 // Then call applyToNumber with each.
 
 // 🐨 Export your functions so we can verify your work
-// 💰 export { double, greet, calculateTotal, isEven, applyToNumber, triple, square }
+// export { double, greet, calculateTotal, isEven, applyToNumber, triple, square }

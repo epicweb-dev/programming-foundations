@@ -24,4 +24,4 @@
 // console.log(ensurePositive(5))
 
 // 🐨 Export your functions so we can verify your work
-// 💰 export { throwError, parseNumber, ensurePositive }
+// export { throwError, parseNumber, ensurePositive }

@@ -14,27 +14,11 @@ let middleName = undefined // not set yet
 const deletedAt = null // intentionally empty
 ```
 
-## Ternary Operator
-
-The ternary operator is a concise way to choose between two values based on a
-condition:
-
-```ts
-const result = condition ? valueIfTrue : valueIfFalse
-```
-
 🐨 Open <InlineFile file="index.ts" /> and:
 
 1. Create a variable `discountCode` set to `undefined`
 2. Create a variable `lastPurchaseDate` set to `null`
-3. Use the ternary operator to log whether `discountCode` has a value
-4. Use the ternary operator to handle `lastPurchaseDate` being `null`
-
-💰 Check for null/undefined with ternary:
-
-```ts
-console.log(value !== undefined ? 'Has value: ' + value : 'No value')
-```
+3. Log both variables to see their values
 
 📜 [TypeScript Handbook - Null and Undefined](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#null-and-undefined)
 

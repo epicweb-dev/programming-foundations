@@ -22,4 +22,4 @@ console.log('Modified person:', person)
 // but the properties of that object can change.
 
 // 🐨 Export your variable so we can verify your work
-// 💰 export { person }
+// export { person }

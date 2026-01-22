@@ -26,4 +26,4 @@ const laptopPrice = 999.99
 // console.log('Final total:', finalTotal)
 
 // 🐨 Export your variables so we can verify your work
-// 💰 export { TAX_RATE, cartTotal, finalTotal }
+// export { TAX_RATE, cartTotal, finalTotal }

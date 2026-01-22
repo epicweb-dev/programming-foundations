@@ -26,4 +26,4 @@
 // console.log('Are symbols equal?', areEqual) // false
 
 // 🐨 Export your variables so we can verify your work
-// 💰 export { largeNumber, anotherLarge, sum, userId, anotherId, areEqual }
+// export { largeNumber, anotherLarge, sum, userId, anotherId, areEqual }

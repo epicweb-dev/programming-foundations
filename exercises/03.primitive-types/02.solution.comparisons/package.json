@@ -1,5 +1,5 @@
 {
-  "name": "exercises_03.primitive-types_02.problem.booleans-and-comparisons",
+  "name": "exercises_03.primitive-types_02.solution.comparisons",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module ./index.ts",

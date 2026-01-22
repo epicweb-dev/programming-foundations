@@ -21,4 +21,4 @@ const score: number = 85
 // console.log(`Passed: ${passed}`)
 
 // 🐨 Export your variables so we can verify your work
-// 💰 export { score, grade, passed }
+// export { score, grade, passed }

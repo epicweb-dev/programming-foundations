@@ -31,4 +31,4 @@ console.log(divide(10, 2)) // 5
 // console.log(isEven(7)) // false
 
 // 🐨 Export your functions so we can verify your work
-// 💰 export { multiply, divide, isEven }
+// export { multiply, divide, isEven }

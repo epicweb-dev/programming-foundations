@@ -1,0 +1,48 @@
+# Ternary Operator
+
+👨‍💼 Sometimes you need to choose between two values based on a condition. The
+`if`/`else` statement works, but it's verbose when you just need a simple
+choice.
+
+The **ternary operator** is a concise way to choose between two values:
+
+```ts
+const result = condition ? valueIfTrue : valueIfFalse
+```
+
+It's called "ternary" because it has three parts:
+
+1. The **condition** to check
+2. The value if the condition is **true** (after `?`)
+3. The value if the condition is **false** (after `:`)
+
+Compare these equivalent approaches:
+
+```ts
+// Using if/else (5 lines)
+let status: string
+if (age >= 18) {
+	status = 'adult'
+} else {
+	status = 'minor'
+}
+
+// Using ternary (1 line)
+const status = age >= 18 ? 'adult' : 'minor'
+```
+
+🐨 Open <InlineFile file="index.ts" /> and use the ternary operator to:
+
+1. Create `weatherDescription` - "hot" if temperature > 30, otherwise
+   "comfortable"
+2. Create `passed` - true if score >= 70, otherwise false
+3. Create `stockMessage` - "In stock" if stock > 0, otherwise "Out of stock"
+
+<callout-info>
+	The ternary operator is an **expression** that produces a value, while
+	`if`/`else` is a **statement** that executes code. This means you can use
+	ternaries anywhere you need a value—in variable assignments, function
+	arguments, or template literals.
+</callout-info>
+
+📜 [MDN - Conditional (ternary) operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator)

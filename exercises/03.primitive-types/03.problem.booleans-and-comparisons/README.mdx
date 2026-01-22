@@ -1,0 +1,44 @@
+# Booleans and Logical Operators
+
+👨‍💼 Our product catalog needs to track whether items are available and combine
+multiple conditions. Booleans and logical operators are essential for making
+decisions in code.
+
+You've already learned that comparisons return booleans. Now let's work with
+boolean values directly and combine them with **logical operators**.
+
+## Logical Operators
+
+```ts
+const both = a && b // true if BOTH are true
+const either = a || b // true if EITHER is true
+const opposite = !a // inverts the boolean
+```
+
+Use parentheses to group expressions and control order of operations:
+
+```ts
+const result1 = (a && b) || c // && happens first, then ||
+const result2 = a && (b || c) // || happens first, then &&
+const result3 = (a || b) && c // || happens first, then &&
+```
+
+🐨 Open <InlineFile file="index.ts" /> and complete the following tasks:
+
+1. Create a variable `isAvailable` with type `boolean` set to `true`
+2. Create a variable `isOnSale` with type `boolean` set to `false`
+3. Create a variable `hasDiscount` that's `true` when the price is under 50
+4. Create a variable `canPurchase` that's `true` when the item is available AND
+   in stock
+5. Create a variable `isNotAvailable` that's the opposite of `isAvailable` using
+   the `!` operator
+
+📜 [MDN - Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#logical_operators)
+
+<callout-success>
+	You'll notice `// @ts-expect-error` comments in the code. This tells
+	TypeScript to ignore the type error on the next line. Once you've created the
+	variables (`isAvailable`, `isOnSale`, `hasDiscount`, `canPurchase`,
+	`isNotAvailable`), you can remove these comments and the code will work
+	correctly!
+</callout-success>

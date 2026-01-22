@@ -81,3 +81,23 @@ await test('canPurchase should be true (isAvailable && stockCount > 0)', () => {
 		'🚨 canPurchase should be a boolean type - use a logical expression that returns true or false',
 	)
 })
+
+await test('isNotAvailable is exported', () => {
+	assert.ok(
+		'isNotAvailable' in solution,
+		'🚨 Make sure you export "isNotAvailable" - add: export { ..., isNotAvailable }',
+	)
+})
+
+await test('isNotAvailable should be false (!isAvailable)', () => {
+	assert.strictEqual(
+		solution.isNotAvailable,
+		false,
+		'🚨 isNotAvailable should be false (the opposite of isAvailable which is true) - use the ! operator: !isAvailable',
+	)
+	assert.strictEqual(
+		typeof solution.isNotAvailable,
+		'boolean',
+		'🚨 isNotAvailable should be a boolean type - use the ! operator to invert isAvailable',
+	)
+})

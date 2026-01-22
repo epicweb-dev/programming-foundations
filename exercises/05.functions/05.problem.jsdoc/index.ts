@@ -46,4 +46,4 @@ function calculateCompoundInterest(
 // 💰 Math.max(min, Math.min(max, value)) will clamp a value
 
 // 🐨 Export your functions so we can verify your work
-// 💰 export { add, greet, calculateCompoundInterest, clamp }
+// export { add, greet, calculateCompoundInterest, clamp }

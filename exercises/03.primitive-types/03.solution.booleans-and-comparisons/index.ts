@@ -12,10 +12,13 @@ const hasDiscount: boolean = price < 50
 
 const canPurchase: boolean = isAvailable && stockCount > 0
 
+const isNotAvailable: boolean = !isAvailable
+
 // ✅ Verification
 console.log('Is Available:', isAvailable)
 console.log('Is On Sale:', isOnSale)
 console.log('Has Discount:', hasDiscount)
 console.log('Can Purchase:', canPurchase)
+console.log('Is Not Available:', isNotAvailable)
 
-export { isAvailable, isOnSale, hasDiscount, canPurchase }
+export { isAvailable, isOnSale, hasDiscount, canPurchase, isNotAvailable }

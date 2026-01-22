@@ -1,5 +1,5 @@
 {
-  "name": "exercises_03.primitive-types_03.problem.null-and-undefined",
+  "name": "exercises_03.primitive-types_04.solution.null-and-undefined",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module ./index.ts",

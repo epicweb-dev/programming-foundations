@@ -1,5 +1,5 @@
 {
-  "name": "exercises_03.primitive-types_04.problem.bigint-and-symbol",
+  "name": "exercises_03.primitive-types_03.problem.booleans-and-comparisons",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module ./index.ts",

@@ -1,0 +1,8 @@
+{
+  "name": "exercises_04.control-flow_04.solution.ternary-operator",
+  "type": "module",
+  "scripts": {
+    "start": "npx @kentcdodds/log-module ./index.ts",
+    "test": "node --test index.test.ts"
+  }
+}

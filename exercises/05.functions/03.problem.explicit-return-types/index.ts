@@ -20,4 +20,4 @@
 // console.log(isValidEmail('invalid-email')) // false
 
 // 🐨 Export your functions so we can verify your work
-// 💰 export { getFullName, parseAge, isValidEmail }
+// export { getFullName, parseAge, isValidEmail }

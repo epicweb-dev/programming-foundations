@@ -18,4 +18,4 @@ const grade: string = 'B'
 // console.log(`Grade ${grade}: ${description}`)
 
 // 🐨 Export your variables so we can verify your work
-// 💰 export { grade, description }
+// export { grade, description }

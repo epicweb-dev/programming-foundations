@@ -1,0 +1,55 @@
+# Comparisons
+
+👨‍💼 Our product system needs to compare values—prices, quantities, and more.
+Understanding comparison operators is essential for making decisions in code.
+
+## Equality Operators
+
+JavaScript has two types of equality:
+
+**Loose equality (`==`)** - Compares values after type conversion:
+
+```ts
+100 == '100' // true (string converted to number)
+0 == false // true (false converted to 0)
+```
+
+**Strict equality (`===`)** - Compares values AND types:
+
+```ts
+100 === '100' // false (number vs string)
+0 === false // false (number vs boolean)
+```
+
+<callout-warning>
+	Always prefer `===` and `!==` (strict equality). Loose equality's type
+	conversion can cause subtle bugs that are hard to track down.
+</callout-warning>
+
+## Inequality Operators
+
+The same distinction applies to "not equal":
+
+- `!=` - Loose inequality (with type conversion)
+- `!==` - Strict inequality (no type conversion)
+
+## Relational Operators
+
+These compare order/magnitude:
+
+```ts
+a > b // greater than
+a < b // less than
+a >= b // greater than or equal
+a <= b // less than or equal
+```
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Compare `price` (number) and `quantity` (string) with both `==` and `===`
+2. Use `!=` and `!==` to check if `a` is not equal to `b`
+3. Use `>` and `<=` to compare `a` and `b`
+
+📜 [MDN - Equality comparisons](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+
+📜 [MDN - Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators)

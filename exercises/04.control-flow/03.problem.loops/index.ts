@@ -15,4 +15,4 @@
 // console.log(output)
 
 // 🐨 Export your variable so we can verify your work
-// 💰 export { output }
+// export { output }

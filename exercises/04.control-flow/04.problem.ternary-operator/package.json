@@ -1,5 +1,5 @@
 {
-  "name": "exercises_03.primitive-types_03.solution.null-and-undefined",
+  "name": "exercises_04.control-flow_04.problem.ternary-operator",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module ./index.ts",

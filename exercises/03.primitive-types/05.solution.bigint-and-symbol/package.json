@@ -1,0 +1,8 @@
+{
+  "name": "exercises_03.primitive-types_05.solution.bigint-and-symbol",
+  "type": "module",
+  "scripts": {
+    "start": "npx @kentcdodds/log-module ./index.ts",
+    "test": "node --test index.test.ts"
+  }
+}

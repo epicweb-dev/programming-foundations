@@ -1,0 +1,20 @@
+# Ternary Operator
+
+👨‍💼 Nice work! The ternary operator is one of the most useful tools for writing
+concise code.
+
+🦉 Notice that `passed` could be simplified even further:
+
+```ts
+// This works but is redundant:
+const passed = score >= 70 ? true : false
+
+// The comparison already produces a boolean!
+const passed = score >= 70
+```
+
+When your ternary returns `true` or `false` based on a condition, you often
+don't need the ternary at all—the condition itself is already a boolean.
+
+However, ternaries shine when you need to choose between **non-boolean values**
+like strings, numbers, or objects based on a condition.

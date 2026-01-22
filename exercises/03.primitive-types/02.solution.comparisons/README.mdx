@@ -1,0 +1,21 @@
+# Comparisons
+
+👨‍💼 Great work! You've seen the critical difference between loose and strict
+equality.
+
+🦉 The key takeaway: **always use `===` and `!==`** in your code. Loose equality
+(`==` and `!=`) can lead to confusing bugs because of its type coercion rules.
+
+For example, these are all true with loose equality:
+
+```ts
+'' == false // true
+0 == '' // true
+null == undefined // true
+```
+
+With strict equality, different types are never equal, which is almost always
+what you want.
+
+TypeScript actually helps here—if you try to compare incompatible types with
+`===`, TypeScript will warn you that the comparison will always be false!

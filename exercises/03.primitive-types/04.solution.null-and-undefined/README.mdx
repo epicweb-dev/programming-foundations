@@ -4,15 +4,14 @@
 applications.
 
 🦉 The key insight: `null` and `undefined` represent two different kinds of
-"missing" values. You can check for each directly to decide what to do.
+"missing" values:
 
-```ts
-const value = undefined
+- **`undefined`** - The value hasn't been set (default for uninitialized variables)
+- **`null`** - The value was intentionally set to "nothing"
 
-if (value === undefined) {
-	console.log('Missing value')
-}
-```
+When you log them, both will display their values. Later, when we learn about
+conditionals, you'll be able to check for these values and handle them
+appropriately.
 
 In practice, many developers prefer `null` for intentional absence (like "user
 hasn't set this yet") and let `undefined` represent truly missing values.

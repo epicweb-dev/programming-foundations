@@ -8,7 +8,7 @@
 
 // 🐨 Create `logWithTimestamp` that takes a message and logs it with timestamp
 // 💰 const timestamp = new Date().toISOString()
-// 💰 console.log(`[${timestamp}] ${message}`)
+// console.log(`[${timestamp}] ${message}`)
 
 // ✅ Test your functions
 // logInfo('Application started')
@@ -16,4 +16,4 @@
 // logWithTimestamp('User logged in')
 
 // 🐨 Export your functions so we can verify your work
-// 💰 export { logInfo, logError, logWithTimestamp }
+// export { logInfo, logError, logWithTimestamp }
