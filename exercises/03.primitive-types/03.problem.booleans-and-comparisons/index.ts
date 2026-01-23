@@ -1,6 +1,7 @@
 // Product Availability System
 // Using booleans to track product status
 
+const price: number = 29.99
 const stockCount: number = 100
 
 // 🐨 Create a variable `isAvailable` with type `boolean` set to `true`
@@ -25,4 +26,4 @@ console.log('Can Purchase:', canPurchase)
 console.log('Is Not Available:', isNotAvailable)
 
 // 🐨 Export your variables so we can verify your work
-// export { isAvailable, isOnSale, hasDiscount, canPurchase, isNotAvailable }
+// export { isAvailable, hasDiscount, canPurchase, isNotAvailable }
