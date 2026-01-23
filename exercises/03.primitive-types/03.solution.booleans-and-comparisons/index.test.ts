@@ -22,23 +22,10 @@ await test('isAvailable should be true', () => {
 	)
 })
 
-await test('hasDiscount is exported', () => {
+await test('isOnSale is exported', () => {
 	assert.ok(
-		'hasDiscount' in solution,
-		'🚨 Make sure you export "hasDiscount" - add: export { ..., hasDiscount, ... }',
-	)
-})
-
-await test('hasDiscount should be true (price < 50)', () => {
-	assert.strictEqual(
-		solution.hasDiscount,
-		true,
-		'🚨 hasDiscount should be true when price is less than 50 - use: price < 50',
-	)
-	assert.strictEqual(
-		typeof solution.hasDiscount,
-		'boolean',
-		'🚨 hasDiscount should be a boolean type - use a comparison that returns true or false',
+		'isOnSale' in solution,
+		'🚨 Make sure you export "isOnSale" - add: export { isAvailable, isOnSale, ... }',
 	)
 })
 
