@@ -25,10 +25,10 @@ await test('cartTotal is exported', () => {
 })
 
 await test('cartTotal should be calculated correctly', () => {
-	// cartTotal = bookPrice + coffeePrice = 15.99 + 4.5 = 20.49
+	// cartTotal = bookPrice + muffinPrice = 15.99 + 4.5 = 20.49
 	assert.ok(
 		Math.abs(solution.cartTotal - 20.49) < Math.pow(10, -2),
-		'🚨 cartTotal should be 20.49 - add bookPrice and coffeePrice together',
+		'🚨 cartTotal should be 20.49 - add bookPrice and muffinPrice together',
 	)
 })
 

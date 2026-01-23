@@ -5,9 +5,9 @@ const shopName = 'Morning Muffins'
 const customerName = 'Avery'
 const isMember = true
 const muffinCount = 3
-const coffeeCount = 2
+const sconeCount = 2
 const muffinPrice = 3.25
-const coffeePrice = 4
+const sconePrice = 4
 const tipPercent = 0.15
 const taxRate = 0.0825
 const pickupMethod = 'counter'
@@ -50,7 +50,7 @@ function calculatePickupFee(method: string) {
 
 let subtotal = 0
 // 🐨 Set subtotal using item counts and prices
-// 💰 (muffinCount * muffinPrice) + (coffeeCount * coffeePrice)
+// 💰 (muffinCount * muffinPrice) + (sconeCount * sconePrice)
 
 const discount = calculateDiscount(subtotal, isMember)
 const taxableAmount = subtotal - discount
@@ -78,7 +78,7 @@ const receipt =
 	`Order for ${customerName}\n` +
 	`${divider}\n` +
 	`Muffins: ${muffinCount} x ${formatMoney(muffinPrice)}\n` +
-	`Coffee: ${coffeeCount} x ${formatMoney(coffeePrice)}\n` +
+	`Scones: ${sconeCount} x ${formatMoney(sconePrice)}\n` +
 	`${divider}\n` +
 	`Subtotal: ${formatMoney(subtotal)}\n` +
 	`Discount: -${formatMoney(discount)}\n` +

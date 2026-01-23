@@ -5,14 +5,16 @@
 
 // 🐨 Create a variable `cartTotal` using `let`, starting at 0
 
-// Product prices
-const bookPrice = 15.99
-const coffeePrice = 4.5
-const laptopPrice = 999.99
+// 🐨 Create constants for product prices:
+// - bookPrice is $15.99
+// - muffinPrice is $4.5
+// - laptopPrice is $999.99
+// 💰 note, TypeScript doesn't know/care about whether the number represents
+// money, a count, or anything, so you don't use the dollar sign in this syntax
 
 // 🐨 Add the book to the cart (update cartTotal)
 
-// 🐨 Add the coffee to the cart (update cartTotal)
+// 🐨 Add the muffin to the cart (update cartTotal)
 
 // 🐨 Calculate the final total with tax
 // 💰 finalTotal = cartTotal + (cartTotal * TAX_RATE)

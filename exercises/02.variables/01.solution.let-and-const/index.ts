@@ -7,12 +7,12 @@ let cartTotal = 0
 
 // Product prices
 const bookPrice = 15.99
-const coffeePrice = 4.5
+const muffinPrice = 4.5
 const laptopPrice = 999.99
 
 cartTotal = cartTotal + bookPrice
 
-cartTotal = cartTotal + coffeePrice
+cartTotal = cartTotal + muffinPrice
 
 const finalTotal = cartTotal + cartTotal * TAX_RATE
 
