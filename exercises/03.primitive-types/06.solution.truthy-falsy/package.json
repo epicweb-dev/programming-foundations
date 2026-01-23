@@ -1,0 +1,10 @@
+{
+  "name": "exercises_03.primitive-types_06.solution.truthy-falsy",
+  "type": "module",
+  "scripts": {
+    "start": "npx @kentcdodds/log-module ./index.ts",
+    "start:watch": "npx @kentcdodds/log-module --watch ./index.ts",
+    "test": "node --test index.test.ts",
+    "test:watch": "node --watch --test index.test.ts"
+  }
+}

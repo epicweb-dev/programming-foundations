@@ -1,0 +1,32 @@
+# Truthy and Falsy
+
+👨‍💼 We often need to decide if a value "exists" without comparing it to
+`null` or `undefined`. JavaScript treats some values as **falsy**, and everything
+else as **truthy**.
+
+Falsy values:
+
+- `false`
+- `0`, `-0`, `0n`
+- `''` (empty string)
+- `null`
+- `undefined`
+- `NaN`
+
+You can convert any value to a boolean with `Boolean(value)` or `!!value`.
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Create `hasUsername` based on the truthiness of `username`
+2. Create `hasNickname` based on the truthiness of `nickname`
+3. Create `hasAge` based on the truthiness of `age`
+4. Create `hasNotes` based on the truthiness of `notes`
+5. Create `canCheckout` that's `true` when `cartTotal` is truthy **and**
+   `hasAcceptedTerms` is true
+6. Create `canCreateAccount` that's `true` when `hasUsername`, `email`, and
+   `password` are all truthy
+
+💰 Use `Boolean(value)` or `!!value` to convert to a boolean.
+
+📜 [MDN - Truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)
+📜 [MDN - Falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
