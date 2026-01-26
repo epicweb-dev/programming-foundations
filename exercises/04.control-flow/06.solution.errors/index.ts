@@ -3,22 +3,19 @@
 
 const rawInput = 'not-a-number'
 
-function parseNumber(value: string) {
-	const parsed = Number(value)
-
-	if (Number.isNaN(parsed)) {
-		throw new Error(`Invalid number: ${value}`)
-	}
-
-	return parsed
-}
-
 let resultMessage = ''
+let hadError = false
 
 try {
-	const parsed = parseNumber(rawInput)
-	resultMessage = `Parsed value: ${parsed}`
+	const parsedValue = Number(rawInput)
+
+	if (Number.isNaN(parsedValue)) {
+		throw new Error(`Invalid number: ${rawInput}`)
+	}
+
+	resultMessage = `Parsed value: ${parsedValue}`
 } catch (error) {
+	hadError = true
 	if (error instanceof Error) {
 		resultMessage = `Error: ${error.message}`
 	} else {
@@ -28,4 +25,4 @@ try {
 
 console.log(resultMessage)
 
-export { parseNumber, resultMessage }
+export { resultMessage, hadError }

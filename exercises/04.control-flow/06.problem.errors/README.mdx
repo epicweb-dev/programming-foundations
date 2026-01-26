@@ -6,12 +6,11 @@ should throw an error and handle it gracefully so the program can keep running.
 Sometimes the best control flow is to stop execution and report a problem:
 
 ```ts
-function riskyWork() {
-	throw new Error('Something went wrong')
-}
-
 try {
-	riskyWork()
+	const parsedValue = Number('not-a-number')
+	if (Number.isNaN(parsedValue)) {
+		throw new Error('Something went wrong')
+	}
 } catch (error) {
 	console.error('Caught an error:', error)
 }
@@ -19,8 +18,8 @@ try {
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Throw an error in `parseNumber` when the input isn't a valid number
-2. Wrap the call to `parseNumber(rawInput)` in a `try`/`catch`
+1. Throw an error when the input isn't a valid number
+2. Wrap the conversion in a `try`/`catch`
 3. Set `resultMessage` to show either the parsed value or the error message
 
 <callout-info>

@@ -1,5 +1,5 @@
 {
-  "name": "exercises_04.control-flow_06.solution.throwing-and-catching",
+  "name": "exercises_04.control-flow_06.solution.errors",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module ./index.ts",

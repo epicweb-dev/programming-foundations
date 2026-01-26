@@ -122,7 +122,10 @@ an error to interrupt normal flow, and **catch** it to recover:
 
 ```ts
 try {
-	riskyWork()
+	const parsedValue = Number('not-a-number')
+	if (Number.isNaN(parsedValue)) {
+		throw new Error('Invalid number')
+	}
 } catch (error) {
 	console.error(error)
 }
