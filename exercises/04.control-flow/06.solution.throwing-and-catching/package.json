@@ -1,0 +1,10 @@
+{
+  "name": "exercises_04.control-flow_06.solution.throwing-and-catching",
+  "type": "module",
+  "scripts": {
+    "start": "npx @kentcdodds/log-module ./index.ts",
+    "start:watch": "npx @kentcdodds/log-module --watch ./index.ts",
+    "test": "node --test index.test.ts",
+    "test:watch": "node --watch --test index.test.ts"
+  }
+}

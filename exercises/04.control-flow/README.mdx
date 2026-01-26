@@ -115,6 +115,19 @@ const status = age >= 18 ? 'adult' : 'minor'
 
 It has three parts: condition, value if true, value if false.
 
+## Error Handling
+
+Sometimes code needs to stop early when something goes wrong. You can **throw**
+an error to interrupt normal flow, and **catch** it to recover:
+
+```ts
+try {
+	riskyWork()
+} catch (error) {
+	console.error(error)
+}
+```
+
 <callout-info>
 	TypeScript's type narrowing works inside conditionals. When you check a type,
 	TypeScript knows the more specific type inside that block.
