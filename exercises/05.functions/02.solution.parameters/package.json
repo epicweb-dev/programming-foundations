@@ -1,5 +1,5 @@
 {
-  "name": "exercises_05.functions_02.problem.parameters-and-returns",
+  "name": "exercises_05.functions_02.solution.parameters",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module ./index.ts",

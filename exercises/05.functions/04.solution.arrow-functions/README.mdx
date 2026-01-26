@@ -7,7 +7,7 @@
 1. **Implicit returns** work when the function body is a single expression—no
    braces, no `return` keyword needed
 2. **Arrow functions are perfect for callbacks** because they're concise and
-   don't rebind `this`
+   don't rebind `this` (we'll learn about `this` later)
 3. **Function declarations** are still best for top-level named functions
    because of hoisting and clearer stack traces
 
@@ -27,7 +27,3 @@ function processOrder(order: Order): Receipt {
 	// ...
 }
 ```
-
-The `this` binding difference matters in React class components (rarely used
-now) and some object-oriented patterns. Arrow functions capture `this` from
-their surrounding scope, while regular functions get their own `this`.
