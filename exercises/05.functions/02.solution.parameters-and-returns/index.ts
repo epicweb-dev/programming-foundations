@@ -1,15 +1,15 @@
 // E-commerce Utility Functions
-// Creating functions with typed parameters and returns
+// Creating functions with typed parameters and return values
 
-function calculateTax(amount: number, rate: number) {
+function calculateTax(amount: number, rate: number): number {
 	return amount * rate
 }
 
-function formatPrice(cents: number) {
+function formatPrice(cents: number): string {
 	return `$${(cents / 100).toFixed(2)}`
 }
 
-function applyDiscount(price: number, discountPercent: number) {
+function applyDiscount(price: number, discountPercent: number): number {
 	return price - (price * discountPercent) / 100
 }
 

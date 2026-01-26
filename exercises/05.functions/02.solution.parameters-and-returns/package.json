@@ -1,5 +1,5 @@
 {
-  "name": "exercises_05.functions_02.problem.type-inference",
+  "name": "exercises_05.functions_02.solution.parameters-and-returns",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module ./index.ts",

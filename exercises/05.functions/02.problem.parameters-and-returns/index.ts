@@ -1,5 +1,5 @@
 // E-commerce Utility Functions
-// Creating functions with typed parameters and returns
+// Creating functions with typed parameters and return values
 
 // 🐨 Create a function `calculateTax` that:
 // - Takes `amount` (number) and `rate` (number)

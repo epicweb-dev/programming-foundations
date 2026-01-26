@@ -1,5 +1,5 @@
 {
-  "name": "exercises_05.functions_03.problem.explicit-return-types",
+  "name": "exercises_05.functions_01.problem.function-declaration",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module ./index.ts",

@@ -1,5 +1,5 @@
 {
-  "name": "exercises_05.functions_05.solution.jsdoc",
+  "name": "exercises_05.functions_05.solution.arrow-functions",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module@latest ./index.ts",
