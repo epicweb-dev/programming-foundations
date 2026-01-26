@@ -11,7 +11,7 @@ const cartTotal = 42
 const hasAcceptedTerms = false
 
 // 🐨 Create a variable `hasUsername` based on the truthiness of `username`
-// 💰 Use Boolean(username) or !!username
+// 💰 Convert the value to a boolean
 
 // 🐨 Create a variable `hasNickname` based on the truthiness of `nickname`
 

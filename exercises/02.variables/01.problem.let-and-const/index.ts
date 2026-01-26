@@ -17,7 +17,7 @@
 // 🐨 Add the muffin to the cart (update cartTotal)
 
 // 🐨 Calculate the final total with tax
-// 💰 finalTotal = cartTotal + (cartTotal * TAX_RATE)
+// 💰 Calculate the tax from cartTotal and add it to get finalTotal
 
 // 🐨 Try uncommenting the line below - what happens?
 // TAX_RATE = 0.10

@@ -6,7 +6,7 @@
 // - @param tag documenting the `a` parameter
 // - @param tag documenting the `b` parameter
 // - @returns tag documenting what the function returns
-// 💰 JSDoc comments start with /** and end with */
+// 💰 JSDoc uses a block comment that starts with /**
 function add(a: number, b: number): number {
 	return a + b
 }
@@ -16,10 +16,7 @@ function add(a: number, b: number): number {
 // - @param tag for the `name` parameter
 // - @returns tag
 // - @example tag showing how to use the function
-// 💰 @example tags let you show usage:
-// @example
-// const result = greet('Alice')
-// console.log(result) // "Hello, Alice!"
+// 💰 Include an @example block that shows how to call the function
 function greet(name: string): string {
 	return `Hello, ${name}!`
 }
@@ -43,7 +40,7 @@ function calculateCompoundInterest(
 // - Takes a value, min, and max
 // - Returns the value constrained between min and max
 // - Has a complete JSDoc comment with description, @param, @returns, and @example
-// 💰 Math.max(min, Math.min(max, value)) will clamp a value
+// 💰 Use Math.min/Math.max to keep the value within range
 
 // 🐨 Export your functions so we can verify your work
 // export { add, greet, calculateCompoundInterest, clamp }

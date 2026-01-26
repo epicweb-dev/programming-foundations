@@ -14,14 +14,6 @@ score, we need to determine the letter grade.
 
 2. Add a check to see if the student passed (grade C or above)
 
-💰 Check ranges with comparisons:
-
-```ts
-if (score >= 90) {
-	// A
-} else if (score >= 80) {
-	// B (we know score < 90 because first check failed)
-}
-```
+💰 Check the highest ranges first so the first match wins.
 
 📜 [MDN - if...else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)

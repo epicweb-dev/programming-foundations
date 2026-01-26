@@ -18,12 +18,12 @@ function calculateTotal(subtotal: number, taxRate: number): number {
 }
 
 // 🐨 Create an arrow function `isEven` that returns true if a number is even
-// 💰 Use implicit return: const isEven = (n: number): boolean => ...
+// 💰 Use an arrow function with an implicit return
 
 // 🐨 Create a function `applyToNumber` that:
 // - Takes a number and a transform function
 // - Returns the transformed number
-// 💰 function applyToNumber(value: number, transform: (n: number) => number): number
+// 💰 This function accepts a callback that transforms a number
 
 // 🐨 Create arrow functions:
 // - `triple` that multiplies a number by 3

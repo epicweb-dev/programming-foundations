@@ -3,15 +3,15 @@
 
 // 🐨 Create a bigint variable `largeNumber` with the value 9007199254740993n
 // This is larger than Number.MAX_SAFE_INTEGER!
-// 💰 const largeNumber: bigint = 9007199254740993n
+// 💰 Use a bigint literal with the `n` suffix
 
 // 🐨 Create another bigint `anotherLarge` with value 1000000000000000000n
 
 // 🐨 Add them together into a variable called `sum`
-// 💰 const sum = largeNumber + anotherLarge
+// 💰 Add the two bigint values together
 
 // 🐨 Create a symbol called `userId` with description 'user-id'
-// 💰 const userId: symbol = Symbol('user-id')
+// 💰 Create a symbol with the given description
 
 // 🐨 Create another symbol called `anotherId` with the same description 'user-id'
 

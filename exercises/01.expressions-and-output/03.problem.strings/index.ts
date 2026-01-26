@@ -6,4 +6,4 @@
 // 🐨 Log your first name and last name concatenated together with a space
 
 // 🐨 Log a sentence by concatenating multiple strings
-// 💰 Example: "I" + " " + "am" + " " + "learning" + " " + "to" + " " + "code"
+// 💰 Build the sentence from small pieces and include spaces where needed

@@ -7,13 +7,13 @@ const stockCount: number = 100
 // 🐨 Create a variable `isAvailable` with type `boolean` set to `true`
 
 // 🐨 Create a variable `hasDiscount` that's true when price is under 50
-// 💰 Use a comparison: price < 50
+// 💰 Use a comparison based on the price
 
 // 🐨 Create a variable `canPurchase` that's true when isAvailable AND stockCount > 0
-// 💰 Use the && operator
+// 💰 Combine conditions so both must be true
 
 // 🐨 Create a variable `isNotAvailable` that's the opposite of `isAvailable`
-// 💰 Use the ! operator: !isAvailable
+// 💰 Invert the boolean
 
 // ✅ Verification
 // @ts-expect-error - 💣 remove this comment

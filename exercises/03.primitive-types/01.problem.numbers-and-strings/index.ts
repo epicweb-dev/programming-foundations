@@ -9,7 +9,7 @@
 
 // 🐨 Create a `description` using a template literal that outputs:
 // "Product: TypeScript Guide | Price: $29.99 | In Stock: 100"
-// 💰 Use backticks ` and ${variable} syntax
+// 💰 Use a template literal with interpolation
 
 // ✅ These console.logs will verify your work
 // console.log('Price:', price)

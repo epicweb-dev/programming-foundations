@@ -14,7 +14,7 @@ const score: number = 85
 // - Below 60: "F"
 
 // 🐨 Create a variable `passed` that is true if grade is C or above
-// 💰 Use: grade !== 'D' && grade !== 'F'
+// 💰 A passing grade is C or above
 
 // console.log(`Score: ${score}`)
 // console.log(`Grade: ${grade}`)

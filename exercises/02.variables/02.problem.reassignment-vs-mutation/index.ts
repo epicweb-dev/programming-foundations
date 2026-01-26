@@ -10,10 +10,10 @@ console.log('Original person:', person)
 // 💣 Uncomment the line above and see the TypeScript error
 
 // 🐨 Now try MUTATING the object by changing the age property
-// 💰 person.age = 31
+// 💰 Update the age property on the existing object
 
 // 🐨 Mutate again by changing the city
-// 💰 person.city = 'Portland'
+// 💰 Update the city property on the existing object
 
 console.log('Modified person:', person)
 

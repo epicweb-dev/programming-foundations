@@ -33,24 +33,9 @@ const double = (n: number): number => n * 2
 2. Use implicit returns where the function body is a single expression
 3. Create a function that uses a callback with arrow functions (no arrays)
 
-💰 Implicit return syntax (no braces, no `return` keyword):
+💰 Implicit returns use a single expression and no braces.
 
-```ts
-const add = (a: number, b: number): number => a + b
-```
-
-💰 Arrow functions in callbacks:
-
-```ts
-function applyToNumber(
-	value: number,
-	transform: (n: number) => number,
-): number {
-	return transform(value)
-}
-
-const result = applyToNumber(5, (n) => n + 1) // 6
-```
+💰 Callbacks are often written as arrow functions.
 
 <callout-info>
 	A **callback** is a function you pass to another function to be called later.

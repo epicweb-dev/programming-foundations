@@ -14,7 +14,7 @@ const pickupMethod = 'counter'
 
 function buildDivider(char: string, length: number) {
 	// 🐨 Build and return a divider string by repeating char
-	// 💰 Start with let line = '' and add char in a for loop
+	// 💰 Build the string by repeating the character in a loop
 	let line = ''
 	return line
 }
@@ -50,7 +50,7 @@ function calculatePickupFee(method: string) {
 
 let subtotal = 0
 // 🐨 Set subtotal using item counts and prices
-// 💰 (muffinCount * muffinPrice) + (sconeCount * sconePrice)
+// 💰 Use the counts and prices to compute the subtotal
 
 const discount = calculateDiscount(subtotal, isMember)
 const taxableAmount = subtotal - discount

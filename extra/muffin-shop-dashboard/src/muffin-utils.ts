@@ -10,13 +10,13 @@ type PickupMethod = 'counter' | 'curbside' | 'delivery'
 
 function formatMoney(amount: number) {
 	// 🐨 Return a string like `$4.5` using a template literal
-	// 💰 return `$${amount}`
+	// 💰 Use a template literal to format the amount with a $ prefix
 	return '$0'
 }
 
 function buildLineItemText(item: OrderItem) {
 	// 🐨 Return a string like `2 x Blueberry Muffin (GF)`
-	// 💰 Use item.quantity, item.name, and item.isGlutenFree
+	// 💰 Build the string from the item fields
 	let glutenFreeLabel = ''
 	// 🐨 If item.isGlutenFree is true, set glutenFreeLabel to ' (GF)'
 	return `${item.quantity} x ${item.name}${glutenFreeLabel}`
@@ -24,7 +24,7 @@ function buildLineItemText(item: OrderItem) {
 
 function calculateSubtotal(items: OrderItem[]) {
 	// 🐨 Use a for loop to add each item total to subtotal
-	// 💰 Use item.price * item.quantity inside the loop
+	// 💰 Multiply each item's price by its quantity
 	let subtotal = 0
 	return subtotal
 }
@@ -69,7 +69,7 @@ function getPickupLabel(method: PickupMethod) {
 	// 'counter' -> 'Counter pickup'
 	// 'curbside' -> 'Curbside pickup'
 	// 'delivery' -> 'Delivery dropoff'
-	// 💰 Use a switch statement with assertNever in the default case
+	// 💰 Use a switch statement and handle the unexpected case
 	return method
 }
 
@@ -85,7 +85,7 @@ function logOrderReady(customer: string): void {
 
 function assertNever(value: never): never {
 	// 🐨 Throw an error so TypeScript knows this never happens
-	// 💰 throw new Error(`Unhandled case: ${value}`)
+	// 💰 Throw an Error that mentions the unexpected value
 	throw new Error('Unhandled case')
 }
 

@@ -2,13 +2,12 @@
 // Functions that perform side effects return void
 
 // 🐨 Create `logInfo` that takes a message and logs it with "[INFO]" prefix
-// 💰 function logInfo(message: string): void
+// 💰 Return type should be void
 
 // 🐨 Create `logError` that takes a message and logs it with "[ERROR]" prefix
 
 // 🐨 Create `logWithTimestamp` that takes a message and logs it with timestamp
-// 💰 const timestamp = new Date().toISOString()
-// console.log(`[${timestamp}] ${message}`)
+// 💰 Use an ISO timestamp from Date in the log output
 
 // ✅ Test your functions
 // logInfo('Application started')
