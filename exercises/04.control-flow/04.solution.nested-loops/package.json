@@ -1,5 +1,5 @@
 {
-  "name": "exercises_04.control-flow_04.problem.ternary-operator",
+  "name": "exercises_04.control-flow_04.solution.nested-loops",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module ./index.ts",

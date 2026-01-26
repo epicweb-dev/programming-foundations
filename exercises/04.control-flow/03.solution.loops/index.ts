@@ -1,17 +1,12 @@
-// Star Staircase
-// Using loops to build a fun string pattern
+// Exhibit Labels
+// Using a for loop to build a numbered list
 
-let output = ''
+let exhibitLabels = ''
 
-for (let row = 1; row <= 5; row++) {
-	let line = ''
-	for (let count = 0; count < row; count++) {
-		line += '*'
-	}
-
-	output += `${line}\n`
+for (let exhibitNumber = 1; exhibitNumber <= 5; exhibitNumber++) {
+	exhibitLabels += `Exhibit ${exhibitNumber}\n`
 }
 
-console.log(output)
+console.log(exhibitLabels)
 
-export { output }
+export { exhibitLabels }

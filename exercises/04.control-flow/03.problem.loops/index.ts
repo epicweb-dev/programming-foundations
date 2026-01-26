@@ -1,18 +1,14 @@
-// Star Staircase
-// Using loops to build a fun string pattern
+// Exhibit Labels
+// Using a for loop to build a numbered list
 
-// 🐨 Create a variable `output` starting as an empty string
-// 💰 let output = ''
+// 🐨 Create a variable `exhibitLabels` starting as an empty string
+// 💰 let exhibitLabels = ''
 
-// 🐨 Write a for loop that builds 5 rows of stars
-// Each row should be one star longer than the previous
-// 💰 for (let row = 1; row <= 5; row++)
+// 🐨 Write a for loop that counts from 1 to 5
+// 🐨 On each pass, add a line like "Exhibit 1" to the string
+// 🐨 Put each label on its own line using "\n"
 
-// Inside the loop:
-// 🐨 Build a single line of stars for this row
-// 🐨 Add that line plus a "\n" to the output
-
-// console.log(output)
+// console.log(exhibitLabels)
 
 // 🐨 Export your variable so we can verify your work
-// export { output }
+// export { exhibitLabels }

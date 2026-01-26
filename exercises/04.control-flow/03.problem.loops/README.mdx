@@ -1,42 +1,25 @@
 # Loops
 
-👨‍💼 Let's build a fun text banner using loops. We'll make a simple "staircase"
-pattern of `*` characters.
+👨‍💼 Let's practice a simple `for` loop by building a numbered list.
 
-🐨 Open <InlineFile file="index.ts" /> and:
+🐨 Open <InlineFile file="index.ts" /> and use a `for` loop to build a string
+with labels for exhibits 1 through 5. Each label should be on its own line.
 
-1. Use a `for` loop to build 5 rows of stars
-2. Each row should have one more `*` than the previous row
-3. Put each row on its own line using `\n`
-
-💰 Traditional `for` loop structure:
+## How a `for` loop works
 
 ```ts
-for (let i = 0; i < count; i++) {
-	// do something
+for (let i = 0; i < limit; i++) {
+	// repeat work
 }
 ```
 
-💰 String building with a loop:
+Each part of the loop has a job:
 
-```ts
-let output = ''
-for (...) {
-	output += 'x'
-}
-```
+- **Initializer** (`let i = 0`) runs once before the loop starts
+- **Condition** (`i < limit`) is checked before each iteration
+- **Final expression** (`i++`) runs after each iteration
 
-💰 You'll need **two loops** for this exercise—an outer loop for each row, and
-an inner loop to build the stars for that row. This is called a "nested loop":
-
-```ts
-for (let row = 1; row <= 5; row++) {
-	// inner loop builds stars for this row
-	for (let star = 0; star < row; star++) {
-		// add a star
-	}
-}
-```
+`i++` means "add 1 to `i`." It's the same as `i += 1`.
 
 📜 [MDN - for statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
 

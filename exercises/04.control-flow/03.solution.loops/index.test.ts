@@ -2,18 +2,19 @@ import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import * as solution from './index.ts'
 
-await test('output is exported', () => {
+await test('exhibitLabels is exported', () => {
 	assert.ok(
-		'output' in solution,
-		'🚨 Make sure you export "output" - add: export { output }',
+		'exhibitLabels' in solution,
+		'🚨 Make sure you export "exhibitLabels" - add: export { exhibitLabels }',
 	)
 })
 
-await test('output should match the star staircase', () => {
-	const expected = '*\n**\n***\n****\n*****\n'
+await test('exhibitLabels should list exhibits 1 through 5', () => {
+	const expected =
+		'Exhibit 1\nExhibit 2\nExhibit 3\nExhibit 4\nExhibit 5\n'
 	assert.strictEqual(
-		solution.output,
+		solution.exhibitLabels,
 		expected,
-		'🚨 output should be a 5-line staircase of stars (each row has one more star than the previous)',
+		'🚨 exhibitLabels should list Exhibit 1 through Exhibit 5 on separate lines',
 	)
 })
