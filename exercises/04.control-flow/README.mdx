@@ -73,6 +73,38 @@ while (condition) {
 }
 ```
 
+**`do...while` loop** - When you want to run the code at least once:
+
+```ts
+do {
+	// Keep going until condition is false
+} while (condition)
+```
+
+**`for...in` loop** - When you want to iterate over the properties of an object:
+
+```ts
+for (const key in object) {
+	// Keep going until condition is false
+}
+```
+
+**`for...of` loop** - When you want to iterate over the values of an iterable:
+
+```ts
+for (const value of iterable) {
+	// Keep going until condition is false
+}
+```
+
+**`for...await...of` loop** - When you want to iterate over the values of an async iterable:
+
+```ts
+for await (const value of asyncIterable) {
+	// Keep going until condition is false
+}
+```
+
 ## Ternary Operator
 
 The ternary operator is a concise way to choose between two values:
