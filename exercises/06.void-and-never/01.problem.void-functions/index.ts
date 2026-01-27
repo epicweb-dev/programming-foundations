@@ -2,12 +2,12 @@
 // Functions that perform side effects return void
 
 // 🐨 Create `logInfo` that takes a message and logs it with "[INFO]" prefix
-// 💰 Return type should be void
+// 💰 Functions that don't return values have a special type
 
 // 🐨 Create `logError` that takes a message and logs it with "[ERROR]" prefix
 
 // 🐨 Create `logWithTimestamp` that takes a message and logs it with timestamp
-// 💰 Use an ISO timestamp from Date in the log output
+// 💰 Include the current time in the log
 
 // ✅ Test your functions
 // logInfo('Application started')

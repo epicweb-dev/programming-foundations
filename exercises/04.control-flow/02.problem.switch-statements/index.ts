@@ -4,7 +4,6 @@
 const grade: string = 'B'
 
 // 🐨 Create a variable `description` of type string
-// 💰 let description: string
 
 // 🐨 Write a switch statement on `grade`:
 // - case 'A': set description to "Excellent"
@@ -13,7 +12,7 @@ const grade: string = 'B'
 // - case 'D': set description to "Needs Improvement"
 // - case 'F': set description to "Failing"
 // - default: set description to "Invalid grade"
-// 💰 Don't forget the `break` after each case!
+// 💰 Each case should avoid falling through
 
 // console.log(`Grade ${grade}: ${description}`)
 

@@ -11,7 +11,6 @@ let hadError = false
 // - If Number.isNaN(parsedValue), throw a new Error with message `Invalid number: ${rawInput}`
 // - If it succeeds, set resultMessage to `Parsed value: ${parsedValue}`
 // - If it throws, set hadError to true and resultMessage to `Error: ${message}`
-// 💰 In the catch, check `error instanceof Error` before using `error.message`
 
 // console.log(resultMessage)
 

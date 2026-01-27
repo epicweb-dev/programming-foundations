@@ -5,13 +5,11 @@ const temperature = 25
 
 // 🐨 Create a variable `weatherDescription` using a ternary operator
 // It should be "hot" if temperature > 30, otherwise "comfortable"
-// 💰 Use a ternary to choose between two values
 
 const score = 85
 
 // 🐨 Create a variable `passed` using a ternary operator
 // It should be true if score >= 70, otherwise false
-// 💰 Use the comparison as the condition
 
 const stock = 0
 

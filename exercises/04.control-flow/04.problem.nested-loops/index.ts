@@ -5,7 +5,6 @@ const rows = ['A', 'B', 'C']
 const seatsPerRow = 4
 
 // 🐨 Create a variable `seatChart` starting as an empty string
-// 💰 Start with an empty string
 
 // 🐨 Use nested for loops to build the seating chart
 // 🐨 Each row should include seat labels like "A1 A2 A3 A4"

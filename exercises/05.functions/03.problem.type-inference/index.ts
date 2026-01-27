@@ -18,11 +18,9 @@ function divide(a: number, b: number) {
 }
 
 // 🐨 Fix the bug by throwing an error instead of returning a string:
-// 💰 Throw an Error instead of returning a string
 
 // 🐨 Create a function `isEven` that returns true if a number is even
 // Let TypeScript infer the return type
-// 💰 Use modulo to check if a number is even
 
 // ✅ Test
 console.log(multiply(4, 5)) // 20

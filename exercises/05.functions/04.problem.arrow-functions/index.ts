@@ -18,12 +18,12 @@ function calculateTotal(subtotal: number, taxRate: number): number {
 }
 
 // 🐨 Create an arrow function `isEven` that returns true if a number is even
-// 💰 Use an arrow function with an implicit return
+// 💰 Short functions can be written more concisely
 
 // 🐨 Create a function `applyToNumber` that:
 // - Takes a number and a transform function
 // - Returns the transformed number
-// 💰 This function accepts a callback that transforms a number
+// 💰 Functions can accept other functions as parameters
 
 // 🐨 Create arrow functions:
 // - `triple` that multiplies a number by 3

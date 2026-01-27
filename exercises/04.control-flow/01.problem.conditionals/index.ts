@@ -4,7 +4,6 @@
 const score: number = 85
 
 // 🐨 Create a variable `grade` of type string
-// 💰 let grade: string
 
 // 🐨 Write if/else if/else to set the grade:
 // - 90 and above: "A"
@@ -14,7 +13,6 @@ const score: number = 85
 // - Below 60: "F"
 
 // 🐨 Create a variable `passed` that is true if grade is C or above
-// 💰 A passing grade is C or above
 
 // console.log(`Score: ${score}`)
 // console.log(`Grade: ${grade}`)
