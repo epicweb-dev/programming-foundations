@@ -12,7 +12,7 @@ const grade: string = 'B'
 // - case 'D': set description to "Needs Improvement"
 // - case 'F': set description to "Failing"
 // - default: set description to "Invalid grade"
-// 💰 Each case should avoid falling through
+// 💰 Each case should avoid falling through (use `break` in each case) by adding a `break` statement
 
 // console.log(`Grade ${grade}: ${description}`)
 
