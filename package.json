@@ -5,7 +5,6 @@
     "title": "Programming Foundations 🧱",
     "subtitle": "Master the core building blocks of TypeScript programming",
     "githubRepo": "https://github.com/epicweb-dev/programming-foundations",
-    "subdomain": "programming-foundations",
     "instructor": {
       "name": "Kent C. Dodds",
       "avatar": "/images/instructor.png",
@@ -14,7 +13,13 @@
     "product": {
       "host": "www.epicweb.dev",
       "displayName": "EpicWeb.dev",
-      "displayNameShort": "Epic Web"
+      "displayNameShort": "Epic Web",
+      "slug": "programming-foundations",
+      "discordChannelId": "1161045224907341972",
+      "discordTags": [
+        "1161046174439063593",
+        "1474187311095746600"
+      ]
     },
     "appType": "export"
   },
