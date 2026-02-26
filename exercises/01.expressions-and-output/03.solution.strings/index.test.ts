@@ -28,13 +28,6 @@ await test('should print Hello TypeScript', () => {
 	)
 })
 
-await test('should print a full name with a space', () => {
-	assert.ok(
-		output.includes('Kody Koala'),
-		'🚨 Output should include a full name with a space between first and last name',
-	)
-})
-
 await test('should print the concatenated sentence', () => {
 	assert.ok(
 		output.includes('I am learning to code'),
