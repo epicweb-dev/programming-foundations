@@ -9,9 +9,9 @@ console.log('Original person:', person)
 // person = { name: 'Bob', age: 25, city: 'Portland' }
 // 💣 Uncomment the line above and see the TypeScript error
 
-// 🐨 Now try MUTATING the object by changing the age property
+// 🐨 Now try MUTATING the object by changing the age property to 31
 
-// 🐨 Mutate again by changing the city
+// 🐨 Mutate again by changing the city to 'Portland'
 
 console.log('Modified person:', person)
 
