@@ -6,11 +6,11 @@ const seatsPerRow = 4
 
 // 🐨 Create a variable `seatChart` starting as an empty string
 
-// 🐨 Use nested for loops to build the seating chart
-// 🐨 Each row should include seat labels like "A1 A2 A3 A4"
-// 🐨 Put each row on its own line using "\n"
+// 🐨 Use nested for loops to build the seating chart from `rows` and `seatsPerRow`
+// 🐨 Each row should look like "A1 A2 A3 A4" (spaces between seats)
+// 🐨 End every row—including the last—with "\n"
 
 // console.log(seatChart)
 
-// 🐨 Export your variable so we can verify your work
+// 🐨 Export seatChart so we can verify your work
 // export { seatChart }

@@ -9,39 +9,35 @@ type MemberStatus = 'member' | 'guest'
 type PickupMethod = 'counter' | 'curbside' | 'delivery'
 
 function formatMoney(amount: number) {
-	// 🐨 Return a string like `$4.5` using a template literal
-	// 💰 Use a template literal to format the amount with a $ prefix
+	// 🐨 Format amount with a leading "$" (e.g. 4.5 → "$4.5")
 	return '$0'
 }
 
 function buildLineItemText(item: OrderItem) {
-	// 🐨 Return a string like `2 x Blueberry Muffin (GF)`
-	// 💰 Build the string from the item fields
-	let glutenFreeLabel = ''
-	// 🐨 If item.isGlutenFree is true, set glutenFreeLabel to ' (GF)'
-	return `${item.quantity} x ${item.name}${glutenFreeLabel}`
+	// 🐨 Return "quantity x name", plus " (GF)" when the item is gluten-free
+	// Examples: "2 x Blueberry Muffin", "1 x Oatberry Muffin (GF)"
+	void item
+	return ''
 }
 
 function calculateSubtotal(items: OrderItem[]) {
-	// 🐨 Use a for loop to add each item total to subtotal
-	// 💰 Multiply each item's price by its quantity
+	// 🐨 Loop items and sum each line total (price × quantity)
 	let subtotal = 0
 	return subtotal
 }
 
 function calculateDiscount(subtotal: number, status: MemberStatus) {
-	// 🐨 If status is 'member' and subtotal is at least 20,
-	// return 10% of subtotal. Otherwise return 0.
+	// 🐨 Members get 10% off when subtotal is at least 20; otherwise 0
 	return 0
 }
 
 function calculateTax(taxableAmount: number, rate: number) {
-	// 🐨 Return taxableAmount multiplied by rate
+	// 🐨 Return the tax for this amount and rate
 	return 0
 }
 
 function calculateTip(totalBeforeTip: number, percent: number) {
-	// 🐨 Return totalBeforeTip multiplied by percent
+	// 🐨 Return the tip for this amount and percent
 	return 0
 }
 
@@ -52,40 +48,35 @@ function calculateTotal(
 	tip: number,
 	pickupFee: number,
 ) {
-	// 🐨 Return the final total using subtotal, discount, tax, tip, and pickupFee
+	// 🐨 Combine subtotal, discount, tax, tip, and pickupFee into the final total
 	return 0
 }
 
 function getPickupFee(method: PickupMethod) {
-	// 🐨 Use a switch statement to return:
-	// 'counter' -> 0
-	// 'curbside' -> 3
-	// 'delivery' -> 7
+	// 🐨 Switch: counter → 0, curbside → 3, delivery → 7
 	return 0
 }
 
 function getPickupLabel(method: PickupMethod) {
-	// 🐨 Return a label for the pickup method:
-	// 'counter' -> 'Counter pickup'
-	// 'curbside' -> 'Curbside pickup'
-	// 'delivery' -> 'Delivery dropoff'
-	// 💰 Use a switch statement and handle the unexpected case
+	// 🐨 Switch labels:
+	// counter → 'Counter pickup'
+	// curbside → 'Curbside pickup'
+	// delivery → 'Delivery dropoff'
+	// 💰 Handle impossible cases with assertNever
 	return method
 }
 
 function formatNote(note: string | null) {
-	// 🐨 If note is null or an empty string, return 'No special notes'
-	// otherwise return the note
+	// 🐨 null or '' → 'No special notes'; otherwise return the note
 	return note ?? ''
 }
 
 function logOrderReady(customer: string): void {
-	// 🐨 Use console.log to print `Order ready for ${customer}`
+	// 🐨 Log: Order ready for <customer>
 }
 
 function assertNever(value: never): never {
-	// 🐨 Throw an error so TypeScript knows this never happens
-	// 💰 Throw an Error that mentions the unexpected value
+	// 🐨 Throw an Error that includes the unexpected value
 	throw new Error('Unhandled case')
 }
 

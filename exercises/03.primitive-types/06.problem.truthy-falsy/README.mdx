@@ -17,16 +17,40 @@ Falsy values:
 
 You can convert any value to a boolean with `Boolean(value)` or `!!value`.
 
-🐨 Open <InlineFile file="index.ts" /> and:
+🐨 Open <InlineFile file="index.ts" />. The starter provides these fixtures:
 
-1. Create `hasUsername` based on the truthiness of `username`
-2. Create `hasNickname` based on the truthiness of `nickname`
-3. Create `hasAge` based on the truthiness of `age`
-4. Create `hasNotes` based on the truthiness of `notes`
-5. Create `canCheckout` that's `true` when `cartTotal` is truthy **and**
-   `hasAcceptedTerms` is true
-6. Create `canCreateAccount` that's `true` when `hasUsername`, `email`, and
-   `password` are all truthy
+| Name               | Value                |
+| ------------------ | -------------------- |
+| `username`         | `'kent'`             |
+| `nickname`         | `''` (empty string)  |
+| `age`              | `0`                  |
+| `email`            | `'kent@epicweb.dev'` |
+| `password`         | `''` (empty string)  |
+| `notes`            | `undefined`          |
+| `cartTotal`        | `42`                 |
+| `hasAcceptedTerms` | `false`              |
+
+Create and export:
+
+1. `hasUsername` — boolean for whether `username` is truthy
+2. `hasNickname` — boolean for whether `nickname` is truthy
+3. `hasAge` — boolean for whether `age` is truthy
+4. `hasNotes` — boolean for whether `notes` is truthy
+5. `canCheckout` — `true` only when `cartTotal` is truthy **and**
+   `hasAcceptedTerms` is `true`
+6. `canCreateAccount` — `true` only when `hasUsername`, `email`, and `password`
+   are all truthy
+
+## Required exports
+
+`hasUsername`, `hasNickname`, `hasAge`, `hasNotes`, `canCheckout`,
+`canCreateAccount`
+
+## Completion criteria
+
+Each export must be a real boolean (`typeof` `"boolean"`). Use the fixtures and
+the falsy list above to reason about (or log) what each expression evaluates
+to—don't hardcode the answers.
 
 💰 Convert values to booleans when you need a strict true/false.
 

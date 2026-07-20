@@ -12,11 +12,11 @@ const score: number = 85
 // - 60-69: "D"
 // - Below 60: "F"
 
-// 🐨 Create a variable `passed` that is true if grade is C or above
+// 🐨 Create `passed` that is true if grade is C or above (A, B, or C)
 
 // console.log(`Score: ${score}`)
 // console.log(`Grade: ${grade}`)
 // console.log(`Passed: ${passed}`)
 
-// 🐨 Export your variables so we can verify your work
+// 🐨 Export score, grade, and passed
 // export { score, grade, passed }

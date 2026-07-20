@@ -25,21 +25,35 @@ const result2 = a && (b || c) // || happens first, then &&
 const result3 = (a || b) && c // || happens first, then &&
 ```
 
-🐨 Open <InlineFile file="index.ts" /> and complete the following tasks:
+🐨 Open <InlineFile file="index.ts" />. The starter provides:
 
-1. Create a variable `isAvailable` with type `boolean` set to `true`
-2. Create a variable `hasDiscount` that's `true` when the price is under 50
-3. Create a variable `canPurchase` that's `true` when the item is available AND
-   in stock
-4. Create a variable `isNotAvailable` that's the opposite of `isAvailable` using
-   the `!` operator
+- `price: number = 29.99`
+- `stockCount: number = 100`
+
+Complete the following tasks:
+
+1. Create `isAvailable` with type `boolean` set to `true`
+2. Create `hasDiscount` that is `true` when `price` is under `50`
+3. Create `canPurchase` that is `true` when `isAvailable` is true **and**
+   `stockCount` is greater than `0`
+4. Create `isNotAvailable` that is the opposite of `isAvailable`
+
+After the variables exist, remove the `// @ts-expect-error` comments above the
+`console.log` lines so the file typechecks cleanly.
+
+## Required exports
+
+`isAvailable`, `hasDiscount`, `canPurchase`, `isNotAvailable`
+
+## Completion criteria
+
+All four exports should be real booleans (`typeof` is `"boolean"`), not strings.
+Use the fixtures and rules above to check your results (for example by logging).
 
 📜 [MDN - Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#logical_operators)
 
 <callout-success>
-	You'll notice `// @ts-expect-error` comments in the code. This tells
-	TypeScript to ignore the type error on the next line. Once you've created the
-	variables (`isAvailable`, `isOnSale`, `hasDiscount`, `canPurchase`,
-	`isNotAvailable`), you can remove these comments and the code will work
-	correctly!
+	You'll notice `// @ts-expect-error` comments in the starter. Those suppress
+	errors for names that don't exist yet. Once you've created `isAvailable`,
+	`hasDiscount`, `canPurchase`, and `isNotAvailable`, remove those comments.
 </callout-success>

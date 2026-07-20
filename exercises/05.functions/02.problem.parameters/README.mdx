@@ -5,15 +5,30 @@
 👨‍💼 We need utility functions for our e-commerce platform. Let's focus on
 functions that accept clear inputs and return the right type.
 
-🐨 Open <InlineFile file="index.ts" /> and create these functions:
+🐨 Open <InlineFile file="index.ts" /> and create these exported functions with
+typed parameters and explicit return types:
 
-1. `calculateTax(amount: number, rate: number)` - Returns the tax amount
-2. `formatPrice(cents: number)` - Converts cents to dollar string (e.g., 1999 →
-   "$19.99")
-3. `applyDiscount(price: number, discountPercent: number)` - Returns discounted
-   price
+1. `calculateTax(amount: number, rate: number): number` — returns the tax amount
+   for the given amount and rate. Examples: `calculateTax(100, 0.08)` → `8`;
+   `calculateTax(50, 0.1)` → `5`
 
-Return values are already familiar from 5.1—focus on **parameter types** here,
-but keep the return types explicit too.
+2. `formatPrice(cents: number): string` — converts whole cents into a dollar
+   string with a `$` prefix and exactly two decimal places. Examples:
+   `formatPrice(1999)` → `"$19.99"`; `formatPrice(100)` → `"$1.00"`;
+   `formatPrice(50)` → `"$0.50"`
+
+3. `applyDiscount(price: number, discountPercent: number): number` — returns the
+   price after a percentage discount is applied. Examples:
+   `applyDiscount(100, 20)` → `80`; `applyDiscount(50, 10)` → `45`;
+   `applyDiscount(200, 25)` → `150`
+
+## Required exports
+
+`calculateTax`, `formatPrice`, `applyDiscount`
+
+## Completion criteria
+
+The examples above must all pass. Prefer keeping return types explicit even
+though this step focuses on parameter types.
 
 📜 [TypeScript Handbook - More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html)

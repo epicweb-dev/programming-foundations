@@ -1,9 +1,9 @@
 // String Expressions
 // Learn to work with text data
 
-// 🐨 Log "Hello" + " " + "TypeScript" (concatenate these three strings)
+// 🐨 Log the concatenation of "Hello", a space, and "TypeScript"
 
 // 🐨 Log your first name and last name concatenated together with a space
 
-// 🐨 Log a sentence by concatenating multiple strings
+// 🐨 Log the sentence "I am learning to code" by concatenating multiple strings
 // 💰 Build the sentence from small pieces and include spaces where needed

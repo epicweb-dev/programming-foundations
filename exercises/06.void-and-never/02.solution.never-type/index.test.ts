@@ -13,7 +13,7 @@ await test('throwError should throw an error', () => {
 	assert.throws(
 		() => solution.throwError('Test error'),
 		{ message: 'Test error' },
-		'🚨 throwError should throw an error with the provided message - use throw new Error()',
+		'🚨 throwError should throw an error with the provided message',
 	)
 })
 
@@ -28,7 +28,7 @@ await test('parseNumber should parse valid numbers', () => {
 	assert.strictEqual(
 		solution.parseNumber('42'),
 		42,
-		'🚨 parseNumber("42") should return 42 - use Number(...) to parse the value',
+		'🚨 parseNumber("42") should return 42',
 	)
 })
 

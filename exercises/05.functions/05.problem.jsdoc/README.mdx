@@ -44,13 +44,42 @@ documentation!
 | `@throws`  | Documents errors the function throws |
 | `@see`     | Links to related documentation       |
 
-🐨 Open <InlineFile file="index.ts" /> and add JSDoc comments to each function.
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Add JSDoc above `add` with a description, `@param` for `a` and `b`, and
+   `@returns`
+2. Add JSDoc above `greet` with a description, `@param` for `name`, `@returns`,
+   and an `@example`
+3. Add JSDoc above `calculateCompoundInterest` documenting `principal`, `rate`
+   (decimal), `years`, `@returns`, and an `@example`
+4. Create and export `clamp(value: number, min: number, max: number): number`
+   that returns:
+   - `min` when `value` is below `min`
+   - `max` when `value` is above `max`
+   - `value` when it is already between `min` and `max` (inclusive)
+5. Give `clamp` complete JSDoc (description, `@param`, `@returns`, `@example`)
+
+## Required exports
+
+`add`, `greet`, `calculateCompoundInterest`, `clamp`
+
+## Completion criteria
+
+Automated tests verify behavior (not the JSDoc text itself):
+
+- `add(2, 3)` → `5`; `add(-1, 1)` → `0`
+- `greet('Alice')` → `"Hello, Alice!"`
+- `calculateCompoundInterest(1000, 0.05, 10)` ≈ `1628.89`
+- `calculateCompoundInterest(100, 0.1, 1)` ≈ `110`
+- `clamp(15, 0, 10)` → `10`; `clamp(-5, 0, 10)` → `0`; `clamp(5, 0, 10)` → `5`;
+  `clamp(0, 0, 10)` → `0`; `clamp(10, 0, 10)` → `10`
+
+For the learning goal: hover each function in your editor and confirm the JSDoc
+appears in the tooltip.
 
 <callout-info>
-	Some functions in this exercise use built-in Math methods: - `Math.pow(base,
-	exponent)` - raises base to the power of exponent (e.g., `Math.pow(2, 3)`
-	returns 8) - `Math.max(a, b)` - returns the larger of two numbers -
-	`Math.min(a, b)` - returns the smaller of two numbers
+	Some functions in this exercise use built-in Math helpers for powers and for
+	choosing the larger/smaller of two numbers when clamping a value into a range.
 </callout-info>
 
 💰 Put a brief description immediately after the opening `/**`.

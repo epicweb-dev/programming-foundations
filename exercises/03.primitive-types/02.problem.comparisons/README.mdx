@@ -46,11 +46,36 @@ a >= b // greater than or equal
 a <= b // less than or equal
 ```
 
-🐨 Open <InlineFile file="index.ts" /> and:
+🐨 Open <InlineFile file="index.ts" />. The starter provides:
 
-1. Compare `price` (number) and `quantity` (string) with both `==` and `===`
-2. Use `!=` and `!==` to check if `a` is not equal to `b`
-3. Use `>` and `<=` to compare `a` and `b`
+- `price: number = 100`
+- `quantity: string = '100'`
+- `a: number = 10`
+- `b: number = 20`
+
+Create and export these variables:
+
+1. `looseEqual` — compare `price` and `quantity` with `==`
+2. `strictEqual` — compare `price` and `quantity` with `===`
+3. `notEqualLoose` — whether `a` is not equal to `b` using `!=`
+4. `notEqualStrict` — whether `a` is not equal to `b` using `!==`
+5. `isGreater` — whether `b` is greater than `a`
+6. `isLessOrEqual` — whether `a` is less than or equal to `b`
+
+For the `price`/`quantity` comparisons, add a `// @ts-expect-error` comment on
+the line above each comparison so TypeScript allows comparing different types
+(that's part of the lesson).
+
+## Required exports
+
+`looseEqual`, `strictEqual`, `notEqualLoose`, `notEqualStrict`, `isGreater`,
+`isLessOrEqual`
+
+## Completion criteria
+
+Each export is a boolean produced by the comparison described above. Log or
+inspect the values with these fixtures so you can see how loose vs strict
+equality (and the other operators) evaluate—don't hardcode the answers.
 
 📜 [MDN - Equality comparisons](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
 

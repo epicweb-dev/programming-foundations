@@ -5,7 +5,13 @@
 👨‍💼 Let's generate a seating chart for a small theater. Each row has multiple
 seats, so we'll need a loop inside a loop.
 
-🐨 Open <InlineFile file="index.ts" /> and build a string that looks like this:
+🐨 Open <InlineFile file="index.ts" />. The starter provides:
+
+- `rows = ['A', 'B', 'C']`
+- `seatsPerRow = 4`
+
+Build and export `seatChart` as a string that looks exactly like this
+(spaces between seats, newline after **every** row including the last):
 
 ```
 A1 A2 A3 A4
@@ -13,11 +19,23 @@ B1 B2 B3 B4
 C1 C2 C3 C4
 ```
 
-Each row should be on its own line using `\n`.
+As a single string value, that is:
+
+```ts
+'A1 A2 A3 A4\nB1 B2 B3 B4\nC1 C2 C3 C4\n'
+```
 
 Use **nested `for` loops**:
 
-- The **outer loop** controls which row you're on
-- The **inner loop** builds the seat labels for that row
+- The **outer loop** walks the `rows` array
+- The **inner loop** builds seat numbers `1` through `seatsPerRow`
+
+## Required exports
+
+- `seatChart`
+
+## Completion criteria
+
+`seatChart` must equal the exact string above (including the trailing `\n`).
 
 📜 [MDN - for statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)

@@ -19,5 +19,5 @@ console.log('Modified person:', person)
 // The variable person always points to the SAME object,
 // but the properties of that object can change.
 
-// 🐨 Export your variable so we can verify your work
+// 🐨 Export person so we can verify your work
 // export { person }

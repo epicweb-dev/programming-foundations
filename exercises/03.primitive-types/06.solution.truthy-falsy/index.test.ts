@@ -13,7 +13,7 @@ await test('hasUsername should be true', () => {
 	assert.strictEqual(
 		typeof solution.hasUsername,
 		'boolean',
-		'🚨 hasUsername should be a boolean - use Boolean(username) or !!username',
+		'🚨 hasUsername should be a boolean based on the truthiness of username',
 	)
 	assert.strictEqual(
 		solution.hasUsername,
@@ -33,7 +33,7 @@ await test('hasNickname should be false', () => {
 	assert.strictEqual(
 		typeof solution.hasNickname,
 		'boolean',
-		'🚨 hasNickname should be a boolean - use Boolean(nickname) or !!nickname',
+		'🚨 hasNickname should be a boolean based on the truthiness of nickname',
 	)
 	assert.strictEqual(
 		solution.hasNickname,
@@ -53,7 +53,7 @@ await test('hasAge should be false', () => {
 	assert.strictEqual(
 		typeof solution.hasAge,
 		'boolean',
-		'🚨 hasAge should be a boolean - use Boolean(age) or !!age',
+		'🚨 hasAge should be a boolean based on the truthiness of age',
 	)
 	assert.strictEqual(
 		solution.hasAge,
@@ -73,7 +73,7 @@ await test('hasNotes should be false', () => {
 	assert.strictEqual(
 		typeof solution.hasNotes,
 		'boolean',
-		'🚨 hasNotes should be a boolean - use Boolean(notes) or !!notes',
+		'🚨 hasNotes should be a boolean based on the truthiness of notes',
 	)
 	assert.strictEqual(
 		solution.hasNotes,

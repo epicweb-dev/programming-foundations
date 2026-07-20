@@ -7,22 +7,50 @@ double-check totals before handing it off.
 for you. You only need the workshop skills: numbers, strings, booleans,
 variables, functions, if/else, switch statements, loops, and `never`.
 
-🐨 Open <InlineFile file="src/muffin-utils.ts" /> and complete the following tasks:
+🐨 Open <InlineFile file="src/muffin-utils.ts" /> and implement the exported
+helpers. Function signatures are already in the file.
 
-1. Format money with a template literal.
-2. Add the `(GF)` label for gluten-free items.
-3. Sum the subtotal with a loop.
-4. Apply the member discount.
-5. Calculate tax and tip.
-6. Calculate the final total.
-7. Return the pickup fee with a switch statement.
-8. Return the pickup label with a switch statement.
-9. Format the special note when it's empty.
-10. Log the ready message.
-11. Implement `assertNever`.
+## Business rules
 
-💰 Toggle `memberStatus` or `pickupMethod` in <InlineFile file="src/app.tsx" /> to
-see different outputs.
+- **Money display**: `formatMoney` formats an amount with a leading `$` (for
+  example `4.5` displays as `$4.5`).
+- **Line items**: `buildLineItemText` shows `quantity x name`, and appends
+  ` (GF)` (leading space) when the item is gluten-free. Examples:
+  `2 x Blueberry Muffin`, `1 x Oatberry Muffin (GF)`.
+- **Subtotal**: sum of each item’s price × quantity (use a loop).
+- **Member discount**: status `'member'` gets 10% off when the subtotal is at
+  least `$20`; otherwise `$0`.
+- **Tax / tip**: tax uses the taxable amount and rate; tip uses the amount before
+  tip and the tip percent.
+- **Total**: subtotal, minus discount, plus tax, tip, and pickup fee.
+- **Pickup fee** (switch): `counter` → `$0`, `curbside` → `$3`, `delivery` → `$7`.
+- **Pickup label** (switch): `Counter pickup`, `Curbside pickup`, or
+  `Delivery dropoff`. Use `assertNever` for impossible cases.
+- **Notes**: `null` or an empty string becomes `No special notes`; otherwise keep
+  the note.
+- **Ready log**: `logOrderReady` is a `void` function that logs
+  `Order ready for <customer>`.
+- **`assertNever`**: throw so TypeScript knows that branch cannot continue
+  (include the unexpected value in the error).
+
+## Success criteria
+
+- The dashboard in <InlineFile file="src/app.tsx" /> renders without runtime
+  errors once the helpers are implemented
+- With the default app fixtures (`member`, `curbside`, gluten-free items, empty
+  note), you should see:
+  - Line items including a `(GF)` suffix where appropriate
+  - Pickup label `Curbside pickup` and a pickup fee of `$3`
+  - Special note text `No special notes`
+  - Console log: `Order ready for Avery`
+- Toggle `memberStatus` or `pickupMethod` in <InlineFile file="src/app.tsx" />
+  and confirm labels/fees/discounts update
+
+## Run the example
+
+```sh nonumber
+npm run dev --workspace extra_muffin-shop-dashboard
+```
 
 ## Try next
 

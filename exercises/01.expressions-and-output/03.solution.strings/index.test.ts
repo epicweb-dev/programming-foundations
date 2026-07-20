@@ -27,7 +27,7 @@ const output = getOutput()
 await test('should print Hello TypeScript', () => {
 	assert.ok(
 		output.includes('Hello TypeScript'),
-		'🚨 Output should include "Hello TypeScript" - concatenate "Hello" + " " + "TypeScript"',
+		'🚨 Output should include "Hello TypeScript" - concatenate those three pieces with +',
 	)
 })
 

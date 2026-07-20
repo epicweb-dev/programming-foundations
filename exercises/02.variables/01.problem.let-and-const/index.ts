@@ -6,18 +6,18 @@
 // 🐨 Create a variable `cartTotal` using `let`, starting at 0
 
 // 🐨 Create constants for product prices:
-// - bookPrice is $15.99
-// - muffinPrice is $4.5
-// - laptopPrice is $999.99
-// 💰 note, TypeScript doesn't know/care about whether the number represents
-// money, a count, or anything, so you don't use the dollar sign in this syntax
+// - bookPrice is 15.99
+// - muffinPrice is 4.5
+// - laptopPrice is 999.99
+// 💰 TypeScript doesn't know/care whether the number represents money or a
+// count, so you don't use a dollar sign in the syntax
 
 // 🐨 Add the book to the cart (update cartTotal)
 
 // 🐨 Add the muffin to the cart (update cartTotal)
+// 💰 Leave the laptop out of the cart for this exercise
 
-// 🐨 Calculate the final total with tax
-// 💰 Include tax when computing the final total
+// 🐨 Create `finalTotal` as cartTotal plus 8% tax using TAX_RATE
 
 // 🐨 Try uncommenting the line below - what happens?
 // TAX_RATE = 0.10
@@ -27,5 +27,5 @@
 // console.log('Tax:', cartTotal * TAX_RATE)
 // console.log('Final total:', finalTotal)
 
-// 🐨 Export your variables so we can verify your work
+// 🐨 Export TAX_RATE, cartTotal, and finalTotal so we can verify your work
 // export { TAX_RATE, cartTotal, finalTotal }

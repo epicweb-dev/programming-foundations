@@ -7,5 +7,5 @@
 
 // 🐨 Use console.log to show the result of 100 divided by 4
 
-// 🐨 Use console.log to show the result of (10 + 5) multiplied by 2
-// 💰 Use parentheses to control order of operations
+// 🐨 Use console.log to show the result of adding 10 and 5, then multiplying by 2
+// 💰 Use parentheses so the addition happens before the multiplication

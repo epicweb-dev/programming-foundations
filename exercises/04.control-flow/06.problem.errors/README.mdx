@@ -18,15 +18,38 @@ try {
 }
 ```
 
-🐨 Open <InlineFile file="index.ts" /> and:
+🐨 Open <InlineFile file="index.ts" />. The starter provides:
 
-1. Throw an error when the input isn't a valid number
-2. Wrap the conversion in a `try`/`catch`
-3. Set `resultMessage` to show either the parsed value or the error message
+- `rawInput = 'not-a-number'`
+- `resultMessage` starting as `''`
+- `hadError` starting as `false`
+
+Parse `rawInput` as a number inside a `try`/`catch`. If the input is not a valid
+number, throw an error whose message is exactly
+`Invalid number: not-a-number` (the prefix `Invalid number: ` plus the raw
+input). On success, set `resultMessage` to describe the parsed value using the
+format `Parsed value: <number>`. On failure, set `hadError` to `true` and set
+`resultMessage` to `Error: <error message>` (so the thrown message appears after
+the `Error: ` prefix).
+
+Export `resultMessage` and `hadError`.
+
+## Required exports
+
+`resultMessage`, `hadError`
+
+## Completion criteria (with this fixture)
+
+- `hadError` is `true`
+- `resultMessage` is exactly `Error: Invalid number: not-a-number`
+
+Edge cases to keep in mind: valid numeric strings should succeed and set
+`resultMessage` to the success format (no error); invalid input must throw and
+be caught without crashing the program.
 
 <callout-info>
-	In a `catch` block, the `error` value is `unknown`. Use
-	`error instanceof Error` before reading `error.message`.
+	In a `catch` block, the caught value is typed as `unknown`. Narrow it before
+	you read properties like a message string.
 </callout-info>
 
 📜 [MDN - throw](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw)

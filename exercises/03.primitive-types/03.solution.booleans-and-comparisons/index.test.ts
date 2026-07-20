@@ -33,7 +33,7 @@ await test('hasDiscount should be true (price < 50)', () => {
 	assert.strictEqual(
 		solution.hasDiscount,
 		true,
-		'🚨 hasDiscount should be true when price < 50 - use a comparison: price < 50',
+		'🚨 hasDiscount should be true when price is under 50 - use a comparison against price',
 	)
 })
 
@@ -41,7 +41,7 @@ await test('hasDiscount should be a boolean type', () => {
 	assert.strictEqual(
 		typeof solution.hasDiscount,
 		'boolean',
-		'🚨 hasDiscount should be a boolean type - use a comparison: price < 50',
+		'🚨 hasDiscount should be a boolean type - compare price to 50',
 	)
 })
 
@@ -56,12 +56,12 @@ await test('canPurchase should be true (isAvailable && stockCount > 0)', () => {
 	assert.strictEqual(
 		solution.canPurchase,
 		true,
-		'🚨 canPurchase should be true when both isAvailable is true AND stockCount > 0 - use the && operator',
+		'🚨 canPurchase should be true when the item is available and stockCount is greater than 0',
 	)
 	assert.strictEqual(
 		typeof solution.canPurchase,
 		'boolean',
-		'🚨 canPurchase should be a boolean type - use a logical expression that returns true or false',
+		'🚨 canPurchase should be a boolean type - combine the availability and stock checks',
 	)
 })
 
@@ -76,11 +76,11 @@ await test('isNotAvailable should be false (!isAvailable)', () => {
 	assert.strictEqual(
 		solution.isNotAvailable,
 		false,
-		'🚨 isNotAvailable should be false (the opposite of isAvailable which is true) - use the ! operator: !isAvailable',
+		'🚨 isNotAvailable should be false (the opposite of isAvailable, which is true)',
 	)
 	assert.strictEqual(
 		typeof solution.isNotAvailable,
 		'boolean',
-		'🚨 isNotAvailable should be a boolean type - use the ! operator to invert isAvailable',
+		'🚨 isNotAvailable should be a boolean type - invert isAvailable',
 	)
 })

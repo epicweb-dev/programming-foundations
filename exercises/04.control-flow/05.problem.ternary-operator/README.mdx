@@ -33,12 +33,29 @@ if (age >= 18) {
 const status = age >= 18 ? 'adult' : 'minor'
 ```
 
-🐨 Open <InlineFile file="index.ts" /> and use the ternary operator to:
+🐨 Open <InlineFile file="index.ts" />. The starter provides:
 
-1. Create `weatherDescription` - "hot" if temperature > 30, otherwise
-   "comfortable"
-2. Create `passed` - true if score >= 70, otherwise false
-3. Create `stockMessage` - "In stock" if stock > 0, otherwise "Out of stock"
+- `temperature = 25`
+- `score = 85`
+- `stock = 0`
+
+Use the ternary operator to create:
+
+1. `weatherDescription` — `"hot"` if `temperature > 30`, otherwise
+   `"comfortable"`
+2. `passed` — `true` if `score >= 70`, otherwise `false`
+3. `stockMessage` — `"In stock"` if `stock > 0`, otherwise `"Out of stock"`
+
+Export all three.
+
+## Required exports
+
+`weatherDescription`, `passed`, `stockMessage`
+
+## Completion criteria
+
+Each export follows the ternary rules above for the given fixtures. Log or
+inspect the values to confirm—don't hardcode answers that ignore the conditions.
 
 <callout-info>
 	The ternary operator is an **expression** that produces a value, while

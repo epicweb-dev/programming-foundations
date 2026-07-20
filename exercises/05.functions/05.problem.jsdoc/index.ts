@@ -16,7 +16,6 @@ function add(a: number, b: number): number {
 // - @param tag for the `name` parameter
 // - @returns tag
 // - @example tag showing how to use the function
-// 💰 Include an @example block that shows how to call the function
 function greet(name: string): string {
 	return `Hello, ${name}!`
 }
@@ -36,11 +35,11 @@ function calculateCompoundInterest(
 	return principal * Math.pow(1 + rate, years)
 }
 
-// 🐨 Create a function called `clamp` that:
-// - Takes a value, min, and max
-// - Returns the value constrained between min and max
-// - Has a complete JSDoc comment with description, @param, @returns, and @example
-// 💰 Use Math.min/Math.max to keep the value within range
+// 🐨 Create `clamp(value, min, max)` that returns value constrained to [min, max]
+// - Below min → return min
+// - Above max → return max
+// - Otherwise → return value
+// - Add complete JSDoc: description, @param, @returns, @example
 
-// 🐨 Export your functions so we can verify your work
+// 🐨 Export add, greet, calculateCompoundInterest, and clamp
 // export { add, greet, calculateCompoundInterest, clamp }

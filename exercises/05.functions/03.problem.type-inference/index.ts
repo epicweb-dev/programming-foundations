@@ -17,10 +17,12 @@ function divide(a: number, b: number) {
 	return a / b
 }
 
-// 🐨 Fix the bug by throwing an error instead of returning a string:
+// 🐨 Fix the bug by throwing an Error with message "Cannot divide by zero"
+// instead of returning a string
 
-// 🐨 Create a function `isEven` that returns true if a number is even
-// Let TypeScript infer the return type
+// 🐨 Create `isEven(n: number)` that returns true for even numbers
+// 💰 Let TypeScript infer the boolean return type
+// 💰 A number is even when dividing by 2 leaves no remainder
 
 // ✅ Test
 console.log(multiply(4, 5)) // 20
@@ -28,5 +30,5 @@ console.log(divide(10, 2)) // 5
 // console.log(isEven(4)) // true
 // console.log(isEven(7)) // false
 
-// 🐨 Export your functions so we can verify your work
+// 🐨 Export multiply, divide, and isEven
 // export { multiply, divide, isEven }

@@ -7,7 +7,7 @@
 
 // 🐨 Create a variable `quantity` with type `number` set to 100
 
-// 🐨 Create a `description` using a template literal that outputs:
+// 🐨 Create a `description` using a template literal that equals exactly:
 // "Product: TypeScript Guide | Price: $29.99 | In Stock: 100"
 
 // ✅ These console.logs will verify your work
@@ -16,5 +16,5 @@
 // console.log('Quantity:', quantity)
 // console.log('Description:', description)
 
-// 🐨 Export your variables so we can verify your work
+// 🐨 Export price, productName, quantity, and description
 // export { price, productName, quantity, description }

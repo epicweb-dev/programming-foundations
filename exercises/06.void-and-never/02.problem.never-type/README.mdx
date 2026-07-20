@@ -14,24 +14,35 @@ function fail(message: string): never {
 TypeScript uses this to mark code paths that can't continue. A `never` function
 is one that always throws or exits early.
 
-🐨 Open <InlineFile file="index.ts" /> and:
+🐨 Open <InlineFile file="index.ts" /> and create these exported functions:
 
-1. Create a `throwError` function that throws and returns `never`
-2. Create a `parseNumber` function that converts a string to a number, using
-   `throwError("Invalid number")` if the input can't be parsed
-3. Create an `ensurePositive` function that returns the number if positive, or
-   uses `throwError("Number must be positive")` if negative
+1. `throwError(message: string): never` — always throws an error using the given
+   message
+2. `parseNumber(value: string): number` — turn a string into a number; if the
+   value cannot be parsed, call `throwError` with the exact message
+   `Invalid number`; otherwise return the number
+3. `ensurePositive(value: number): number` — return the number when it is zero
+   or positive; if it is negative, call `throwError` with the exact message
+   `Number must be positive`
+
+## Required exports
+
+`throwError`, `parseNumber`, `ensurePositive`
+
+## Completion criteria
+
+- `throwError('Test error')` throws with message `Test error`
+- `parseNumber('42')` returns `42`
+- `parseNumber('not-a-number')` throws with message `Invalid number`
+- `ensurePositive(5)` returns `5`
+- `ensurePositive(0)` returns `0` (zero is allowed)
+- `ensurePositive(-1)` throws with message `Number must be positive`
 
 <callout-info>
 	The key learning here is that `parseNumber` and `ensurePositive` should
 	**use** the `throwError` function rather than throwing directly. This
 	demonstrates how TypeScript's flow analysis understands that code after a
 	`never`-returning function call is unreachable.
-</callout-info>
-
-<callout-info>
-	`Number(value)` converts a string to a number. If the string can't be parsed,
-	it returns `NaN` (Not a Number). Check for `NaN` using `Number.isNaN(result)`.
 </callout-info>
 
 📜 [TypeScript Handbook - never](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#the-never-type)

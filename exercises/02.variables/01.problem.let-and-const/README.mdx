@@ -8,11 +8,31 @@ product prices).
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Create a `const` for `TAX_RATE` set to `0.08`
-2. Create a `let` for `cartTotal` starting at `0`
-3. Create `const` variables for product prices: `bookPrice`, `muffinPrice`, and `laptopPrice`
-4. Add items to the cart by updating `cartTotal`
-5. Try to reassign `TAX_RATE` and see what TypeScript says
+1. Create a `const` named `TAX_RATE` set to `0.08`
+2. Create a `let` named `cartTotal` starting at `0`
+3. Create `const` product prices with these exact values:
+   - `bookPrice` = `15.99`
+   - `muffinPrice` = `4.5`
+   - `laptopPrice` = `999.99`
+4. Add the book and the muffin to the cart by updating `cartTotal` (do **not**
+   add the laptop for this step)
+5. Create `finalTotal` as the cart subtotal plus 8% tax (`TAX_RATE`)
+6. Try to reassign `TAX_RATE` (keep it commented after you see the TypeScript
+   error) and export your results
+
+## Required exports
+
+Export these names so the tests can verify your work:
+
+- `TAX_RATE`
+- `cartTotal`
+- `finalTotal`
+
+## Completion criteria (with the fixtures above)
+
+- `TAX_RATE` is `0.08`
+- `cartTotal` is `20.49` (book + muffin only)
+- `finalTotal` is `22.1292` (subtotal + 8% tax)
 
 💰 By convention, constants that represent fixed values are often UPPER_CASE:
 

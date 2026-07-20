@@ -5,16 +5,27 @@
 👨‍💼 We're building a grade calculator for a school system. Based on a numeric
 score, we need to determine the letter grade.
 
-🐨 Open <InlineFile file="index.ts" /> and:
+🐨 Open <InlineFile file="index.ts" />. The starter sets `score` to `85`.
 
-1. Write an `if`/`else if`/`else` chain to determine the letter grade:
-   - 90 and above: "A"
-   - 80-89: "B"
-   - 70-79: "C"
-   - 60-69: "D"
-   - Below 60: "F"
+1. Create a `grade` string using an `if`/`else if`/`else` chain:
+   - 90 and above: `"A"`
+   - 80–89: `"B"`
+   - 70–79: `"C"`
+   - 60–69: `"D"`
+   - Below 60: `"F"`
+2. Create `passed` as a boolean that is `true` when the letter grade is C or
+   above (that means grades `"A"`, `"B"`, or `"C"`)
+3. Export `score`, `grade`, and `passed`
 
-2. Add a check to see if the student passed (grade C or above)
+## Required exports
+
+`score`, `grade`, `passed`
+
+## Completion criteria (with `score = 85`)
+
+- `score` remains `85`
+- `grade` is `"B"`
+- `passed` is `true`
 
 💰 Check the highest ranges first so the first match wins.
 
