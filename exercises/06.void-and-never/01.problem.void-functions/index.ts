@@ -1,18 +1,20 @@
 // Logging System
 // Functions that perform side effects return void
 
-// 🐨 Create `logInfo` that takes a message and logs it with "[INFO]" prefix
-// 💰 Functions that don't return values have a special type: `void`
+// 🐨 Create `logInfo(message: string): void`
+// 💰 Log with an "[INFO]" prefix, e.g. [INFO] Application started
 
-// 🐨 Create `logError` that takes a message and logs it with "[ERROR]" prefix
+// 🐨 Create `logError(message: string): void`
+// 💰 Log with an "[ERROR]" prefix
 
-// 🐨 Create `logWithTimestamp` that takes a message and logs it with timestamp
-// 💰 Include the current time in the log using `new Date().toISOString()`
+// 🐨 Create `logWithTimestamp(message: string): void`
+// 💰 Log with the current time as an ISO timestamp in brackets, then the message
+// Example shape: [2024-01-15T12:00:00.000Z] User logged in
 
 // ✅ Test your functions
 // logInfo('Application started')
 // logError('Connection failed')
 // logWithTimestamp('User logged in')
 
-// 🐨 Export your functions so we can verify your work
+// 🐨 Export logInfo, logError, and logWithTimestamp
 // export { logInfo, logError, logWithTimestamp }

@@ -1,10 +1,10 @@
 // Escaping Strings
 // Learn to include special characters in strings
 
-// 🐨 Log "It's working!" using single quotes (you'll need to escape the apostrophe)
+// 🐨 Log exactly: It's working! (single-quoted string; escape the apostrophe)
 
-// 🐨 Log: She said "Hi" (using double quotes for the string)
+// 🐨 Log exactly: She said "Hi" (double-quoted string; escape the inner quotes)
 
-// 🐨 Log "Hello" and "World" on separate lines using a single string with \n
+// 🐨 Log "Hello" and "World" on separate lines using a single string with a newline escape
 
-// 🐨 Log tab-separated data: Name: [tab] Age: [tab] City: (like column headers)
+// 🐨 Log exactly: Name: [tab] Age: [tab] City:

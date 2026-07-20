@@ -5,17 +5,26 @@
 👨‍💼 We've been using `if`/`else if` chains, but when you're checking one value
 against many possible matches, a `switch` statement is often cleaner.
 
-🐨 Open <InlineFile file="index.ts" /> and:
+🐨 Open <InlineFile file="index.ts" />. The starter sets `grade` to `'B'`.
 
-1. Create a `description` variable to hold the feedback text
-2. Write a `switch` statement that checks the `grade` value and sets the
-   appropriate description:
-   - 'A' → "Excellent"
-   - 'B' → "Good"
-   - 'C' → "Satisfactory"
-   - 'D' → "Needs Improvement"
-   - 'F' → "Failing"
-   - Any other value → "Invalid grade"
+1. Create a `description` string
+2. Write a `switch` on `grade` that sets `description` to these exact values:
+   - `'A'` → `"Excellent"`
+   - `'B'` → `"Good"`
+   - `'C'` → `"Satisfactory"`
+   - `'D'` → `"Needs Improvement"`
+   - `'F'` → `"Failing"`
+   - any other value → `"Invalid grade"`
+3. Export `grade` and `description`
+
+## Required exports
+
+`grade`, `description`
+
+## Completion criteria (with `grade = 'B'`)
+
+- `grade` remains `"B"`
+- `description` is `"Good"`
 
 💰 Use `switch` with `case` branches and a `default` for all other values.
 

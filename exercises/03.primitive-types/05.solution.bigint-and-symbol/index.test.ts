@@ -13,7 +13,7 @@ await test('largeNumber should be a bigint with correct value', () => {
 	assert.strictEqual(
 		typeof solution.largeNumber,
 		'bigint',
-		'🚨 largeNumber should be type bigint - use the n suffix: 9007199254740993n',
+		'🚨 largeNumber should be type bigint (use a bigint literal)',
 	)
 	assert.strictEqual(
 		solution.largeNumber,
@@ -73,7 +73,7 @@ await test('userId should be a symbol', () => {
 	assert.strictEqual(
 		typeof solution.userId,
 		'symbol',
-		'🚨 userId should be type symbol - use Symbol("user-id")',
+		'🚨 userId should be type symbol with description "user-id"',
 	)
 })
 

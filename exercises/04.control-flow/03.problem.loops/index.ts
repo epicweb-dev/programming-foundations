@@ -4,10 +4,10 @@
 // 🐨 Create a variable `exhibitLabels` starting as an empty string
 
 // 🐨 Write a for loop that counts from 1 to 5
-// 🐨 On each pass, add a line like "Exhibit 1" to the string
-// 🐨 Put each label on its own line using "\n"
+// 🐨 On each pass, append "Exhibit N" plus a newline ("\n")
+// 💰 The finished string should end with a newline after Exhibit 5
 
 // console.log(exhibitLabels)
 
-// 🐨 Export your variable so we can verify your work
+// 🐨 Export exhibitLabels so we can verify your work
 // export { exhibitLabels }

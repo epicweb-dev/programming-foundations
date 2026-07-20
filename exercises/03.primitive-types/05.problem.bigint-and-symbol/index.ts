@@ -12,15 +12,14 @@
 
 // 🐨 Create another symbol called `anotherId` with the same description 'user-id'
 
-// 🐨 Create a variable `areEqual` that compares userId === anotherId
-// This will be false because each Symbol() call creates a unique value!
+// 🐨 Create `areEqual` that compares userId === anotherId
 
 // Test - uncomment when ready
 // console.log('Large number:', largeNumber)
 // console.log('Sum of bigints:', sum)
 // console.log('userId:', userId)
 // console.log('anotherId:', anotherId)
-// console.log('Are symbols equal?', areEqual) // false
+// console.log('Are symbols equal?', areEqual)
 
-// 🐨 Export your variables so we can verify your work
+// 🐨 Export largeNumber, anotherLarge, sum, userId, anotherId, and areEqual
 // export { largeNumber, anotherLarge, sum, userId, anotherId, areEqual }

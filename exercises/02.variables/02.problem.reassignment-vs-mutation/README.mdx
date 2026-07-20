@@ -24,12 +24,31 @@ obj.count = 2 // The object itself is modified (mutated)
 	properties on a `const` object.
 </callout-warning>
 
-🐨 Open <InlineFile file="index.ts" /> and:
+🐨 Open <InlineFile file="index.ts" />. The starter already declares:
 
-1. Try to reassign the `const` object (see the error)
-2. Mutate the `const` object by changing `age` to `31` and `city` to
-   `'Portland'`
-3. Observe that mutation works even with `const`
+```ts
+const person = { name: 'Alice', age: 30, city: 'Seattle' }
+```
+
+Complete these tasks:
+
+1. Try to reassign `person` to a new object (uncomment the line and observe the
+   TypeScript error), then leave that reassignment commented out
+2. Mutate `person` so `age` becomes `31` and `city` becomes `'Portland'`
+   (`name` stays `'Alice'`)
+3. Export `person`
+
+## Required exports
+
+- `person`
+
+## Completion criteria
+
+After mutation, `person` must deep-equal:
+
+```ts
+{ name: 'Alice', age: 31, city: 'Portland' }
+```
 
 💰 Mutation means changing properties on the existing object (not replacing the
 object itself).

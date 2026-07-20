@@ -6,31 +6,37 @@ clean summary for customers.
 📜 This example sticks to the skills from the workshop: numbers, strings,
 booleans, variables, functions, if/else, switch statements, and loops.
 
-🐨 Open <InlineFile file="index.ts" /> and complete the following tasks:
+🐨 Open <InlineFile file="index.ts" /> and complete the helpers and values
+below. Fixture inputs (`muffinCount`, prices, `taxRate`, `tipPercent`,
+`isMember`, `pickupMethod`, and so on) are already in the file.
 
-1. Build the divider string with a loop.
-2. Calculate `subtotal`.
-3. Implement `calculateDiscount`.
-4. Implement `calculateTax`.
-5. Implement `calculateTip`.
-6. Implement `calculatePickupFee` with a switch statement.
-7. Set `pickupLabel` with an if/else.
-8. Set `memberMessage` with an if/else.
-9. Calculate `total`.
-10. Make sure the receipt prints with `console.log`.
+## Business rules
 
-💰 Flip `isMember` to see the discount and message change.
-💰 Try `pickupMethod` as `curbside` or `delivery` to test the switch logic.
+- **Divider lines**: `buildDivider` builds the `=` / `-` banner lines by
+  repeating a character to a given length.
+- **Money display**: `formatMoney` formats an amount with a leading `$` (for
+  example `3.25` displays as `$3.25`, and `4` as `$4`).
+- **Subtotal**: sum of each line item (quantity × unit price for muffins and
+  scones).
+- **Member discount**: members get 10% off when the subtotal is at least `$15`;
+  otherwise the discount is `$0`.
+- **Tax**: applied to the amount after the discount, using `taxRate`.
+- **Tip**: applied to the post-discount subtotal plus tax, using `tipPercent`.
+- **Pickup fee** (use a `switch` on `pickupMethod`):
+  - `counter` → `$0`
+  - `curbside` → `$3`
+  - `delivery` → `$7`
+- **Pickup label**: show `FREE` when the fee is `$0`; otherwise show the fee with
+  `formatMoney`.
+- **Member message**: `Member discount applied` for members, otherwise
+  `Join the club for 10% off`.
+- **Total**: subtotal, minus discount, plus tax, tip, and pickup fee.
+- Print the assembled `receipt` with `console.log`.
 
-## Run the example
+## Success criteria (default fixtures)
 
-```sh nonumber
-npm run start --workspace examples/muffin-shop-checkout
-```
-
-## What the output can look like
-
-Here is a sample console receipt output:
+With the starter defaults (`isMember = true`, `pickupMethod = 'counter'`, etc.),
+your printed receipt should match this shape and the sample numbers below:
 
 ```text
 ================================
@@ -49,6 +55,17 @@ Pickup fee: FREE
 Total: $20.14
 Member discount applied
 ================================
+```
+
+(Floating-point display may vary slightly; the structure and labels must match.)
+
+💰 Flip `isMember` to see the discount and message change.
+💰 Try `pickupMethod` as `curbside` or `delivery` to test the switch logic.
+
+## Run the example
+
+```sh nonumber
+npm run start --workspace extra_muffin-shop-checkout
 ```
 
 ## Try next

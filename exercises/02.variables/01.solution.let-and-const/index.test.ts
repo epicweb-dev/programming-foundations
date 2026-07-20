@@ -28,7 +28,7 @@ await test('cartTotal should be calculated correctly', () => {
 	// cartTotal = bookPrice + muffinPrice = 15.99 + 4.5 = 20.49
 	assert.ok(
 		Math.abs(solution.cartTotal - 20.49) < Math.pow(10, -2),
-		'🚨 cartTotal should be 20.49 - add bookPrice and muffinPrice together',
+		'🚨 cartTotal should be 20.49 - add the book and muffin prices (not the laptop)',
 	)
 })
 
@@ -43,6 +43,6 @@ await test('finalTotal should include tax', () => {
 	// finalTotal = cartTotal + cartTotal * TAX_RATE = 20.49 + 20.49 * 0.08 = 22.1292
 	assert.ok(
 		Math.abs(solution.finalTotal - 22.1292) < Math.pow(10, -4),
-		'🚨 finalTotal should be 22.1292 - add the tax (cartTotal * TAX_RATE) to cartTotal',
+		'🚨 finalTotal should be 22.1292 - subtotal plus 8% tax',
 	)
 })

@@ -18,17 +18,16 @@ function calculateTotal(subtotal: number, taxRate: number): number {
 }
 
 // 🐨 Create an arrow function `isEven` that returns true if a number is even
-// 💰 Short functions can be written more concisely (use `n % 2 === 0`)
+// 💰 A number is even when dividing by 2 leaves no remainder
 
-// 🐨 Create a function `applyToNumber` that:
-// - Takes a number and a transform function
-// - Returns the transformed number
-// 💰 Functions can accept other functions as parameters
+// 🐨 Create `applyToNumber(value, transform)` that:
+// - Takes a number and a transform function `(n: number) => number`
+// - Returns the result of calling transform with that number
 
 // 🐨 Create arrow functions:
 // - `triple` that multiplies a number by 3
 // - `square` that multiplies a number by itself
-// Then call applyToNumber with each.
+// Then you can call applyToNumber with each.
 
-// 🐨 Export your functions so we can verify your work
+// 🐨 Export double, greet, calculateTotal, isEven, applyToNumber, triple, square
 // export { double, greet, calculateTotal, isEven, applyToNumber, triple, square }

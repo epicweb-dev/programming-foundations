@@ -9,5 +9,5 @@
 // console.log('discountCode:', discountCode)
 // console.log('lastPurchaseDate:', lastPurchaseDate)
 
-// 🐨 Export your variables so we can verify your work
+// 🐨 Export discountCode and lastPurchaseDate
 // export { discountCode, lastPurchaseDate }

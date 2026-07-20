@@ -22,5 +22,5 @@ console.log('Can Purchase:', canPurchase)
 // @ts-expect-error - 💣 remove this comment
 console.log('Is Not Available:', isNotAvailable)
 
-// 🐨 Export your variables so we can verify your work
+// 🐨 Export isAvailable, hasDiscount, canPurchase, and isNotAvailable
 // export { isAvailable, hasDiscount, canPurchase, isNotAvailable }

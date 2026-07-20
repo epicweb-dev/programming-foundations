@@ -1,22 +1,20 @@
 // E-commerce Utility Functions
 // Creating functions with typed parameters and return values
 
-// 🐨 Create a function `calculateTax` that:
-// - Takes `amount` (number) and `rate` (number)
-// - Returns the tax amount (amount * rate)
+// 🐨 Create `calculateTax(amount: number, rate: number): number`
+// 💰 Examples: (100, 0.08) → 8; (50, 0.1) → 5
 
-// 🐨 Create a function `formatPrice` that:
-// - Takes `cents` (number)
-// - Returns a formatted dollar string like "$19.99"
+// 🐨 Create `formatPrice(cents: number): string`
+// 💰 "$" prefix and exactly two decimal places
+// Examples: 1999 → "$19.99", 100 → "$1.00", 50 → "$0.50"
 
-// 🐨 Create a function `applyDiscount` that:
-// - Takes `price` (number) and `discountPercent` (number)
-// - Returns the discounted price
+// 🐨 Create `applyDiscount(price: number, discountPercent: number): number`
+// 💰 Examples: (100, 20) → 80; (50, 10) → 45; (200, 25) → 150
 
 // ✅ Test your functions
 // console.log(calculateTax(100, 0.08)) // 8
 // console.log(formatPrice(1999)) // "$19.99"
 // console.log(applyDiscount(100, 20)) // 80
 
-// 🐨 Export your functions so we can verify your work
+// 🐨 Export calculateTax, formatPrice, and applyDiscount
 // export { calculateTax, formatPrice, applyDiscount }

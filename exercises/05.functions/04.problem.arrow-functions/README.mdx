@@ -31,9 +31,32 @@ const double = (n: number): number => n * 2
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Convert the function declarations to arrow functions
-2. Use implicit returns where the function body is a single expression
-3. Create a function that uses a callback with arrow functions (no arrays)
+1. Convert `double` and `greet` from function declarations to arrow functions
+   with **implicit returns**
+2. Convert `calculateTotal` to an arrow function but keep a block body and
+   explicit `return` (it has multiple lines)
+3. Create an arrow function `isEven(n: number)` that returns whether `n` is even
+4. Create `applyToNumber(value: number, transform: (n: number) => number): number`
+   that applies `transform` to `value` and returns the result
+5. Create arrow functions `triple` (multiply by 3) and `square` (multiply a
+   number by itself)
+6. Export:
+   `double`, `greet`, `calculateTotal`, `isEven`, `applyToNumber`, `triple`,
+   `square`
+
+## Required exports
+
+`double`, `greet`, `calculateTotal`, `isEven`, `applyToNumber`, `triple`,
+`square`
+
+## Completion criteria
+
+- `double`, `greet`, `calculateTotal`, and `isEven` are arrow functions
+- `double(5)` → `10`; `double(0)` → `0`; `double(-3)` → `-6`
+- `greet('Alice')` → `"Hello, Alice!"`; `greet('Bob')` → `"Hello, Bob!"`
+- `calculateTotal(60, 0.1)` → `66`; `calculateTotal(100, 0.05)` → `105`
+- `isEven(4)` / `isEven(0)` → `true`; `isEven(7)` → `false`
+- `applyToNumber(5, triple)` → `15`; `applyToNumber(6, square)` → `36`
 
 💰 Implicit returns use a single expression and no braces.
 

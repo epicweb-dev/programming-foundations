@@ -10,18 +10,18 @@ const notes = undefined
 const cartTotal = 42
 const hasAcceptedTerms = false
 
-// 🐨 Create a variable `hasUsername` based on the truthiness of `username`
+// 🐨 Create `hasUsername` as a boolean based on the truthiness of `username`
 
-// 🐨 Create a variable `hasNickname` based on the truthiness of `nickname`
+// 🐨 Create `hasNickname` as a boolean based on the truthiness of `nickname`
 
-// 🐨 Create a variable `hasAge` based on the truthiness of `age`
+// 🐨 Create `hasAge` as a boolean based on the truthiness of `age`
 
-// 🐨 Create a variable `hasNotes` based on the truthiness of `notes`
+// 🐨 Create `hasNotes` as a boolean based on the truthiness of `notes`
 
-// 🐨 Create a variable `canCheckout` that is true when cartTotal is truthy AND
+// 🐨 Create `canCheckout` that is true when cartTotal is truthy AND
 // hasAcceptedTerms is true
 
-// 🐨 Create a variable `canCreateAccount` that is true when hasUsername, email,
+// 🐨 Create `canCreateAccount` that is true when hasUsername, email,
 // and password are all truthy
 
 // ✅ Verification
@@ -38,5 +38,5 @@ console.log('Can checkout:', canCheckout)
 // @ts-expect-error - 💣 remove this comment
 console.log('Can create account:', canCreateAccount)
 
-// 🐨 Export your variables so we can verify your work
+// 🐨 Export hasUsername, hasNickname, hasAge, hasNotes, canCheckout, canCreateAccount
 // export { hasUsername, hasNickname, hasAge, hasNotes, canCheckout, canCreateAccount }

@@ -70,17 +70,17 @@ await test('isEven should return true for even numbers', () => {
 	assert.strictEqual(
 		solution.isEven(4),
 		true,
-		'🚨 isEven(4) should return true - check if the number modulo 2 equals 0',
+		'🚨 isEven(4) should return true',
 	)
 	assert.strictEqual(
 		solution.isEven(2),
 		true,
-		'🚨 isEven(2) should return true - check if the number modulo 2 equals 0',
+		'🚨 isEven(2) should return true',
 	)
 	assert.strictEqual(
 		solution.isEven(0),
 		true,
-		'🚨 isEven(0) should return true - check if the number modulo 2 equals 0',
+		'🚨 isEven(0) should return true',
 	)
 })
 
@@ -88,16 +88,16 @@ await test('isEven should return false for odd numbers', () => {
 	assert.strictEqual(
 		solution.isEven(7),
 		false,
-		'🚨 isEven(7) should return false - check if the number modulo 2 does not equal 0',
+		'🚨 isEven(7) should return false',
 	)
 	assert.strictEqual(
 		solution.isEven(3),
 		false,
-		'🚨 isEven(3) should return false - check if the number modulo 2 does not equal 0',
+		'🚨 isEven(3) should return false',
 	)
 	assert.strictEqual(
 		solution.isEven(1),
 		false,
-		'🚨 isEven(1) should return false - check if the number modulo 2 does not equal 0',
+		'🚨 isEven(1) should return false',
 	)
 })

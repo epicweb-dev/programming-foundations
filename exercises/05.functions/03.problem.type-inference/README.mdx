@@ -28,14 +28,31 @@ function add(a: number, b: number) {
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Observe what TypeScript infers for each function
-2. Hover over function names to see the inferred return types
-3. Add an explicit return type where it catches a bug
+1. Hover over `multiply` and notice TypeScript infers its return type as
+   `number` without an annotation
+2. On `divide`, add an explicit return type of `: number` so TypeScript flags the
+   buggy string return
+3. Fix `divide` so dividing by zero throws an `Error` with the exact message
+   `"Cannot divide by zero"` (instead of returning a string)
+4. Create `isEven(n: number)` that returns whether `n` is even; let TypeScript
+   infer the boolean return type
+5. Export `multiply`, `divide`, and `isEven`
+
+## Required exports
+
+`multiply`, `divide`, `isEven`
+
+## Completion criteria
+
+- `multiply(4, 5)` → `20` (and other products work)
+- `divide(10, 2)` → `5`; `divide(7, 2)` → `3.5`
+- `divide(10, 0)` throws with message `"Cannot divide by zero"`
+- `isEven(4)` / `isEven(0)` → `true`; `isEven(7)` → `false`
 
 <callout-info>
-	This exercise uses: - `throw new Error(message)` - stops execution and raises
-	an error - `%` (modulo operator) - returns the remainder after division (e.g.,
-	`7 % 2` returns `1`)
+	`throw new Error(message)` stops normal execution and raises an error. For
+	`isEven`, choose an arithmetic check that works for positive, negative, and
+	zero values.
 </callout-info>
 
 💰 In VS Code/Cursor, hover over a function name to see its full type signature.

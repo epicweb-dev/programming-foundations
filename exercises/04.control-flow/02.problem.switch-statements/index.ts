@@ -5,16 +5,16 @@ const grade: string = 'B'
 
 // 🐨 Create a variable `description` of type string
 
-// 🐨 Write a switch statement on `grade`:
-// - case 'A': set description to "Excellent"
-// - case 'B': set description to "Good"
-// - case 'C': set description to "Satisfactory"
-// - case 'D': set description to "Needs Improvement"
-// - case 'F': set description to "Failing"
-// - default: set description to "Invalid grade"
-// 💰 Each case should avoid falling through (use `break` in each case) by adding a `break` statement
+// 🐨 Write a switch statement on `grade` with these exact strings:
+// - case 'A': "Excellent"
+// - case 'B': "Good"
+// - case 'C': "Satisfactory"
+// - case 'D': "Needs Improvement"
+// - case 'F': "Failing"
+// - default: "Invalid grade"
+// 💰 End each case so it does not fall through to the next one
 
 // console.log(`Grade ${grade}: ${description}`)
 
-// 🐨 Export your variables so we can verify your work
+// 🐨 Export grade and description
 // export { grade, description }

@@ -12,7 +12,7 @@ await test('double is exported', () => {
 await test('double should be an arrow function', () => {
 	assert.ok(
 		solution.double.toString().includes('=>'),
-		'🚨 double should be an arrow function - use const double = (n: number) => ...',
+		'🚨 double should be an arrow function (its source should include =>)',
 	)
 	assert.strictEqual(solution.double(5), 10, '🚨 double(5) should return 10')
 	assert.strictEqual(solution.double(0), 0, '🚨 double(0) should return 0')
@@ -29,7 +29,7 @@ await test('greet is exported', () => {
 await test('greet should be an arrow function', () => {
 	assert.ok(
 		solution.greet.toString().includes('=>'),
-		'🚨 greet should be an arrow function - use const greet = (name: string) => ...',
+		'🚨 greet should be an arrow function (its source should include =>)',
 	)
 	assert.strictEqual(
 		solution.greet('Alice'),

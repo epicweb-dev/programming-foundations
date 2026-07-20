@@ -26,7 +26,7 @@ const output = getOutput()
 await test('should print "The answer is 42"', () => {
 	assert.ok(
 		output.includes('The answer is 42'),
-		'🚨 Output should include "The answer is 42" - use a template literal with ${40 + 2}',
+		'🚨 Output should include "The answer is 42" - use a template literal and embed a calculation for 42',
 	)
 })
 
@@ -41,6 +41,6 @@ await test('should print Hello, TypeScript! greeting', () => {
 await test('should print math result with 50', () => {
 	assert.ok(
 		output.includes('50'),
-		'🚨 Output should include 50 (the result of 10 * 5) - use ${10 * 5} in a template literal',
+		'🚨 Output should include 50 as the computed answer in a template-literal math sentence',
 	)
 })

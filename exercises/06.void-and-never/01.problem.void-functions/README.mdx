@@ -12,14 +12,24 @@ Examples of side effects:
 - Sending data to a server
 - Playing a sound
 
-🐨 Open <InlineFile file="index.ts" /> and:
+🐨 Open <InlineFile file="index.ts" /> and create these exported functions.
+Each takes a `message: string` and returns `void` (no useful return value):
 
-1. Create a `logInfo` function that logs a message with "[INFO]" prefix
-2. Create a `logError` function that logs with "[ERROR]" prefix
-3. Create a `logWithTimestamp` function that includes the current time
+1. `logInfo` — logs with an `[INFO]` prefix, e.g. `[INFO] Application started`
+2. `logError` — logs with an `[ERROR]` prefix, e.g. `[ERROR] Connection failed`
+3. `logWithTimestamp` — logs with an ISO timestamp in brackets, e.g.
+   `[2024-01-15T12:00:00.000Z] User logged in` (use the current time)
 
-💰 Use `Date` to get the current time and include it in the log.
+## Required exports
 
-💰 Void functions don’t return a value.
+`logInfo`, `logError`, `logWithTimestamp`
+
+## Completion criteria
+
+- Each function is callable and returns `undefined` (the runtime value of
+  `void`)
+- When you call them, console output uses the prefix/timestamp formats above
+
+💰 Void functions don't return a value—annotate the return type as `void`.
 
 📜 [TypeScript Handbook - void](https://www.typescriptlang.org/docs/handbook/2/functions.html#void)
